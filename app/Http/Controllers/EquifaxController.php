@@ -90,6 +90,12 @@ try{
              $State=$req->State?$req->State:'';
              $TransactionAmount=$req->TransactionAmount?$req->TransactionAmount:'';
              $VoterId=$req->VoterId?$req->VoterId:'';
+             $data['brokerid']=Session::get('brokerid')?Session::get('brokerid'):'MAA=';
+
+             $data['empid']=Session::get('empid')?Session::get('empid'):'MAA=';
+
+             $data['source']=Session::get('source')?Session::get('source'):'MAA=';
+             // print_r($data['source']);exit();
 
 
  
@@ -102,6 +108,9 @@ try{
 $post_data='{
     "InquiryCommonAccountDetails":'.$AccountDetails.',
     "RequestBody":{
+        "brokerid":"'.$data['brokerid'].'",
+         "empid":"'.$data['empid'].'",
+         "source":"'. $data['source'].'",
         "AdditionalId1":"",
         "AdditionalId2":"",
         "AddrLine1":"'.$req->AddressLine[0].'",
@@ -146,6 +155,7 @@ $post_data='{
  // print_r($post_data);exit();
 		    $result=$this->call_json_data_api("http://api.rupeeboss.com/EquifaxAPIService.svc/createCreditReportReq",$post_data);
 		    $http_result=$result['http_result'];
+            // print_r($result);exit();
         
 
         $xml = simplexml_load_string($http_result);
@@ -195,7 +205,10 @@ $post_data='{
 	}
 
   public function equifax_verification(){
-    return view('equifax-verification');
+    $data['brokerid']=Session::get('brokerid')?Session::get('brokerid'):'MAA=';
+    $data['empid']=Session::get('empid')?Session::get('empid'):'MAA=';
+    $data['source']=Session::get('source')?Session::get('source'):'MAA=';
+    return view('equifax-verification')->with($data);
   }
 
   public function equifax_send_otp(Request $req){

@@ -631,7 +631,7 @@ textarea {
 		// console.log(obj);
 		if(obj=='VoterId' ){
                    var str =$('#VoterId').val();
-                   var voteridPattern = /^([a-zA-Z]{3})(\d{7})$/;
+                   var voteridPattern = /^([a-zA-Z]{4})(\d{6})$/;
                    var res = str.match(voteridPattern);
                    if(res){
                      // console.log('Pancard is valid one.!!');

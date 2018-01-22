@@ -1,7 +1,45 @@
-@include('layout.header')
+<!DOCTYPE html>
+<html class="no-js"> 
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css"> -->
+	<title><?php if(isset($title))echo $title; else echo "RupeeBoss-Apply for a Loan";  ?></title>
+	<!-- <meta name="google-signin-client_id" content="752185558821-9vlmac53np7bgdo3kn9d2e5ft39t7gud.apps.googleusercontent.com"> -->
+	<meta name="msvalidate.01" content="3744048BDD61F7FE6837BD664522C8F9" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="<?php if(isset($description))echo $description; else echo "RupeeBoss provides all kind of loans."; ?>" />
+	<meta name="keywords" content="<?php if(isset($keywords))echo $keywords; else echo "rupeeboss loans getloan expressloan"; ?>" />
+	<meta name="p:domain_verify" content="05d8ec5b6a704fa5b78abd5f636fdc24"/>
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="<?php echo e(URL::to('images/rb_fav.png')); ?>">
+	<!-- <link rel="stylesheet" href="<?php echo e(URL::to('fonts/Raleway.css')); ?>" type="text/css"> -->
+	<!-- Animate.css -->
+
+	<link  rel="stylesheet" type="text/css" href="<?php echo e(URL::to('css/mysite.css')); ?>"/>
+<link  rel="stylesheet" type="text/css" href="<?php echo e(URL::to('css/style.css')); ?>"/>
+<script src="js/icici_js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/icici_js/material.min.js"></script>
+  <script type="text/javascript" src="js/icici_js/moment-with-locales.min.js"></script>
+  <script type="text/javascript" src="js/icici_js/bootstrap-material-datetimepicker.js"></script>
+   
+</script>
 
 
-<div id="fh5co-hero">
+<script type="text/javascript" src="js/icici_js/jquery.datepicker.js"></script>
+
+
+    
+<script src="js/jquery.mask.js"></script>
+<script src="js/icici_js/jquery.validate.min.js"></script>
+<script src="js/icici_js/classie.js"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>  
+<link href="css/jquery-ui.min.css" rel="Stylesheet"></link>
+<script src="js/jquery-ui.js" ></script>
+<script type="text/javascript" src="js/datepicker.js"></script>
+
+
+  <div id="fh5co-hero">
 	<div class="container">
 		  <!--Step 1 -->
           
@@ -12,7 +50,7 @@
 					
 </div>
 				<div class="col-md-6">
-              <img src="{{url('images/rbl_personal_loan.jpg')}}"  width="570" class="img-responsive"/>
+              <img src="<?php echo e(url('images/rbl_personal_loan.jpg')); ?>"  width="570" class="img-responsive"/>
 			  <div>
 			    <ul class="text-left pad1 ull">
 				    <li>Loan amount from Rs.1 Lakh up to Rs.20 Lakhs.</li>
@@ -145,8 +183,9 @@
        <div class="row">
        <div class="col-md-1"></div>
 	<div class="col-md-10 pad-no-mob">
-	 <form id="customer_details_form" method="POST" >
-	  {{ csrf_field() }}
+	 <form id="customer_details_form" method="POST" style="display: none;" >
+	  <?php echo e(csrf_field()); ?>
+
 	
 <div class="col-md-12">
 <h2 class="pad">Personal Loan - Customer Details </h2>
@@ -350,7 +389,7 @@
 <a class="btn btn-primary btn-outline with-arrow animate-box fadeInUp animated" id="submit_application">Submit my Application<i class="icon-arrow-right"></i></a>
 </div>
  <div class="iframeloading" style= "display: none; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
-  <img src="{{URL::to('images/ajaxloader.gif')}}" alt="Loader" title="Loader" style="top: 50%; position: relative; left: 50%;"  />
+  <img src="<?php echo e(URL::to('images/ajaxloader.gif')); ?>" alt="Loader" title="Loader" style="top: 50%; position: relative; left: 50%;"  />
  </div>
 </div>
 	</div>
@@ -437,8 +476,7 @@
 			</form>
 </div>
 </div>
-@include('layout.footer')
-@include('layout.script')
+
 
 <!-- modal -->
 <div class="modal fade" tabindex="-1" role="dialog" id="rbl-popup">
@@ -639,7 +677,7 @@
 <script type="text/javascript">   
 
  $.ajax({ 
-   url: "{{URL::to('rbl-city-master')}}",
+   url: "<?php echo e(URL::to('rbl-city-master')); ?>",
    method:"GET",
    success: function(datas)  
    {
@@ -809,7 +847,7 @@
         	  $(".iframeloading").show();
           $.ajax({  
          type: "POST",  
-         url: "{{URL::to('rbl-personal-loan-submit')}}",
+         url: "<?php echo e(URL::to('rbl-personal-loan-submit-dc')); ?>",
          data : $('#customer_details_form').serialize(),
          success: function(msg){
          	$(".iframeloading").hide();
@@ -875,7 +913,7 @@
 
     <script type="text/javascript">   
     $.ajax({ 
-   url: "{{URL::to('rbl-off-city-master')}}",
+   url: "<?php echo e(URL::to('rbl-off-city-master')); ?>",
    method:"GET",
    success: function(datas)  
    {
@@ -894,5 +932,3 @@
 
  });
 </script>
-
-

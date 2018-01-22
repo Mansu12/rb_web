@@ -49,8 +49,8 @@ class CreditcardController extends CallApiController
             $m=$s=str_replace('\\', "", $s);
             $update_user='';
             $obj = json_decode($m);
-            // print_r($obj);exit();
-            if (isset($obj->ApplicationId))  
+           
+            if (isset($obj->ApplicationId) && $obj->ApplicationId!=null)  
             {
                 $update_user=DB::table('credit_card_form_req')
                  ->where('id',$id)
@@ -61,7 +61,9 @@ class CreditcardController extends CallApiController
                     $error =json_encode( array('id' =>$obj->ApplicationId,'Decision'=>$obj->Decision,'Reason'=>$obj->Reason ));
                   }
             }else{
-                $error=3;
+               echo json_encode($obj);
+               
+
             }
              
         }catch(\Exception $ee){

@@ -158,6 +158,14 @@
 							<a class="btn btn-primary btn-outline with-arrow" href="{{URL::to('kotak-home-loan')}}">Apply Now<i class="icon-arrow-right"></i></a>
 						</div>
 					</div>
+
+					<div class="col-md-4 animate-box">
+						<div class="price-box popular1">
+							<div class="center-blg"><img src="{{URL::to('images/bank/kotak.png')}}" width="150" alt="apply_online_pic" /></div>
+							<h4 class="mrg-btm">Kotak Personal Loan</h4>
+							<a class="btn btn-primary btn-outline with-arrow" href="{{URL::to('kotak-personal-loan')}}">Apply Now<i class="icon-arrow-right"></i></a>
+						</div>
+					</div>
 					
 					<div class="col-md-4 animate-box">
 						<div class="price-box popular1">

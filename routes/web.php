@@ -351,6 +351,14 @@ Route::get('rbl-personal-loan','LoanController@rbl_personal_loan');
 Route::post('rbl-personal-loan-submit','LoanController@rbl_personal_loan_submit');
 Route::get('rbl-off-city-master','LoanController@rbl_off_city_master');
 Route::get('rbl-city-master','LoanController@rbl_city_master');
+
+/*Emailer purpose*/
+Route::get('rbl-personal-loan-dc','LoanController@rbl_personal_loan_dc');
+Route::post('rbl-personal-loan-submit-dc','LoanController@rbl_personal_loan_submit');
+Route::get('kotak-personal-loan-dc','LoanController@kotak_personal_loan_dc');
+Route::post('kotak-pl-submit-dc','LoanController@kotak_pl_submit');
+Route::post('kotak-personal-loan-status-dc','LoanController@kotak_personal_loan_status');
+
 Route::get('pay-online','BankController@pay_online');
 Route::get('kotak-home-loan','LoanController@kotak_home_loan');
 // Kotak AutoComplete

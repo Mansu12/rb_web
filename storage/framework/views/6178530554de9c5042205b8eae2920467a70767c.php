@@ -145,7 +145,7 @@
        <div class="row">
        <div class="col-md-1"></div>
 	<div class="col-md-10 pad-no-mob">
-	 <form id="customer_details_form" method="POST" style="display: none;">
+	 <form id="customer_details_form" method="POST" >
 	  <?php echo e(csrf_field()); ?>
 
 	
@@ -246,7 +246,7 @@
 	
 	<div class="col-md-4">
 	<span>Pincode</span>
-	<input type="text" class="form-control" name="ResPIN" id="ResPIN" required/>
+	<input type="text" class="form-control" name="ResPIN" id="ResPIN" maxlength="10" required/>
 	</div>
 	
 	

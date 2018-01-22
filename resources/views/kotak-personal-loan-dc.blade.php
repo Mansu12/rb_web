@@ -1,4 +1,41 @@
-@include('layout.header')
+<!DOCTYPE html>
+<html class="no-js"> 
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css"> -->
+  <title><?php if(isset($title))echo $title; else echo "RupeeBoss-Apply for a Loan";  ?></title>
+  <!-- <meta name="google-signin-client_id" content="752185558821-9vlmac53np7bgdo3kn9d2e5ft39t7gud.apps.googleusercontent.com"> -->
+  <meta name="msvalidate.01" content="3744048BDD61F7FE6837BD664522C8F9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="<?php if(isset($description))echo $description; else echo "RupeeBoss provides all kind of loans."; ?>" />
+  <meta name="keywords" content="<?php if(isset($keywords))echo $keywords; else echo "rupeeboss loans getloan expressloan"; ?>" />
+  <meta name="p:domain_verify" content="05d8ec5b6a704fa5b78abd5f636fdc24"/>
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="shortcut icon" href="{{URL::to('images/rb_fav.png')}}">
+  <!-- <link rel="stylesheet" href="{{URL::to('fonts/Raleway.css')}}" type="text/css"> -->
+  <!-- Animate.css -->
+
+<link  rel="stylesheet" type="text/css" href="{{URL::to('css/mysite.css')}}"/>
+<link  rel="stylesheet" type="text/css" href="{{URL::to('css/style.css')}}"/>
+<script src="js/icici_js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/icici_js/material.min.js"></script>
+  <script type="text/javascript" src="js/icici_js/moment-with-locales.min.js"></script>
+  <script type="text/javascript" src="js/icici_js/bootstrap-material-datetimepicker.js"></script>
+   
+</script>
+
+
+<script type="text/javascript" src="js/icici_js/jquery.datepicker.js"></script>
+
+
+    
+<script src="js/jquery.mask.js"></script>
+<script src="js/icici_js/jquery.validate.min.js"></script>
+<script src="js/icici_js/classie.js"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>  
+<link href="css/jquery-ui.min.css" rel="Stylesheet"></link>
+<script src="js/jquery-ui.js" ></script>
 <div id="fh5co-hero">
  <img src="{{URL::to('images/Personal-Loan-Banner.png')}}" alt="Kotak Personal Loan Banner" title="Kotak Personal Loan" class="img-responsive">
   <div class="fh5co-contact animate-box">
@@ -12,7 +49,7 @@
 
         <div class="col-md-12">
           <div class="row text-left comp-pg rate white-bg">
-          <button class="btn btn-success btn-outline with-arrow animate-box fadeInUp animated dis-tbl" id="kotak-pl-status" >Tack Status If Already Applied<i class="icon-arrow-right"></i></button>
+          
 
             
               <form class="" id="Kotak_PL_form" role="form" method="POST" >
@@ -127,7 +164,7 @@
                 
                 
                 
-                <div class="row sec" style="display: none;"  id="section1">
+                <div class="row sec" style="display: none;"   id="section1">
                   <div class="form-group">
                     <h1 class="loan-head" >Office Details:</h1>
                     <div class="col-md-4">
@@ -204,7 +241,7 @@
                   
                   
                   
-                <div class="row sec" style="display: none;"  id="section2">   
+                <div class="row sec"  style="display: none;" id="section2">   
                   <div class="form-group">
                     <h1 class="loan-head" >Current Address :</h1>
                     <div class="col-md-4">
@@ -450,8 +487,7 @@
     </div>  
   </div>
 </div>
-@include('layout.footer')
-@include('layout.script')
+
 
 
 <div class="modal fade" tabindex="-1" role="dialog" id="kotak_pl_popup">
@@ -539,85 +575,6 @@
   </div>
 </div>
 
-<div class="modal fade" tabindex="-1" role="dialog" id="kotak-pl-popup-status">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Track Status</h4>
-      </div>
-      <div class="modal-body">
-        <form name="kotak_personal_loan_status" id="kotak_personal_loan_status" method="post">
-          {{ csrf_field() }}
-          <input type="hidden" name="form" value="kotak_personal_loan_status">
-                  <div>
-                    <fieldset>
-                      <input type="text" class="newsletter-name" name="Mobile" pattern="[789][0-9]{9}" required maxlength="10" placeholder="Mobile Number">
-                    </fieldset>                 
-                    </div>
-
-                    <div>
-                    <fieldset>
-                      <input type="text" class="newsletter-name" name="PAN" id="pan" oninput="pan_nmbr('pan')" required  placeholder="PAN Number">
-                       <span id="pan_num" style="display:none;color: red; font-size: 10px">Oops.Please Enter Valid Pan Number.!!</span>
-                    </fieldset>                 
-                    </div>
-                  <div>
-                      <button class="btn btn-primary btn-outline with-arrow" id="kotak_status">Submit<i class="icon-arrow-right"></i></button>
-                  </div>
-
-            </form>
-        
-      </div>
-      
-      
-    </div>
-  </div>
-</div>
-
-<!-- Status Modal -->
-<div class="modal fade" tabindex="-1" role="dialog" id="kotak-status-popup">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Confirmation Status</h4>
-      </div>
-      <div class="modal-body">
-        <h4><p id="modalerr"><h5 style="color: black">Your Kotak Home Loan Lead Id is <b><span id="kotakrefcode"></span></b> And Status Is<b><span id="kotakstatus"></span></b> .<h5></p></h4>
-        
-      </div>
-
-      <div class="modal-footer">
-        <a type="button" id="okae" name="okae" class="btn btn-primary kotak_hl_proceed">OK</a>
-        
-      </div>
-      
-      
-    </div>
-  </div>
-</div>
-
-<div class="modal fade" tabindex="-1" role="dialog" id="kotak-hl-status-error">
-  <div class="modal-dialog" role="document">
-    <div class="modal-content">
-      <div class="modal-header">
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-        <h4 class="modal-title">Error Status</h4>
-      </div>
-      <div class="modal-body">
-        <h4><p id="modalerr"><h5 style="color: black">Something Went Wrong.<h5></p></h4>
-        
-      </div>
-      
-      
-    </div>
-  </div>
-</div>
-
-
-
-
 <script type="text/javascript">
 
  function same_fn(checked){
@@ -694,6 +651,7 @@
 
 
   $(".kotak-pl-submit").click(function(event){
+    alert('okae');
     
     event.preventDefault();
      
@@ -705,7 +663,7 @@
      
         $.ajax({  
          type: "POST",  
-         url: "{{URL::to('kotak-pl-submit')}}",
+         url: "{{URL::to('kotak-pl-submit-dc')}}",
          data : $('#Kotak_PL_form').serialize(),
          dataType: 'json',
          success: function(msg){
@@ -1144,16 +1102,17 @@ $(document).ready(function(){
   });
 </script>
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
   $('#kotak-pl-status').click(function(){
-    // alert('okae');
+    alert('okae');
      $('#kotak-pl-popup-status').modal('show');
      
   });
-</script>
+</script> -->
 
 <script type="text/javascript">
   $('#kotak_status').click(function(event){
+    alert('okae');
      event.preventDefault();
      // alert('okae');
     if(! $('#kotak_personal_loan_status').valid())
@@ -1165,7 +1124,7 @@ $(document).ready(function(){
          
         $.ajax({  
          type: "POST",  
-         url: "{{URL::to('kotak-personal-loan-status')}}",
+         url: "{{URL::to('kotak-personal-loan-status-dc')}}",
          data : $('#kotak_personal_loan_status').serialize(),
          success: function(msg){
 

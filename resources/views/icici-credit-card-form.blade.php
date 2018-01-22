@@ -789,6 +789,25 @@ $(".top").click(function() {
   </div>
 </div>
 
+<div class="modal fade" tabindex="-1" role="dialog" id="errormessage">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title"></h4>
+      </div>
+      <div class="modal-body">
+        <h4><p id="modalerr"><h5>Error Message is <b><span id="drop3"></span></b>.<h5></p></h4>
+      </div>
+      
+      <div class="modal-footer">
+        <a type="button" id="upload" name="upload" class="btn btn-primary" onclick="Redirect();" >OK</a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+
 
 
     
@@ -1243,6 +1262,8 @@ return false;
          data : $('#compareform').serialize(),
          dataType: 'json',
          success: function(msg){
+
+          console.log(msg.ErrorMessage);
          $(".iframeloading").hide();  
         
          
@@ -1251,8 +1272,11 @@ return false;
              alert("Something Went Wrong");
 
              
-          }else if(msg==3){
-           alert('Oops..!! Application ID cannot be generated.');
+          }else if(msg.ApplicationId==null){
+           
+              $('#drop3').text(msg.ErrorMessage);
+             $('#errormessage').modal('show');
+
           }
           else{
             
@@ -1267,6 +1291,7 @@ return false;
              $('#drop').text(msg.id);
               $('#drop1').text(msg.Decision);
               $('#drop2').text(msg.Reason);
+              $('#drop3').text(msg.ErrorMessgae);
              $('#credit_process_sorry').modal('show');
           }
           return false;
