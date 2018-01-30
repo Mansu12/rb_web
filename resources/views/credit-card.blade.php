@@ -19,7 +19,7 @@
         </div>
         <div class="col-md-4">
             <div class="desc">
-              <a href="{{url('coming-soon')}}">  <img src="images/hdfc_credit-crd.jpg" alt="HDFC Credit Cards" title="HDFC Credit Cards" class="img-responsive box-shadow"/></a>
+              <a href="{{url('coming-soon')}}">  <img src="images/sbi_credit_crd.jpg" alt="SBI Credit Cards" title="SBI Credit Cards" class="img-responsive box-shadow"/></a>
             </div>
         </div>
    </div>
