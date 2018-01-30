@@ -292,9 +292,9 @@
             <section class="content">
                 <h3 class="col-md-12 mrg-tpp">Tell Us a Bit About YourSelf</h3>
                   <?php if(isset($_GET['CampaignName'])){?>
-                                <input type="text" name="CampaignName" id="CampaignName" value="<?php echo isset($_GET['CampaignName'])?$_GET['CampaignName']:'';?>">
+                                <input type="hidden" name="CampaignName" id="CampaignName" value="<?php echo isset($_GET['CampaignName'])?$_GET['CampaignName']:'';?>">
                                 <?php }else{?>
-                                <input type="text" name="CampaignName" id="CampaignName" value="0">
+                                <input type="hidden" name="CampaignName" id="CampaignName" value="0">
                                 <?php }?>
 
                 <input class="input__field input__field--nao" type="hidden" name="CompanyName" required id="CompanyName" onkeypress="return AllowAlphabet(event)" />

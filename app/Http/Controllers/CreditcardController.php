@@ -218,6 +218,13 @@ class CreditcardController extends CallApiController
    // print_r($name);exit();
             return view('credit-card-rbl-dc')->with('data',$data)->with('card',$name)->with('ProcessingFee',$ProcessingFee);
     }
+
+
+    /*SBI CC*/
+
+    public function sbi_cc(){
+        return view('sbi-cc');
+    }
 }
 
 
