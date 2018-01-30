@@ -351,6 +351,15 @@ Route::get('rbl-personal-loan','LoanController@rbl_personal_loan');
 Route::post('rbl-personal-loan-submit','LoanController@rbl_personal_loan_submit');
 Route::get('rbl-off-city-master','LoanController@rbl_off_city_master');
 Route::get('rbl-city-master','LoanController@rbl_city_master');
+
+/*Emailer purpose*/
+Route::get('rbl-personal-loan-dc','LoanController@rbl_personal_loan_dc');
+Route::post('rbl-personal-loan-submit-dc','LoanController@rbl_personal_loan_submit');
+Route::get('kotak-personal-loan-dc','LoanController@kotak_personal_loan_dc');
+Route::post('kotak-pl-submit-dc','LoanController@kotak_pl_submit');
+Route::get('apply-iifl-loan-dc','LoanController@apply_iifl_loan_dc');
+
+
 Route::get('pay-online','BankController@pay_online');
 Route::get('kotak-home-loan','LoanController@kotak_home_loan');
 // Kotak AutoComplete
@@ -395,14 +404,20 @@ Route::get('test-equifax','TestController@test');
 Route::get('equifax-verification','EquifaxController@equifax_verification');
 Route::post('equifax-send-otp','EquifaxController@equifax_send_otp');
 Route::post('equifax-verify','EquifaxController@equifax_verify_otp');
+Route::get('equifax1','EquifaxController@equifax');
+Route::post('equifax-query','EquifaxController@equifax_query');
+Route::get('equifax-test','EquifaxController@equifax_test');
 
 
 
 /*Excel Upload*/
 Route::get('excel-upload','LoanController@excel_upload');
 Route::post('excel-upload-submit','LoanController@excel_upload_submit');
-Route::get('equifax1','EquifaxController@equifax');
-Route::post('equifax-query','EquifaxController@equifax_query');
+
 
 /*Capital Float*/
 Route::get('capitalfloat','LoanController@capitalfloat');
+
+/*SBI CC*/
+Route::get('sbi-cc','CreditcardController@sbi_cc');
+

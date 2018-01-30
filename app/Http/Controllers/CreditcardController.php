@@ -49,8 +49,8 @@ class CreditcardController extends CallApiController
             $m=$s=str_replace('\\', "", $s);
             $update_user='';
             $obj = json_decode($m);
-            // print_r($obj);exit();
-            if (isset($obj->ApplicationId))  
+           
+            if (isset($obj->ApplicationId) && $obj->ApplicationId!=null)  
             {
                 $update_user=DB::table('credit_card_form_req')
                  ->where('id',$id)
@@ -61,7 +61,9 @@ class CreditcardController extends CallApiController
                     $error =json_encode( array('id' =>$obj->ApplicationId,'Decision'=>$obj->Decision,'Reason'=>$obj->Reason ));
                   }
             }else{
-                $error=3;
+               echo json_encode($obj);
+               
+
             }
              
         }catch(\Exception $ee){
@@ -168,7 +170,7 @@ class CreditcardController extends CallApiController
         $data['source']=Session::get('source')?Session::get('source'):'MAA=';
         $post_data =json_encode(array("CreditCard"=> $data));
      // print_r($post_data);exit();
-       //  print_r($post_data);exit();
+        // print_r($post_data);exit();
         $url = $this::$url_static."BankAPIService.svc/createRBLCreditCardReq ";
         $result=$this->call_json_data_api($url,$post_data);
         $http_result=$result['http_result'];
@@ -178,6 +180,7 @@ class CreditcardController extends CallApiController
         $m=$s=str_replace('\\', "", $s);
         $n=$s=str_replace('#', "", $m);
         $obj=json_decode($n);
+        // print_r($obj);exit();
 
         // $obj->broker_status=(Session::get('brokerid')||Session::get('empid')||Session::get('source'))?1:0;
        // print_r($obj);exit();
@@ -214,6 +217,13 @@ class CreditcardController extends CallApiController
             $data=DB::table('rbl_city_master')->select('city_code','city_name')->get();
    // print_r($name);exit();
             return view('credit-card-rbl-dc')->with('data',$data)->with('card',$name)->with('ProcessingFee',$ProcessingFee);
+    }
+
+
+    /*SBI CC*/
+
+    public function sbi_cc(){
+        return view('sbi-cc');
     }
 }
 

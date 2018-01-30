@@ -1,7 +1,45 @@
-@include('layout.header')
+<!DOCTYPE html>
+<html class="no-js"> 
+	<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<!-- <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css"> -->
+	<title><?php if(isset($title))echo $title; else echo "RupeeBoss-Apply for a Loan";  ?></title>
+	<!-- <meta name="google-signin-client_id" content="752185558821-9vlmac53np7bgdo3kn9d2e5ft39t7gud.apps.googleusercontent.com"> -->
+	<meta name="msvalidate.01" content="3744048BDD61F7FE6837BD664522C8F9" />
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="<?php if(isset($description))echo $description; else echo "RupeeBoss provides all kind of loans."; ?>" />
+	<meta name="keywords" content="<?php if(isset($keywords))echo $keywords; else echo "rupeeboss loans getloan expressloan"; ?>" />
+	<meta name="p:domain_verify" content="05d8ec5b6a704fa5b78abd5f636fdc24"/>
+	<!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+	<link rel="shortcut icon" href="{{URL::to('images/rb_fav.png')}}">
+	<!-- <link rel="stylesheet" href="{{URL::to('fonts/Raleway.css')}}" type="text/css"> -->
+	<!-- Animate.css -->
+
+	<link  rel="stylesheet" type="text/css" href="{{URL::to('css/mysite.css')}}"/>
+<link  rel="stylesheet" type="text/css" href="{{URL::to('css/style.css')}}"/>
+<script src="js/icici_js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/icici_js/material.min.js"></script>
+  <script type="text/javascript" src="js/icici_js/moment-with-locales.min.js"></script>
+  <script type="text/javascript" src="js/icici_js/bootstrap-material-datetimepicker.js"></script>
+   
+</script>
 
 
-<div id="fh5co-hero">
+<script type="text/javascript" src="js/icici_js/jquery.datepicker.js"></script>
+
+
+    
+<script src="js/jquery.mask.js"></script>
+<script src="js/icici_js/jquery.validate.min.js"></script>
+<script src="js/icici_js/classie.js"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>  
+<link href="css/jquery-ui.min.css" rel="Stylesheet"></link>
+<script src="js/jquery-ui.js" ></script>
+<script type="text/javascript" src="js/datepicker.js"></script>
+
+
+  <div id="fh5co-hero">
 	<div class="container">
 		  <!--Step 1 -->
           
@@ -30,58 +68,13 @@
 					<div class="row text-left rate box-shadow pad1 white-bg mrg-btm">
 				
 					<form class="rbl_personal_loan_form" id="rbl_personal_loan_form" role="form" method="POST">
-					 <?php
-		          $myString = isset($_GET['referrer']);
-		          if($myString){
+					 <?php if(isset($_GET['CampaignName'])){?>
+								<input type="hidden" name="CampaignName" id="CampaignName" value="<?php echo isset($_GET['CampaignName'])?$_GET['CampaignName']:'';?>">
+								<?php }else{?>
+								<input type="hidden" name="CampaignName" id="CampaignName" value="0">
+								<?php }?>
 
-		            $myArray = explode('@', $_GET['referrer']);
-		            if(isset($myArray[0])){
-		              Session::put('empid', $myArray[0]);
-		              $empid = Session::get('empid');
-		            }else{
-		              $empid="";
-		            }
-		            if(isset($myArray[1])){
-		             Session::put('brokerid', $myArray[1]);
-		              $brokerid = Session::get('brokerid');
-		            }else{
-		              $brokerid ="";
-		            }
-		            if(isset($myArray[2])){
-		              Session::put('source', $myArray[2]);
-		              $source = Session::get('source');
-
-
-		            }else{
-		               $source="";
-		            }
-		            if(isset($myArray[3])){
-		              Session::put('CampaignName', $myArray[2]);
-		              $campaign = Session::get('CampaignName');
-
-
-		            }else{
-		               $campaign="";
-		            }
-		            if($campaign){
-		              Session::put('CampaignName', $_GET['CampaignName']);
-		            }else{
-		             Session::put('CampaignName', 'Christmas');
-		            }
-		            
-		            //$a= str_replace('�', '', $brokerid);
-		            // echo $empid;
-		             
-		          }else{
-
-
-		            $empid = Session::get('empid')?Session::get('empid'):'MA';
-		            $brokerid =Session::get('brokerid')?Session::get('brokerid'):'MA';
-		            $source =Session::get('source')?Session::get('source'):'MA';
-		            $campaign=Session::get('CampaignName')?Session::get('CampaignName'):'MA';
-		          }
-		          
-		          ?>
+		        
 					<div class="row">
 					<div class="form-group">
 					<h4 class="hdr pad1 text-center">&nbsp;&nbsp;&nbsp;&nbsp;Your Loan Quote in Under 1 Minute.</h4>
@@ -145,7 +138,7 @@
        <div class="row">
        <div class="col-md-1"></div>
 	<div class="col-md-10 pad-no-mob">
-	 <form id="customer_details_form" method="POST" >
+	 <form id="customer_details_form" method="POST" style="display: none;" >
 	  {{ csrf_field() }}
 	
 <div class="col-md-12">
@@ -437,8 +430,7 @@
 			</form>
 </div>
 </div>
-@include('layout.footer')
-@include('layout.script')
+
 
 <!-- modal -->
 <div class="modal fade" tabindex="-1" role="dialog" id="rbl-popup">
@@ -809,7 +801,7 @@
         	  $(".iframeloading").show();
           $.ajax({  
          type: "POST",  
-         url: "{{URL::to('rbl-personal-loan-submit')}}",
+         url: "{{URL::to('rbl-personal-loan-submit-dc')}}",
          data : $('#customer_details_form').serialize(),
          success: function(msg){
          	$(".iframeloading").hide();
@@ -894,5 +886,3 @@
 
  });
 </script>
-
-

@@ -230,17 +230,17 @@ var product;
                   console.log(msg);
                 if(msg==1){
                          if (product == 'Low Cost Housing Finance') {
-                           window.location.href ="{{URL::to('thank-you?CampaignName=GaneshChaturthi')}}";
+                           window.location.href ="{{URL::to('thank-you?LandmarkNewYear')}}";
                           } else if(product =='Credit sudhar'){
-                             window.location.href ="{{URL::to('thank-you?CampaignName=GaneshChaturthi')}}";
+                             window.location.href ="{{URL::to('thank-you?CampaignName=LandmarkNewYear')}}";
                           }else if(product== 'Early Salary') {
-                            window.location.href ="{{URL::to('early-salary?CampaignName=GaneshChaturthi')}}";
+                            window.location.href ="{{URL::to('early-salary?CampaignName=LandmarkNewYear')}}";
                           }else if(product =='Credit Card'){
-                             window.location.href ="{{URL::to('credit-card?CampaignName=GaneshChaturthi')}}";
+                             window.location.href ="{{URL::to('credit-card?CampaignName=LandmarkNewYear')}}";
                          }else if(product =='Balance Transfer'){
-                            window.location.href ="{{URL::to('magic-link?CampaignName=GaneshChaturthi')}}";
+                            window.location.href ="{{URL::to('magic-link?CampaignName=LandmarkNewYear')}}";
                         }else{
-                          window.location.href ="{{URL::to('apply-iifl-loan?CampaignName=GaneshChaturthi')}}";  
+                          window.location.href ="{{URL::to('apply-iifl-loan?CampaignName=LandmarkNewYear')}}";  
                         }
                     }else{
                         alert("Oops!! Something Went Wrong");

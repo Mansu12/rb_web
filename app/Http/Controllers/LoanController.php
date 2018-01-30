@@ -990,8 +990,10 @@ $url = $this::$url_static."/BankAPIService.svc/updateIIFLRevisedQuote";
 
 
   public function kotak_pl_proceed(Request $req){
-    $proc='call get_kotak_pl_category ("'.$req['Company_Cat'].'","'.$req['Organization'].'","'.$req['NMI'].'")';
+    $proc='call get_kotak_pl_category ("'.$req['NMI'].'","'.$req['Organization'].'")';
+     // print_r($proc);exit();
     $quote_data=DB::select($proc);
+    // print_r($quote_data);exit();
     return $quote_data;
   }
 
@@ -1002,6 +1004,7 @@ $url = $this::$url_static."/BankAPIService.svc/updateIIFLRevisedQuote";
     $data['brokerid']=Session::get('brokerid')?Session::get('brokerid'):'MAA=';
     $data['empid']=Session::get('empid')?Session::get('empid'):'MAA=';
     $data['source']=Session::get('source')?Session::get('source'):'MAA=';
+    $data['CampaignName']=Session::get('CampaignName');
     // $data['UniqRefCode']='135'.(substr(str_shuffle(str_repeat("0123456789", 6)), 0, 6));
     
    
@@ -1011,12 +1014,14 @@ $url = $this::$url_static."/BankAPIService.svc/updateIIFLRevisedQuote";
         $url = $this::$url_static."/BankAPIService.svc/createKotakPersonalLoanReq";
         $result=$this->call_json_data_api($url,$post_data);
         $http_result=$result['http_result'];
+        // print_r($http_result);exit();
         $error=$result['error'];
         $st=str_replace('"{', "{", $http_result);
         $s=str_replace('}"', "}", $st);
         $m=$s=str_replace('\\', "", $s);
-        // print_r($http_result);exit();
+        
         $obj=json_decode($m);
+        // print_r($obj);exit();
         
         try{
           $a['status']=$obj->Response->Status;
@@ -1119,6 +1124,7 @@ $url = $this::$url_static."/BankAPIService.svc/updateIIFLRevisedQuote";
     }
 
     public function excel_upload_submit(Request $req){
+      // print_r($req->all());exit();
      $data = \Excel::load($req['file'])->toObject();
   
 //employername
@@ -1159,5 +1165,23 @@ $url = $this::$url_static."/BankAPIService.svc/updateIIFLRevisedQuote";
    public function capitalfloat(){
     return view('capitalfloat');
    }
+
+/*Emailer Purpose*/
+   public function rbl_personal_loan_dc(){
+    return view('rbl-personal-loan-dc');
+   }
+
+   public function kotak_personal_loan_dc(){
+    return view('kotak-personal-loan-dc');
+   }
+
+   public function apply_iifl_loan_dc(Request $req){
+    $CampaignName=Session::get('CampaignName');
+    // print_r($CampaignName);exit();
+
+    return view('apply-iifl-loan-dc',['CampaignName'=>$CampaignName]);
+   }
+
+   
 }
 
