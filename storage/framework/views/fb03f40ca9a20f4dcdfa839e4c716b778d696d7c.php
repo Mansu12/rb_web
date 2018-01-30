@@ -19,11 +19,11 @@
   <!-- Wrapper for slides 
   <div class="carousel-inner" role="listbox">
     <div class="item active">
-      <img src="<?php echo e(URL::to('images/birla_ban.png')); ?>" alt="birla_banner">
+      <img src="<?php echo e(URL::to('images/express/birla_ban.png')); ?>" alt="birla_banner">
     </div>
 
     <div class="item">
-      <img src="<?php echo e(URL::to('images/tribe_bann.png')); ?>" alt="tribe_banner">
+      <img src="<?php echo e(URL::to('images/express/tribe_bann.png')); ?>" alt="tribe_banner">
     </div>
   </div>
 
@@ -82,81 +82,104 @@
 			
 			<div class="row">
 				<div class="pricing pad">
-					<div class="col-md-4 animate-box">
+				
+				<div class="col-md-3 animate-box">
+					   <h3 style="background:#28a0ff;color:#fff; font-size:14px; padding:10px;">Business Loan</h3>
 						<div class="price-box popular1">
-							
-							<div class="center-blg"><img src="<?php echo e(URL::to('images/tribe.png')); ?>" alt="Tribe Logo" title="Tribe Logo" /></div>
-							<h4 class="mrg-btm">Tribe</h4>
-							
+							<div class="center-blg"><img src="<?php echo e(URL::to('images/express/tata_capital.png')); ?>" alt="Tata Capital Logo" title="Tata Capital Logo" /></div>
+							<h4 class="mrg-btm">Business Loan</h4>
+							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('tata-capital-business-loan')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
+						</div>
 						
-							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('tribe')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
-						</div>
-					</div>
-
-					<div class="col-md-4 animate-box">
 						<div class="price-box popular1">
-							<div class="center-blg"><img src="<?php echo e(URL::to('images/birla.png')); ?>" alt="Aditya Birla Group Logo" title="Aditya Birla Group Logo" /></div>
-							<h4 class="mrg-btm">Aditya Birla</h4>
-						
-							<a class="btn btn-primary btn-outline with-arrow" onclick="Redirect();">Apply Now<i class="icon-arrow-right"></i></a>
-						</div>
-					</div>
-					
-					<div class="col-md-4 animate-box">
-						<div class="price-box popular1">
-							<div class="center-blg"><img src="<?php echo e(URL::to('images/apply-online.png')); ?>" alt="apply_online_pic" /></div>
-							<h4 class="mrg-btm">Edelweiss</h4>
-							
-							
-							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('edelweiss')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
-						</div>
-					</div>
-					
-					<div class="col-md-4 animate-box">
-						<div class="price-box popular1">
-							<div class="center-blg"><img src="<?php echo e(URL::to('images/bank/iifl.png')); ?>" width="140" alt="apply_online_pic" /></div>
-							<h4 class="mrg-btm">IIFL</h4>
-							
-							
-							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('apply-iifl-loan')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
-						</div>
-					</div>
-
-					<div class="col-md-4 animate-box">
-						<div class="price-box popular1">
-							<div class="center-blg"><img src="<?php echo e(URL::to('images/lendingkart.png')); ?>" width="150" alt="apply_online_pic" /></div>
-							<h4 class="mrg-btm">LendingKart</h4>
+							<div class="center-blg"><img src="<?php echo e(URL::to('images/express/lendingkart.png')); ?>" alt="lendingkart Logo" title="lendingkart  Logo" /></div>
+							<h4 class="mrg-btm">Business Loan</h4>
 							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('lendingkart')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
 						</div>
-					</div>
-					<div class="col-md-4 animate-box">
+						
 						<div class="price-box popular1">
-							<div class="center-blg"><img src="<?php echo e(URL::to('images/earlysalary.png')); ?>" width="150" alt="apply_online_pic" /></div>
-							<h4 class="mrg-btm">Early Salary</h4>
-							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('early-salary')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
+							<div class="center-blg"><img src="<?php echo e(URL::to('images/express/birla.png')); ?>" alt="Aditya Birla Logo" title="Aditya Birla Logo" /></div>
+							<h4 class="mrg-btm">Business Loan</h4>
+							<a class="btn btn-primary btn-outline with-arrow" onclick="Redirect();">Apply Now<i class="icon-arrow-right"></i></a>
 						</div>
-					</div>
-					
-					
-					<div class="col-md-4 animate-box">
+						
 						<div class="price-box popular1">
-							<div class="center-blg"><img src="<?php echo e(URL::to('images/bank/yes.png')); ?>" width="150" alt="apply_online_pic" /></div>
-							<h4 class="mrg-btm">Yes Bank</h4>
+							<div class="center-blg"><img src="<?php echo e(URL::to('images/express/tribe.png')); ?>" alt="Tribe Logo" title="Tribe Logo" /></div>
+							<h4 class="mrg-btm">Business Loan</h4>
+							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('tribe')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
+						</div>
+						
+						<div class="price-box popular1">
+							<div class="center-blg"><img src="<?php echo e(URL::to('images/express/edelweiss.png')); ?>" alt="Edelweiss Logo" title="Edelweiss Logo" /></div>
+							<h4 class="mrg-btm">Business Loan</h4>
+							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('edelweiss')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
+						</div>
+						
+						<div class="price-box popular1">
+							<div class="center-blg"><img src="<?php echo e(URL::to('images/express/hdfc.png')); ?>" alt="HDFC Logo" title="HDFC Logo" /></div>
+							<h6 class="text-center text-danger"><i>Coming Soon</i></h6>
+							<h4 class="mrg-btm">Business Loan</h4>
+							
+							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('contact-us')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
+						</div>
+						
+						<div class="price-box popular1">
+							<div class="center-blg"><img src="<?php echo e(URL::to('images/express/capital_first.png')); ?>" alt="Capital First Logo" title="Capital First Logo" /></div>
+							<h6 class="text-center text-danger"><i>Coming Soon</i></h6>
+							<h4 class="mrg-btm">Business Loan</h4>
+							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('contact-us')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
+						</div>
+						
+						<div class="price-box popular1">
+							<div class="center-blg"><img src="<?php echo e(URL::to('images/express/capital_float.png')); ?>" alt="Capital Float Logo" title="Capital Float Logo" /></div>
+							<h6 class="text-center text-danger"><i>Coming Soon</i></h6>
+							<h4 class="mrg-btm">Business Loan</h4>
 							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('contact-us')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
 						</div>
 					</div>
-					<div class="col-md-4 animate-box">
+				
+				
+				
+				
+					<div class="col-md-3 animate-box">
+					   <h3 style="background:#28a0ff;color:#fff; font-size:14px; padding:10px;">Personal Loan</h3>
 						<div class="price-box popular1">
-							<div class="center-blg"><img src="<?php echo e(URL::to('images/bank/idfc.png')); ?>" width="150" alt="apply_online_pic" /></div>
-							<h4 class="mrg-btm">IDFC</h4>
+							<div class="center-blg"><img src="<?php echo e(URL::to('images/express/rbl.png')); ?>" alt="RBL Logo" title="RBL Logo" /></div>
+							<h4 class="mrg-btm">Personal Loan</h4>
+							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('rbl-personal-loan')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
+						</div>
+						
+						<div class="price-box popular1">
+							<div class="center-blg"><img src="<?php echo e(URL::to('images/express/kotak.png')); ?>" alt="Kotak Logo" title="Kotak Logo" /></div>
+							<h4 class="mrg-btm">Personal Loan</h4>
+							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('kotak-personal-loan')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
+						</div>
+						
+						<div class="price-box popular1">
+							<div class="center-blg"><img src="<?php echo e(URL::to('images/express/iifl.png')); ?>" alt="IIFL Logo" title="IIFL Logo" /></div>
+							<h4 class="mrg-btm">Personal Loan</h4>
+							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('apply-iifl-loan')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
+						</div>
+						
+						<div class="price-box popular1">
+							<div class="center-blg"><img src="<?php echo e(URL::to('images/express/tata_capital.png')); ?>" alt="Tata Capital Logo" title="Tata Capital Logo" /></div>
+							<h6 class="text-center text-danger"><i>Coming Soon</i></h6>
+							<h4 class="mrg-btm">Personal Loan</h4>
 							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('contact-us')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
 						</div>
-					</div>
-					<div class="col-md-4 animate-box">
+						
 						<div class="price-box popular1">
-							<div class="center-blg"><img src="<?php echo e(URL::to('images/bank/kotak.png')); ?>" width="150" alt="apply_online_pic" /></div>
-							<h4 class="mrg-btm">Kotak Home Loan</h4>
-							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('kotak-home-loan')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
+							<div class="center-blg"><img src="<?php echo e(URL::to('images/express/capital_first.png')); ?>" alt="Capital First Logo" title="Capital First Logo" /></div>
+							<h6 class="text-center text-danger"><i>Coming Soon</i></h6>
+							<h4 class="mrg-btm">Personal Loan</h4>
+							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('contact-us')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
+						</div>
+						
+						<div class="price-box popular1">
+							<div class="center-blg"><img src="<?php echo e(URL::to('images/express/hdfc.png')); ?>" alt="HDFC Logo" title="HDFC Logo" /></div>
+							<h6 class="text-center text-danger"><i>Coming Soon</i></h6>
+							<h4 class="mrg-btm">Personal Loan</h4>
+							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('contact-us')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
 						</div>
 					</div>
 
@@ -168,46 +191,77 @@
 						</div>
 					</div>
 					
-					<div class="col-md-4 animate-box">
-						<div class="price-box popular1">
-							<div class="center-blg"><img src="<?php echo e(URL::to('images/bank/hdfc.png')); ?>" width="160" alt="apply_online_pic" /></div>
-							<h4 class="mrg-btm">HDFC</h4>
-							
-							
-							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('contact-us')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
-						</div>
-					</div>
-					<div class="col-md-4 animate-box">
-						<div class="price-box popular1">
-							<div class="center-blg"><img src="<?php echo e(URL::to('images/bank/rbl.png')); ?>"width="160" alt="apply_online_pic" /></div>
-							<h4 class="mrg-btm">RBL Personal Loan </h4>
-							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('rbl-personal-loan')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
-						</div>
-					</div>
 					
-					<div class="col-md-4 animate-box">
+					
+					<div class="col-md-3 animate-box">
+					   <h3 style="background:#28a0ff;color:#fff; font-size:14px; padding:10px;">Home Loan</h3>
 						<div class="price-box popular1">
-							<div class="center-blg"><img src="<?php echo e(URL::to('images/bank/icici.png')); ?>"width="160" alt="apply_online_pic" /></div>
-							<h4 class="mrg-btm">ICICI</h4>
-							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('contact-us')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
-						</div>
-					</div>
-
-					<!-- <div class="col-md-4 animate-box">
-						<div class="price-box popular1">
-							<div class="center-blg"><img src="<?php echo e(URL::to('images/bank/kotak.png')); ?>"width="160" alt="apply_online_pic" /></div>
-							<h4 class="mrg-btm">Kotak Home Loan</h4>
+							<div class="center-blg"><img src="<?php echo e(URL::to('images/express/kotak.png')); ?>" alt="Kotak Logo" title="Kotak Logo" /></div>
+							<h4 class="mrg-btm">Home Loan</h4>
 							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('kotak-home-loan')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
 						</div>
-					</div> -->
-
-					<div class="col-md-4 animate-box">
+						
 						<div class="price-box popular1">
-							<div class="center-blg"><img src="<?php echo e(URL::to('images/bank/tata-capital.png')); ?>"width="160" alt="apply_online_pic" /></div>
-							<h4 class="mrg-btm">Tata Capital BL</h4>
-							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('tata-capital-business-loan')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
+							<div class="center-blg"><img src="<?php echo e(URL::to('images/express/yesbank.png')); ?>" alt="Yes Logo" title="Yes Logo" /></div>
+							<h4 class="mrg-btm">Home Loan</h4>
+							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('yesbank-home-loan')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
 						</div>
+						
+						<div class="price-box popular1">
+							<div class="center-blg"><img src="<?php echo e(URL::to('images/express/hdfc.png')); ?>" alt="HDFC Logo" title="HDFC Logo" /></div>
+							<h6 class="text-center text-danger"><i>Coming Soon</i></h6>
+							<h4 class="mrg-btm">Home Loan</h4>
+							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('contact-us')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
+						</div>
+						
+						<div class="price-box popular1">
+							<div class="center-blg"><img src="<?php echo e(URL::to('images/express/vastu.png')); ?>" alt="Vastu Logo" title="Vastu Logo" /></div>
+							<h6 class="text-center text-danger"><i>Coming Soon</i></h6>
+							<h4 class="mrg-btm">Home Loan</h4>
+							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('contact-us')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
+						</div>
+						
+						
 					</div>
+					
+					
+					
+					
+					
+					
+					
+					
+					
+					<div class="col-md-3 animate-box">
+					   <h3 style="background:#28a0ff;color:#fff; font-size:14px; padding:10px;">Short Term Personal Loan</h3>
+						<div class="price-box popular1">
+							<div class="center-blg"><img src="<?php echo e(URL::to('images/express/early.png')); ?>" alt="Early Salary Logo" title="Early Salary Logo" /></div>
+							<h4 class="mrg-btm">Short Term Personal Loan</h4>
+							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('early-salary')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
+						</div>
+						
+						<div class="price-box popular1">
+							<div class="center-blg"><img src="<?php echo e(URL::to('images/express/pay.png')); ?>" alt="Pay Sense Logo" title="Pay Sense Logo" /></div>
+							<h6 class="text-center text-danger"><i>Coming Soon</i></h6>
+							<h4 class="mrg-btm">Short Term Personal Loan</h4>
+							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('contact-us')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
+						</div>
+						
+						
+						<h3 style="background:#28a0ff;color:#fff; font-size:14px; padding:10px;">POS Loan</h3>
+						<div class="price-box popular1">
+							<div class="center-blg"><img src="<?php echo e(URL::to('images/express/iifl.png')); ?>" alt="IIFL Logo" title="IIFL Logo" /></div>
+							<h6 class="text-center text-danger"><i>Coming Soon</i></h6>
+							<h4 class="mrg-btm">POS Loan</h4>
+							<a class="btn btn-primary btn-outline with-arrow" href="<?php echo e(URL::to('contact-us')); ?>">Apply Now<i class="icon-arrow-right"></i></a>
+						</div>	
+					</div>
+					
+					
+					
+					
+
+					
 
 					
 					

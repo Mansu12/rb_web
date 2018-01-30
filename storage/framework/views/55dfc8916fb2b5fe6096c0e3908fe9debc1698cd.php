@@ -1,18 +1,19 @@
-@include('layout.header')
+<?php echo $__env->make('layout.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 <br>
 <div class="container" id="fh5co-hero">
 
 <div class="row white-bg pad1">
 		<div class="col-sm-5">
-			<img src="{{URL::to('images/contact_img.jpg')}}" alt="Contact Us" title="Contact Us" class="img-responsive">
+			<img src="<?php echo e(URL::to('images/contact_img.jpg')); ?>" alt="Contact Us" title="Contact Us" class="img-responsive">
 		</div>
 		<div  class="col-sm-6">
 			<h2 class="">Have us call you now.</h2>
 			<h3>Your contact details:</h3>
 			<div class="row">
 			<form name="contact_back_now" id="subscribe-form" method="post"> 
-                   {{ csrf_field() }}
+                   <?php echo e(csrf_field()); ?>
+
                 <input type="hidden" name="form" value="contact-back-form">
                         
                     <div class="form-group col-sm-12">
@@ -41,7 +42,7 @@
 
                   
                     <div class="iframeloading" style= "display: none; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
-                <img src="{{URL::to('images/ajaxloader.gif')}}" alt="Loader" title="Loader" style="top: 50%; position: relative; left: 50%;"  />
+                <img src="<?php echo e(URL::to('images/ajaxloader.gif')); ?>" alt="Loader" title="Loader" style="top: 50%; position: relative; left: 50%;"  />
                </div> 
             </form>
             
@@ -62,6 +63,6 @@
 <br>
 
 
-@include('layout.footer')
-@include('layout.script')
+<?php echo $__env->make('layout.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('layout.script', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
