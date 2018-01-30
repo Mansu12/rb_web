@@ -230,6 +230,10 @@ class CreditcardController extends CallApiController
         print_r($req->all());
        
     }
+
+    public function sbi(){
+            return view('sbi');
+     }
 }
 
 
