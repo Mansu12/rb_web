@@ -420,4 +420,5 @@ Route::get('capitalfloat','LoanController@capitalfloat');
 
 /*SBI CC*/
 Route::get('sbi-cc','CreditcardController@sbi_cc');
+Route::post('sbi-cc-submit','CreditcardController@sbi_cc_submit');
 
