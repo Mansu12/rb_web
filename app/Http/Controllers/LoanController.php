@@ -1004,6 +1004,7 @@ $url = $this::$url_static."/BankAPIService.svc/updateIIFLRevisedQuote";
     $data['brokerid']=Session::get('brokerid')?Session::get('brokerid'):'MAA=';
     $data['empid']=Session::get('empid')?Session::get('empid'):'MAA=';
     $data['source']=Session::get('source')?Session::get('source'):'MAA=';
+    $data['CampaignName']=Session::get('CampaignName');
     // $data['UniqRefCode']='135'.(substr(str_shuffle(str_repeat("0123456789", 6)), 0, 6));
     
    
@@ -1165,6 +1166,7 @@ $url = $this::$url_static."/BankAPIService.svc/updateIIFLRevisedQuote";
     return view('capitalfloat');
    }
 
+/*Emailer Purpose*/
    public function rbl_personal_loan_dc(){
     return view('rbl-personal-loan-dc');
    }
@@ -1172,5 +1174,14 @@ $url = $this::$url_static."/BankAPIService.svc/updateIIFLRevisedQuote";
    public function kotak_personal_loan_dc(){
     return view('kotak-personal-loan-dc');
    }
+
+   public function apply_iifl_loan_dc(Request $req){
+    $CampaignName=Session::get('CampaignName');
+    // print_r($CampaignName);exit();
+
+    return view('apply-iifl-loan-dc',['CampaignName'=>$CampaignName]);
+   }
+
+   
 }
 

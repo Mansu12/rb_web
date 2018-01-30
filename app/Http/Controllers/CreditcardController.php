@@ -170,7 +170,7 @@ class CreditcardController extends CallApiController
         $data['source']=Session::get('source')?Session::get('source'):'MAA=';
         $post_data =json_encode(array("CreditCard"=> $data));
      // print_r($post_data);exit();
-       //  print_r($post_data);exit();
+        // print_r($post_data);exit();
         $url = $this::$url_static."BankAPIService.svc/createRBLCreditCardReq ";
         $result=$this->call_json_data_api($url,$post_data);
         $http_result=$result['http_result'];
@@ -180,6 +180,7 @@ class CreditcardController extends CallApiController
         $m=$s=str_replace('\\', "", $s);
         $n=$s=str_replace('#', "", $m);
         $obj=json_decode($n);
+        // print_r($obj);exit();
 
         // $obj->broker_status=(Session::get('brokerid')||Session::get('empid')||Session::get('source'))?1:0;
        // print_r($obj);exit();

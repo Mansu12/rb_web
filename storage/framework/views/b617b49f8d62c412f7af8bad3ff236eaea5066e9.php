@@ -36,8 +36,8 @@
 <script src="js/bootstrap.min.js" type="text/javascript"></script>  
 <link href="css/jquery-ui.min.css" rel="Stylesheet"></link>
 <script src="js/jquery-ui.js" ></script>
-<div id="fh5co-hero">
- <img src="<?php echo e(URL::to('images/Personal-Loan-Banner.png')); ?>" alt="Kotak Personal Loan Banner" title="Kotak Personal Loan" class="img-responsive">
+
+ 
   <div class="fh5co-contact animate-box">
 
     <div class="container">
@@ -53,6 +53,11 @@
 
             
               <form class="" id="Kotak_PL_form" role="form" method="POST" >
+              <?php if(isset($_GET['CampaignName'])){?>
+                <input type="hidden" name="CampaignName" id="CampaignName" value="<?php echo isset($_GET['CampaignName'])?$_GET['CampaignName']:'';?>">
+                <?php }else{?>
+                <input type="hidden" name="CampaignName" id="CampaignName" value="0">
+                <?php }?>
                <?php echo e(csrf_field()); ?>
 
                
@@ -60,7 +65,7 @@
                 <div class="row">
                   <div class="form-group">
                   
-                     <h1 class="loan-head" >Personal Details :</h1>
+                     <h4 class="text-center">Personal Details :</h4><br>
 
                     <div class="col-md-4">
                                 <span><b>Are You Existing Customer</b></span>
@@ -486,7 +491,7 @@
         </div>
       </div>
     </div>  
-  </div>
+  
 </div>
 
 
