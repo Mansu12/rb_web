@@ -2,6 +2,13 @@
     <script src="{{URL::to('js/jsPdf.js')}}"></script>
 	 <script src="{{URL::to('js/freshslider.min.js')}}"></script>
 	 
+	 
+	 
+<script>
+   $(window).load(function(){        
+   $('#myModal111').modal('show');
+    }); 
+</script> 
  <script>
 	       // Hide Header on on scroll down
 //var didScroll;
@@ -1938,6 +1945,45 @@ function mobile_valid(element){
    </div>
   </div>
   </div>
+  
+  
+  
+  
+  
+  <div id="equifaxTerm" role="dialog" class="modal fade">
+    <div class="modal-dialog">
+      <!-- Modal content-->
+      <div class="modal-content " style="height:450px; overflow:auto;">
+        <div class="modal-header">
+          <h4 class="modal-title text-center">Rupeeboss Financial Services Pvt. Ltd</h4>
+		  <hr>
+          <h4>TERMS OF USE</h4>
+		  <p>Rupeeboss Financial Services Pvt. Ltd is an online service that enables you to access your Credit Score/Report based on the data supplied by our third party data processing service provider, Equifax Credit Information Services Pvt Ltd (Processing Service Provider). The Service consists of receipt of your credit report/score. This information is for your personal use only, report subject to your agreement to the provisions set forth below.</p>
+		  <p>Please read the following provisions carefully before using this Service. If you do not agree with any of these provisions, you should not use this Service. By accessing or using this Service you agree to be bound by these Terms of Use.</p>
+		  <p>Subject to the Terms of Use, Rupeeboss Financial Services Pvt. Ltd will provide the Service to you. By clicking "I AGREE," you indicate that you understand and agree to these Terms of Use.</p>
+		  <hr>
+		  </h4>1. REQUEST FOR SERVICE</h4>
+		  <p>You agree that by filing up your details in the Credit Report Request (Request Form) and requesting the Service you are providing "written instructions" to Rupeeboss and you authorize and instruct the Processing Service Provider, its affiliates and suppliers, to obtain, and compile your credit information in order to provide the Service to you and you authorize Rupeeboss to provide the Service to you through the Website ***********. You agree that the Service is provided for informational purposes only and is intended to provide helpful information concerning the subjects that it addresses. You agree that by processing your request for the Service as provided herein, Rupeeboss is not offering to sell, provide or perform any service to you for the express or implied purpose of either improving your credit record, credit history or credit rating or providing advice or assistance to you with regard to improving your credit record, credit history or credit rating. The processing of your request (Services) will start after receipt of your Request Form with the relevant documents.
+</p>
+          <h4>2. AUTHORIZATION</h4>
+		  <p>You must be at least 18 years of age to use the Service, and you must be the subject of the credit report that you are seeking. You agree not to use the Request Form to attempt to obtain Credit Report about any other person other than you.</p>
+		  <p>You hereby authorize Rupeeboss to do all of the following in connection with providing you the Services: (i) verify your identity and share with our Processing Service Provider certain personal identifiable information about You; (ii) request and obtain your Credit report, including your score from our Processing Agent throughout the term in which we provide you the Services; such request constitutes "written instructions" and (iii) use and retain your credit information, along with the other information you have given us access to under this Authorization, to provide the Services and use with other Rupeeboss services.You agree that we may use and analyze your information as follows: (a) present you an overview of your credit profile including detailed information, where available; (b) provide you with customized recommendations and general information to sell or offer the products and services of Rupeeboss; (c) serve you targeted ads and other communication based on your information; and (d) providing advice or assistance to you with regard to improving your credit record, credit history or credit rating. Rupeeboss may send you information via email, text or online display or other means of delivery in Rupeeboss reasonable sole discretion. We may also aggregate and evaluate your information to do statistical analysis to provide historical or comparative information about your data. You hereby agree that your authorization shall be contiguous with your account with Rupeeboss, which will enable Rupeeboss to provide you with your credit report from time to time. This authorization shall immediately and automatically terminate with the deactivation of your account.</p>
+		  <p>We will obtain your prior consent if we use your identifying information for any other purpose not expressly permitted under these Terms. Please refer to ourPrivacy Policyfor more information.</p>
+       </div>
+     </div>
+   </div>
+  </div>
+  
+  <script type="text/javascript">
+     
+      $(document).ready(function () {
+          if (!$.browser.webkit) {
+              $('.container').jScrollPane();
+          }
+      });
+     
+    </script>
+                 
 
 <script type="text/javascript">
 
@@ -2496,7 +2542,7 @@ $(window).on('load', function(){
         });
 		</script>
 		
-       
+      
  
   
 

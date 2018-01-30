@@ -1,4 +1,5 @@
 @include('layout.header')
+
 <br>
 <div class="container" id="fh5co-hero">
 
@@ -27,10 +28,16 @@
                     </div>
 					<br>
 					 <button class="btn btn-primary btn-outline with-arrow pull-left sidebar-submit" >Call Me Back<i class="icon-arrow-right"></i></button>
+					 
+					 
                     </div>
-                          
+                       
+        <div class="col-md-12"><input type="checkbox" name="checkbx"/> I Agree Rupeeboss <a href="#" data-toggle="modal" data-target="#equifaxTerm">Terms & Conditions</a></div>					   
                    
-                           
+                      <div class="col-md-12"><input type="checkbox" name="terms" required>
+											I hereby confirm that I have read and understood the
+
+											<a href="#" data-toggle="modal" data-target="#Experian_terms_modal"> Rupeeboss Terms</a> and Conditions applicable to this service and that all the details furnished by me above are true and correct. I further provide consent to Rupeeboss and its affiliates to contact me with reference to financial products and this consent shall override any registration with DNC/NDNC.</div>     
 
                   
                     <div class="iframeloading" style= "display: none; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">

@@ -54,3 +54,25 @@
  .eqfx-input {margin:0 auto; padding:10px;background:#eee;border:1px solid #ddd; display:block;margin-top:20px; width:70%;}
  .otp-btn {padding:10px 30px; background:#ed1e26; color:#fff; width:120px;margin:0 auto; display:block;margin-top:15px;}
   .h4-text  { color:#333; }
+  
+  
+  body::-webkit-scrollbar
+    width: 20px
+  
+  body::-webkit-scrollbar-track
+    background: tomato
+    border-left: 9px solid white
+    border-right: 9px solid white
+  
+  body::-webkit-scrollbar-thumb
+    background: black
+    border-left: 7px solid white
+    border-right: 7px solid white
+  
+
+   
+    body:last-child
+      margin-bottom: 0
+
+  
+  

@@ -1,3 +1,20 @@
+
+<div id="myModal111" class="modal fade" role="dialog">
+  <div class="modal-dialog model-widh">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="model-header">
+        <button type="button" class="close" data-dismiss="modal">x</button>
+      </div>
+      <div class="modal-body">
+        <img src="{{URL::to('images/new_year_img.png')}}" alt="Happy New Year 2018 " width="800" height="508" />
+      </div>
+      
+    </div>
+
+  </div>
+</div>
+
 @include('layout.header')
 
 

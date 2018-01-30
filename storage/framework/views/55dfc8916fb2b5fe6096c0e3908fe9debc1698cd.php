@@ -1,4 +1,5 @@
 <?php echo $__env->make('layout.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
 <br>
 <div class="container" id="fh5co-hero">
 
@@ -28,10 +29,16 @@
                     </div>
 					<br>
 					 <button class="btn btn-primary btn-outline with-arrow pull-left sidebar-submit" >Call Me Back<i class="icon-arrow-right"></i></button>
+					 
+					 
                     </div>
-                          
+                       
+        <div class="col-md-12"><input type="checkbox" name="checkbx"/> I Agree Rupeeboss <a href="#" data-toggle="modal" data-target="#equifaxTerm">Terms & Conditions</a></div>					   
                    
-                           
+                      <div class="col-md-12"><input type="checkbox" name="terms" required>
+											I hereby confirm that I have read and understood the
+
+											<a href="#" data-toggle="modal" data-target="#Experian_terms_modal"> Rupeeboss Terms</a> and Conditions applicable to this service and that all the details furnished by me above are true and correct. I further provide consent to Rupeeboss and its affiliates to contact me with reference to financial products and this consent shall override any registration with DNC/NDNC.</div>     
 
                   
                     <div class="iframeloading" style= "display: none; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
@@ -52,7 +59,6 @@
 		<iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3770.51082761713!2d72.8894307!3d19.0852334!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7c87d64ffffff%3A0x52070606740f342d!2sRupeeBoss+financial+Services+Pvt.+ltd!5e0!3m2!1sen!2s!4v1492498308982" width="100%" height="350" frameborder="0" style="border:0" allowfullscreen></iframe>
 		</div>
 	</div>
-<button class="btn btn-default" data-toggle="modal" data-target="#equifax_modal" >Model Popup</button>
 </div>
 <br>
 

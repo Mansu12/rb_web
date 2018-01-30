@@ -58,8 +58,17 @@
  }
 
  </script>
- 
+ <style>
+    #myModal111 .modal-dialog:after {display:none;}
+	#myModal111 .modal-dialog {width: 832px !important;height:450px;padding: 0px;position: relative;}
+	#myModal111 .modal-dialog .close {z-index: 99999999;color: white;text-shadow: 0px 0px 0px;font-weight: normal;top: -11px;right: -11px;position: absolute;
+    opacity: 1;background: #ed1e26;width: 40px;height: 40px;line-height: 26px;border-radius: 70px;
+}
+ </style>
+ </head>
 	<body>
+	
+	
 <!-- 	
 <script async="async" type="text/javascript" src="https://app.tigerapi.com/rest/?i=MTQ5MjY4MDA2OA=="></script> -->
 	<!-- Side bar -->
