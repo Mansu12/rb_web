@@ -16,7 +16,7 @@
             <div class="col-md-6 col-sm-12">
                     <center class="brd">
 					<h3 class="text-left crd-titl">AI Platinum Card</h3>
-					<img src="<?php echo e(url('images/titanium_crd.png')); ?>" class="sbi-crd pull-left" width="260"/>
+					<img src="<?php echo e(url('images/sbi-cards/ai-sbi-platinum-card.png')); ?>" class="sbi-crd pull-left" width="260"/>
 					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
 					 <li>Exclusive Wednesday offers - free movie tickets, value back on groceries & pizzas</li>
 					 <li>4,000 bonus reward points on crossing spends of Rs. 1.2 lacs</li>
@@ -32,7 +32,7 @@
 				<div class="col-md-6 col-sm-12">
                     <center class="brd">
 					<h3 class="text-left crd-titl">AI Signature Card</h3>
-					<img src="<?php echo e(url('images/titanium_crd.png')); ?>" class="sbi-crd pull-left" width="260"/>
+					<img src="<?php echo e(url('images/sbi-cards/ai-sbi-signature-card.png')); ?>" class="sbi-crd pull-left" width="260"/>
 					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
 					 <li>Exclusive Wednesday offers - free movie tickets, value back on groceries & pizzas</li>
 					 <li>4,000 bonus reward points on crossing spends of Rs. 1.2 lacs</li>
@@ -48,7 +48,7 @@
 				<div class="col-md-6 col-sm-12">
                     <center class="brd">
 					<h3 class="text-left crd-titl">Central SBI Cards</h3>
-					<img src="<?php echo e(url('images/titanium_crd.png')); ?>" class="sbi-crd pull-left" width="260"/>
+					<img src="<?php echo e(url('images/sbi-cards/central-sbi-card.png')); ?>" class="sbi-crd pull-left" width="260"/>
 					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
 					 <li>Exclusive Wednesday offers - free movie tickets, value back on groceries & pizzas</li>
 					 <li>4,000 bonus reward points on crossing spends of Rs. 1.2 lacs</li>
@@ -64,7 +64,7 @@
 				<div class="col-md-6 col-sm-12">
                     <center class="brd">
 					<h3 class="text-left crd-titl">FBB SBI Card</h3>
-					<img src="<?php echo e(url('images/titanium_crd.png')); ?>" class="sbi-crd pull-left" width="260"/>
+					<img src="<?php echo e(url('images/sbi-cards/fbb-sbi-card.png')); ?>" class="sbi-crd pull-left" width="260"/>
 					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
 					 <li>Exclusive Wednesday offers - free movie tickets, value back on groceries & pizzas</li>
 					 <li>4,000 bonus reward points on crossing spends of Rs. 1.2 lacs</li>
@@ -80,7 +80,7 @@
 				<div class="col-md-6 col-sm-12">
                     <center class="brd">
 					<h3 class="text-left crd-titl">IRCTC SBI Card Updated</h3>
-					<img src="<?php echo e(url('images/titanium_crd.png')); ?>" class="sbi-crd pull-left" width="260"/>
+					<img src="<?php echo e(url('images/sbi-cards/irctc-sbi-card.png')); ?>" class="sbi-crd pull-left" width="260"/>
 					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
 					 <li>Exclusive Wednesday offers - free movie tickets, value back on groceries & pizzas</li>
 					 <li>4,000 bonus reward points on crossing spends of Rs. 1.2 lacs</li>
@@ -96,7 +96,7 @@
 				<div class="col-md-6 col-sm-12">
                     <center class="brd">
 					<h3 class="text-left crd-titl">SBI Elite Card</h3>
-					<img src="<?php echo e(url('images/titanium_crd.png')); ?>" class="sbi-crd pull-left" width="260"/>
+					<img src="<?php echo e(url('images/sbi-cards/sbi-card-elite.png')); ?>" class="sbi-crd pull-left" width="260"/>
 					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
 					 <li>Exclusive Wednesday offers - free movie tickets, value back on groceries & pizzas</li>
 					 <li>4,000 bonus reward points on crossing spends of Rs. 1.2 lacs</li>
@@ -112,7 +112,7 @@
 				<div class="col-md-6 col-sm-12">
                     <center class="brd">
 					<h3 class="text-left crd-titl">SBI Prime Card</h3>
-					<img src="<?php echo e(url('images/titanium_crd.png')); ?>" class="sbi-crd pull-left" width="260"/>
+					<img src="<?php echo e(url('images/sbi-cards/sbi-prime-card.png')); ?>" class="sbi-crd pull-left" width="260"/>
 					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
 					 <li>Exclusive Wednesday offers - free movie tickets, value back on groceries & pizzas</li>
 					 <li>4,000 bonus reward points on crossing spends of Rs. 1.2 lacs</li>
@@ -125,10 +125,10 @@
                     </center>
 				</div>
 				
-				<!-- <div class="col-md-6 col-sm-12">
+				 <div class="col-md-6 col-sm-12">
                     <center class="brd">
 					<h3 class="text-left crd-titl">SimplyCLICK SBI Card</h3>
-					<img src="<?php echo e(url('images/titanium_crd.png')); ?>" class="sbi-crd pull-left" width="260"/>
+					<img src="<?php echo e(url('images/sbi-cards/simplyclick-sbi-card.png')); ?>" class="sbi-crd pull-left" width="260"/>
 					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
 					 <li>Exclusive Wednesday offers - free movie tickets, value back on groceries & pizzas</li>
 					 <li>4,000 bonus reward points on crossing spends of Rs. 1.2 lacs</li>
@@ -139,12 +139,27 @@
 					 <a href="" class="btn btn-primary pull-left">APPLY NOW</a>
 					 </div>
                     </center>
-				</div> -->
+				</div> 
+				 <div class="col-md-6 col-sm-12">
+                    <center class="brd">
+					<h3 class="text-left crd-titl">SimplySAVE SBI Card</h3>
+					<img src="<?php echo e(url('images/sbi-cards/simplysave-card.png')); ?>" class="sbi-crd pull-left" width="260"/>
+					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
+					 <li>Exclusive Wednesday offers - free movie tickets, value back on groceries & pizzas</li>
+					 <li>4,000 bonus reward points on crossing spends of Rs. 1.2 lacs</li>
+					 <li>1 Reward point on every Rs.100 spent except fuel</li>
+					 <li>Waiver of fuel surcharge up to Rs. 100 every month</li>
+                     <li>Joining Fee Rs.750</li>
+					 </ul>
+					 <a href="" class="btn btn-primary pull-left">APPLY NOW</a>
+					 </div>
+                    </center>
+				</div> 
 				
 				<div class="col-md-6 col-sm-12">
                     <center class="brd">
 					<h3 class="text-left crd-titl">Yatra Card One Pager</h3>
-					<img src="<?php echo e(url('images/titanium_crd.png')); ?>" class="sbi-crd pull-left" width="260"/>
+					<img src="<?php echo e(url('images/sbi-cards/yatra-card-face.png')); ?>" class="sbi-crd pull-left" width="260"/>
 					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
 					 <li>Exclusive Wednesday offers - free movie tickets, value back on groceries & pizzas</li>
 					 <li>4,000 bonus reward points on crossing spends of Rs. 1.2 lacs</li>
