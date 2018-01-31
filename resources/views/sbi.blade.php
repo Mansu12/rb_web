@@ -18,11 +18,10 @@
 					<h3 class="text-left crd-titl">AI Platinum Card</h3>
 					<img src="{{url('images/sbi-cards/ai-sbi-platinum-card.png')}}" class="sbi-crd pull-left" width="260"/>
 					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
-					 <li>Exclusive Wednesday offers - free movie tickets, value back on groceries & pizzas</li>
-					 <li>4,000 bonus reward points on crossing spends of Rs. 1.2 lacs</li>
-					 <li>1 Reward point on every Rs.100 spent except fuel</li>
-					 <li>Waiver of fuel surcharge up to Rs. 100 every month</li>
-                     <li>Joining Fee Rs.750</li>
+					 <li>5,000 Reward Points as Welcome Gift</li>
+                     <li>Card Anniversary gift of 2,000 Reward Points, every year</li>
+                     <li>Upto 15 Reward Points for every Rs. 100 spent on Air India tickets</li>
+                     <li>Up to 15,000 Bonus Reward Points on annual spends</li>
 					 </ul>
 					 <a href="" class="btn btn-primary pull-left">APPLY NOW</a>
 					 </div>
@@ -34,11 +33,10 @@
 					<h3 class="text-left crd-titl">AI Signature Card</h3>
 					<img src="{{url('images/sbi-cards/ai-sbi-signature-card.png')}}" class="sbi-crd pull-left" width="260"/>
 					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
-					 <li>Exclusive Wednesday offers - free movie tickets, value back on groceries & pizzas</li>
-					 <li>4,000 bonus reward points on crossing spends of Rs. 1.2 lacs</li>
-					 <li>1 Reward point on every Rs.100 spent except fuel</li>
-					 <li>Waiver of fuel surcharge up to Rs. 100 every month</li>
-                     <li>Joining Fee Rs.750</li>
+					 <li>20,000 Reward Points as Welcome Gift</li>
+					 <li>Card Anniversary gift of 5,000 Reward Points every year</li>
+					 <li>Upto 30 Reward Points for every Rs. 100 spent on Air India tickets.</li>
+					 <li>Up to 1,00,000 Bonus Reward Points on annual spends </li>
 					 </ul>
 					 <a href="" class="btn btn-primary pull-left">APPLY NOW</a>
 					 </div>
@@ -50,11 +48,10 @@
 					<h3 class="text-left crd-titl">Central SBI Cards</h3>
 					<img src="{{url('images/sbi-cards/central-sbi-card.png')}}" class="sbi-crd pull-left" width="260"/>
 					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
-					 <li>Exclusive Wednesday offers - free movie tickets, value back on groceries & pizzas</li>
-					 <li>4,000 bonus reward points on crossing spends of Rs. 1.2 lacs</li>
-					 <li>1 Reward point on every Rs.100 spent except fuel</li>
-					 <li>Waiver of fuel surcharge up to Rs. 100 every month</li>
-                     <li>Joining Fee Rs.750</li>
+					 <li>Welcome benefits worth Rs. 1,750</li>
+					 <li>10 Select Points per Rs. 100 spent at any Central store</li>
+					 <li>5 Select Points per Rs. 100 spent on Dining & Movies</li>
+					 <li>1 Select Point per Rs. 100 on other retail spends (Non fuel)</li>
 					 </ul>
 					 <a href="" class="btn btn-primary pull-left">APPLY NOW</a>
 					 </div>
@@ -66,11 +63,10 @@
 					<h3 class="text-left crd-titl">FBB SBI Card</h3>
 					<img src="{{url('images/sbi-cards/fbb-sbi-card.png')}}" class="sbi-crd pull-left" width="260"/>
 					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
-					 <li>Exclusive Wednesday offers - free movie tickets, value back on groceries & pizzas</li>
-					 <li>4,000 bonus reward points on crossing spends of Rs. 1.2 lacs</li>
-					 <li>1 Reward point on every Rs.100 spent except fuel</li>
-					 <li>Waiver of fuel surcharge up to Rs. 100 every month</li>
-                     <li>Joining Fee Rs.750</li>
+					 <li>Flat 10% Discount on all Fashion Apparel, Accessories, Backpacks, Footwear & School Bags at fbb & Big Bazaar Stores</li>
+					 <li>10X Reward Points on Big Bazaar, fbb & Dining spend</li>
+					 <li>Welcome gift of Rs.500 worth fbb gift voucher</li>
+					 <li>2000 Reward points on Card Anniversary</li>
 					 </ul>
 					 <a href="" class="btn btn-primary pull-left">APPLY NOW</a>
 					 </div>
@@ -82,11 +78,10 @@
 					<h3 class="text-left crd-titl">IRCTC SBI Card Updated</h3>
 					<img src="{{url('images/sbi-cards/irctc-sbi-card.png')}}" class="sbi-crd pull-left" width="260"/>
 					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
-					 <li>Exclusive Wednesday offers - free movie tickets, value back on groceries & pizzas</li>
-					 <li>4,000 bonus reward points on crossing spends of Rs. 1.2 lacs</li>
-					 <li>1 Reward point on every Rs.100 spent except fuel</li>
-					 <li>Waiver of fuel surcharge up to Rs. 100 every month</li>
-                     <li>Joining Fee Rs.750</li>
+					 <li>Upto 10% value back as Reward Points for railway ticket purchases</li>
+					 <li>350 bonus Reward Points on activation</li>
+					 <li>1.8% transaction charges waiver, on railway ticket bookings on irctc.co.in</li>
+					 <li>1% fuel surcharge waiver at all petrol pumps</li>
 					 </ul>
 					 <a href="" class="btn btn-primary pull-left">APPLY NOW</a>
 					 </div>
@@ -98,11 +93,10 @@
 					<h3 class="text-left crd-titl">SBI Elite Card</h3>
 					<img src="{{url('images/sbi-cards/sbi-card-elite.png')}}" class="sbi-crd pull-left" width="260"/>
 					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
-					 <li>Exclusive Wednesday offers - free movie tickets, value back on groceries & pizzas</li>
-					 <li>4,000 bonus reward points on crossing spends of Rs. 1.2 lacs</li>
-					 <li>1 Reward point on every Rs.100 spent except fuel</li>
-					 <li>Waiver of fuel surcharge up to Rs. 100 every month</li>
-                     <li>Joining Fee Rs.750</li>
+					 <li>Welcome e-Gift Voucher worth Rs. 5,000 on joining</li>
+					 <li>Get free movie tickets worth Rs. 6,000 every year</li>
+					 <li>Earn upto 50,000 Bonus Reward Points worth Rs. 12,500/year</li>
+					 <li>Complimentary membership to Club Vistara and Trident Privilege program</li>
 					 </ul>
 					 <a href="" class="btn btn-primary pull-left">APPLY NOW</a>
 					 </div>
@@ -114,11 +108,10 @@
 					<h3 class="text-left crd-titl">SBI Prime Card</h3>
 					<img src="{{url('images/sbi-cards/sbi-prime-card.png')}}" class="sbi-crd pull-left" width="260"/>
 					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
-					 <li>Exclusive Wednesday offers - free movie tickets, value back on groceries & pizzas</li>
-					 <li>4,000 bonus reward points on crossing spends of Rs. 1.2 lacs</li>
-					 <li>1 Reward point on every Rs.100 spent except fuel</li>
-					 <li>Waiver of fuel surcharge up to Rs. 100 every month</li>
-                     <li>Joining Fee Rs.750</li>
+					 <li>Welcome e-Gift Voucher worth Rs. 3,000 on joining</li>
+					 <li>Spend linked Gift Vouchers worth Rs. 11,000</li>
+					 <li>10 Reward Points per Rs. 100 spent on Dining, Groceries, Departmental stores and Movies</li>
+					 <li>Complimentary International and Domestic Airport Lounge access</li>
 					 </ul>
 					 <a href="" class="btn btn-primary pull-left">APPLY NOW</a>
 					 </div>
@@ -130,11 +123,10 @@
 					<h3 class="text-left crd-titl">SimplyCLICK SBI Card</h3>
 					<img src="{{url('images/sbi-cards/simplyclick-sbi-card.png')}}" class="sbi-crd pull-left" width="260"/>
 					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
-					 <li>Exclusive Wednesday offers - free movie tickets, value back on groceries & pizzas</li>
-					 <li>4,000 bonus reward points on crossing spends of Rs. 1.2 lacs</li>
-					 <li>1 Reward point on every Rs.100 spent except fuel</li>
-					 <li>Waiver of fuel surcharge up to Rs. 100 every month</li>
-                     <li>Joining Fee Rs.750</li>
+					 <li>Amazon.in Gift Card worth Rs. 500 on joining</li>
+					 <li>5X Reward Points on online spends</li>
+					 <li>10X Reward Points on online spends with exclusive partners</li>
+					 <li>E-vouchers worth Rs.2000 on annual online spends of Rs.1 Lakh and Rs.2 Lakhs each</li>
 					 </ul>
 					 <a href="" class="btn btn-primary pull-left">APPLY NOW</a>
 					 </div>
@@ -145,11 +137,10 @@
 					<h3 class="text-left crd-titl">SimplySAVE SBI Card</h3>
 					<img src="{{url('images/sbi-cards/simplysave-card.png')}}" class="sbi-crd pull-left" width="260"/>
 					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
-					 <li>Exclusive Wednesday offers - free movie tickets, value back on groceries & pizzas</li>
-					 <li>4,000 bonus reward points on crossing spends of Rs. 1.2 lacs</li>
-					 <li>1 Reward point on every Rs.100 spent except fuel</li>
-					 <li>Waiver of fuel surcharge up to Rs. 100 every month</li>
-                     <li>Joining Fee Rs.750</li>
+					 <li>2,000 bonus reward points on spends of Rs. 2,000 in first 60 days</li>
+					 <li>Enjoy 10 Reward Points per Rs.100 spent on Dining, Movies, Departmental Stores and Grocery Spends </li>
+					 <li>Annual fees reversal on spends of Rs. 90,000 and above</li>
+					 <li>1% fuel surcharge waiver across all petrol pumps</li>
 					 </ul>
 					 <a href="" class="btn btn-primary pull-left">APPLY NOW</a>
 					 </div>
@@ -161,11 +152,10 @@
 					<h3 class="text-left crd-titl">Yatra Card One Pager</h3>
 					<img src="{{url('images/sbi-cards/yatra-card-face.png')}}" class="sbi-crd pull-left" width="260"/>
 					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
-					 <li>Exclusive Wednesday offers - free movie tickets, value back on groceries & pizzas</li>
-					 <li>4,000 bonus reward points on crossing spends of Rs. 1.2 lacs</li>
-					 <li>1 Reward point on every Rs.100 spent except fuel</li>
-					 <li>Waiver of fuel surcharge up to Rs. 100 every month</li>
-                     <li>Joining Fee Rs.750</li>
+					 <li>Welcome Gift Vouchers worth Rs. 8250</li>
+					 <li>Rs. 1,000 Off *on Domestic Airfare.</li>
+					 <li>Rs. 4,000 Off* on International Flight Booking</li>
+					 <li>20% Off* on Domestic Hotel Bookings</li>
 					 </ul>
 					 <a href="" class="btn btn-primary pull-left">APPLY NOW</a>
 					 </div>
