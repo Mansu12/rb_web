@@ -227,7 +227,15 @@ class CreditcardController extends CallApiController
     }
 
     public function sbi_cc_submit(Request $req){
-        print_r($req->all());
+        $data=$req->all();
+            $data['brokerid']=Session::get('brokerid')?Session::get('brokerid'):'MAA=';
+            $data['empid']=Session::get('empid')?Session::get('empid'):'MAA=';
+            $data['source']=Session::get('source')?Session::get('source'):'MAA=';
+            
+            $post_data=json_encode($data);
+            print_r($post_data);
+
+
        
     }
 

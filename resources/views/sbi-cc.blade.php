@@ -6,8 +6,15 @@
 				<div class="col-md-12 white-bg mrg-tp-minus box-shadow">
 					<form id="sbi_cc" name="sbi_cc" method="POST">
                     {{ csrf_field() }}
+
 					<div class="form-group">
 					<div class="col-md-12"><h4 class="hdr pad1 text-center">Personal Details</h4></div>
+          <input type="text" name="prod" class="prod" 
+                      value="<?php if(isset($_GET['prod'])){
+                        echo str_replace("_"," ",$_GET["prod"]);
+                        }else{
+                          echo "0";
+                          }?>"> 
 					<div class="col-md-3">
 					<label>Name <i style="color:red"> *</i></label>
 					<input type="text" id="first_name" name="first_name" class="form-control" onkeypress="return AllowAlphabet(event)"  required="">
@@ -41,11 +48,11 @@
 					</div>
                     <div class="col-md-3">
                     <label>City</label>
-                    <input type="text" id="city" name="city" class="form-control">
+                    <input type="text" id="city" name="city" required class="form-control">
                     </div>
                     <div class="col-md-3">
                     <label>State</label>
-                    <input type="text" id="state" name="state" class="form-control">
+                    <input type="text" id="state" name="state" required class="form-control">
                     </div>
 					<div class="col-md-3">
 					<label>Pincode<i style="color:red"> *</i></label>
@@ -86,11 +93,11 @@
 					</div>
                     <div class="col-md-3">
                     <label>City</label>
-                    <input type="text" id="off_city" name="off_city" class="form-control">
+                    <input type="text" id="off_city" name="off_city" required class="form-control">
                     </div>
                     <div class="col-md-3">
                     <label>State</label>
-                    <input type="text" id="off_state" name="off_state" class="form-control">
+                    <input type="text" id="off_state" name="off_state" required class="form-control">
                     </div>
 					<div class="col-md-3">
 					<label>Pincode<i style="color:red"> *</i></label>
@@ -215,7 +222,7 @@
 
 <script type="text/javascript">
     $('#submit').click(function(){
-    alert('okae');
+    // alert('okae');
     if(! $('#sbi_cc').valid())
        {
               
