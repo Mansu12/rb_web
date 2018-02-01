@@ -1,171 +1,199 @@
 <?php echo $__env->make('layout.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 <style>
-.brd {padding:20px;padding-top:10px;border:1px dashed #f1f1f1; float:left;margin:15px 0px;}
-.brd:hover {background:#f8f8f8;}
-.crd-titl {padding-bottom:15px;margin-bottom:5px;}
+/* RBL Credit Card CSS*/
+	
+/*  bhoechie tab */
+div.bhoechie-tab-container{
+  z-index: 10;
+  background-color: #ffffff;
+  padding: 0 !important;
+  border-radius: 4px;
+  -moz-border-radius: 4px;
+  border:1px solid #ddd;
+  margin-top: 20px;
+  -webkit-box-shadow: 1px 1px 3px 0px rgba(0,0,0,.175);
+  box-shadow: 1px 1px 3px 0px rgba(0,0,0,.175);
+  -moz-box-shadow: 1px 1px 3px 0px rgba(0,0,0,.175);
+  background-clip: padding-box;
+  opacity: 0.97;
+  filter: alpha(opacity=97);
+}
+div.bhoechie-tab-menu{
+  padding-right: 0;
+  padding-left: 0;
+  padding-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group{
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a{
+  margin-bottom: 0;
+}
+div.bhoechie-tab-menu div.list-group>a .icon-credit-card,
+div.bhoechie-tab-menu div.list-group {
+  color: #28a0ff;
+}
+
+div.bhoechie-tab-menu div.list-group>a:first-child{
+  border-top-right-radius: 0;
+  -moz-border-top-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a:last-child{
+  border-bottom-right-radius: 0;
+  -moz-border-bottom-right-radius: 0;
+}
+div.bhoechie-tab-menu div.list-group>a.active,
+div.bhoechie-tab-menu div.list-group>a.active .glyphicon,
+div.bhoechie-tab-menu div.list-group>a.active .fa{
+  background-color: #0767b3;
+  background-image: #5A55A3;
+  color: #ffffff;
+}
+div.bhoechie-tab-menu div.list-group>a.active:after{
+  content: '';
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  margin-top: -13px;
+  border-left: 0;
+  border-bottom: 13px solid transparent;
+  border-top: 13px solid transparent;
+  border-left: 10px solid #0767b3;
+}
+
+div.bhoechie-tab-content{
+  background-color: #ffffff;
+  /* border: 1px solid #eeeeee; */
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+div.bhoechie-tab div.bhoechie-tab-content:not(.active){
+  display: none;
+}
+.rbl-cr-lst li {margin-bottom:5px; padding:0px;}
+.rbl-cr-lst {padding:15px;}
+	
+/* RBL Credit Card CSS END */	
+	
+	
+.btn-more {margin-left:30%;}
+	
+.price-box {
+    text-align: center;
+    padding: 20px;
+    background: #fff;
+	color:#666;
+    margin-bottom: 20px;
+    position: relative;
+    -webkit-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.11);
+    -moz-box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.11);
+    box-shadow: 0px 1px 2px 0px rgba(0, 0, 0, 0.11);
+    top: 2px;
+    -webkit-transition: 0.3s;
+    -o-transition: 0.3s;
+    transition: 0.3s;
+}
+.price-box h4 {color:#666666;}
+.hom-rig {margin-left:5%;}	
+.rbl-hed {background: #ccc; padding: 12px;}
+table td {font-size:12px;}
+div.bhoechie-tab-content {background:transparent;}
+
+@media  only screen and (max-width: 768px) {
+
+h3 {
+    font-size: 20px;
+    padding: 10px 20px;
+}
+}
+	
 </style>
 
 <div id="fh5co-hero">
-<img src="<?php echo e(url('images/sbi_banner.jpg')); ?>" class="rbl img-responsive hidden-xs" width="1349"/>
+<img src="<?php echo e(url('images/rbl_banner.jpg')); ?>" class="rbl img-responsive hidden-xs" width="1349"/>
 
 <br>
   <div class="container">
   <div class="row">
         <div class="col-md-12 bhoechie-tab-container">
-            
-            <div class="col-md-6 col-sm-12">
-                    <center class="brd">
-					<h3 class="text-left crd-titl">AI Platinum Card</h3>
-					<img src="<?php echo e(url('images/sbi-cards/ai-sbi-platinum-card.png')); ?>" class="sbi-crd pull-left" width="260"/>
-					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
-					 <li>5,000 Reward Points as Welcome Gift</li>
-                     <li>Card Anniversary gift of 2,000 Reward Points, every year</li>
-                     <li>Upto 15 Reward Points for every Rs. 100 spent on Air India tickets</li>
-                     <li>Up to 15,000 Bonus Reward Points on annual spends</li>
+            <div class="col-lg-3 col-md-3 col-sm-3 col-xs-12 bhoechie-tab-menu">
+              <div class="list-group">
+                <a href="#" class="list-group-item active text-center">
+                  <h4 class="icon-credit-card"></h4>Titanium Delight Card
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <h4 class="icon-credit-card"></h4>Platinum Maxima Card
+                </a>
+                <a href="#" class="list-group-item text-center">
+                  <h4 class="icon-credit-card"></h4>Platinum Delight Card
+                </a>
+                
+              </div>
+            </div>
+            <div class="col-lg-9 col-md-9 col-sm-9 col-xs-12 bhoechie-tab">
+                <!-- flight section -->
+                <div class="bhoechie-tab-content active">
+                    <center>
+                      <h1 class="glyphicon glyphicon-plane" style="font-size:14em;color:#55518a"></h1>
+                      
+                    <div class="col-md-4"><br><img src="<?php echo e(url('images/titanium_crd.png')); ?>" class="rbl" width="260"/></div>
+					<div class="col-md-8">
+					<h3 class="text-left">Titanium Delight Card</h3>
+					 <ul class="rbl-cr-lst text-left">
+					 <li>Exclusive Wednesday offers - free movie tickets, value back on groceries & pizzas</li>
+					 <li>4,000 bonus reward points on crossing spends of Rs. 1.2 lacs</li>
+					 <li>1 Reward point on every Rs.100 spent except fuel</li>
+					 <li>Waiver of fuel surcharge up to Rs. 100 every month</li>
+           <li>Joining Fee Rs.750</li>
 					 </ul>
-					 <a name="AI-Platinum-Card" class="btn btn-primary pull-left apply">APPLY NOW</a>
-					 </div>
+					 <a href="<?php echo e(URL::to('credit-card-rbl')); ?>?card=1" class="btn btn-primary mrg-btm pad pull-left">APPLY NOW</a>
+					</div>
                     </center>
-				</div>
-				
-				<div class="col-md-6 col-sm-12">
-                    <center class="brd">
-					<h3 class="text-left crd-titl">AI Signature Card</h3>
-					<img src="<?php echo e(url('images/sbi-cards/ai-sbi-signature-card.png')); ?>" class="sbi-crd pull-left" width="260"/>
-					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
-					 <li>20,000 Reward Points as Welcome Gift</li>
-					 <li>Card Anniversary gift of 5,000 Reward Points every year</li>
-					 <li>Upto 30 Reward Points for every Rs. 100 spent on Air India tickets.</li>
-					 <li>Up to 1,00,000 Bonus Reward Points on annual spends </li>
+                </div>
+                <!-- train section -->
+                <div class="bhoechie-tab-content">
+                    <center>
+                      <h1 class="glyphicon glyphicon-road" style="font-size:12em;color:#55518a"></h1>
+                      
+                     <div class="col-md-4"><br><img src="<?php echo e(url('images/platinum_crd.png')); ?>" class="rbl" width="260"/></div>
+					<div class="col-md-8">
+					<h3 class="text-left">Platinum Maxima Card</h3>
+					<ul class="rbl-cr-lst text-left">
+					 <li>Free movie ticket every month</li>
+					 <li>10 Reward points on every Rs. 100 spent on dining, entertainment, utility bills, fuel and every international spends</li>
+					 <li>2 Reward points for every Rs.100 spent and 5X Reward on selected categories</li>
+					 <li>20,000 bonus Reward Points every year on crossing 3.5 lacs spends</li>
+					 <li>Complimentary access to Airport Lounges</li>
+           <li>Joining Fee Rs.2000</li>
 					 </ul>
-					 <a name="AI-Signature-Card" class="btn btn-primary pull-left apply">APPLY NOW</a>
-					 </div>
+					 <a href="<?php echo e(URL::to('credit-card-rbl')); ?>?card=2" class="btn btn-primary mrg-btm pad pull-left">APPLY NOW</a>
+					</div>
                     </center>
-				</div>
-				
-				<div class="col-md-6 col-sm-12">
-                    <center class="brd">
-					<h3 class="text-left crd-titl">Central SBI Cards</h3>
-					<img src="<?php echo e(url('images/sbi-cards/central-sbi-card.png')); ?>" class="sbi-crd pull-left" width="260"/>
-					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
-					 <li>Welcome benefits worth Rs. 1,750</li>
-					 <li>10 Select Points per Rs. 100 spent at any Central store</li>
-					 <li>5 Select Points per Rs. 100 spent on Dining & Movies</li>
-					 <li>1 Select Point per Rs. 100 on other retail spends (Non fuel)</li>
+                </div>
+    
+                <!-- hotel search -->
+                <div class="bhoechie-tab-content">
+                    <center>
+                      <h1 class="glyphicon glyphicon-home" style="font-size:12em;color:#55518a"></h1>
+                      
+                     <div class="col-md-4"><br><img src="<?php echo e(url('images/platinum_delight_crd.png')); ?>" class="rbl" width="260"/></div>
+					<div class="col-md-8">
+					<h3 class="text-left">Platinum Delight Card</h3>
+					<ul class="rbl-cr-lst text-left">
+					 <li>2 Reward Points on every Rs. 100 spent on weekdays</li>
+					 <li>2X Reward Points on every Rs. 100 spent on weekends</li>
+					 <li>1,000 bonus Reward Points every month on 5 transactions of Rs.1000 or more</li>
+					 <li>Waiver of fuel surcharge up to Rs.150 every month</li>
+           <li>Joining Fee Rs.1000</li>
 					 </ul>
-					 <a name="Central-SBI-Cards" class="btn btn-primary pull-left apply">APPLY NOW</a>
-					 </div>
+					 <a href="<?php echo e(URL::to('credit-card-rbl')); ?>?card=3" class="btn btn-primary mrg-btm pad pull-left">APPLY NOW</a>
+					</div>
                     </center>
-				</div>
-				
-				<div class="col-md-6 col-sm-12">
-                    <center class="brd">
-					<h3 class="text-left crd-titl">FBB SBI Card</h3>
-					<img src="<?php echo e(url('images/sbi-cards/fbb-sbi-card.png')); ?>" class="sbi-crd pull-left" width="260"/>
-					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
-					 <li>Flat 10% Discount on all Fashion Apparel, Accessories, Backpacks, Footwear & School Bags at fbb & Big Bazaar Stores</li>
-					 <li>10X Reward Points on Big Bazaar, fbb & Dining spend</li>
-					 <li>Welcome gift of Rs.500 worth fbb gift voucher</li>
-					 <li>2000 Reward points on Card Anniversary</li>
-					 </ul>
-					 <a name="FBB-SBI-Card" class="btn btn-primary pull-left apply">APPLY NOW</a>
-					 </div>
-                    </center>
-				</div>
-				
-				<div class="col-md-6 col-sm-12">
-                    <center class="brd">
-					<h3 class="text-left crd-titl">IRCTC SBI Card Updated</h3>
-					<img src="<?php echo e(url('images/sbi-cards/irctc-sbi-card.png')); ?>" class="sbi-crd pull-left" width="260"/>
-					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
-					 <li>Upto 10% value back as Reward Points for railway ticket purchases</li>
-					 <li>350 bonus Reward Points on activation</li>
-					 <li>1.8% transaction charges waiver, on railway ticket bookings on irctc.co.in</li>
-					 <li>1% fuel surcharge waiver at all petrol pumps</li>
-					 </ul>
-					 <a name="IRCTC-SBI-Card-Updated" class="btn btn-primary pull-left apply">APPLY NOW</a>
-					 </div>
-                    </center>
-				</div>
-				
-				<div class="col-md-6 col-sm-12">
-                    <center class="brd">
-					<h3 class="text-left crd-titl">SBI Elite Card</h3>
-					<img src="<?php echo e(url('images/sbi-cards/sbi-card-elite.png')); ?>" class="sbi-crd pull-left" width="260"/>
-					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
-					 <li>Welcome e-Gift Voucher worth Rs. 5,000 on joining</li>
-					 <li>Get free movie tickets worth Rs. 6,000 every year</li>
-					 <li>Earn upto 50,000 Bonus Reward Points worth Rs. 12,500/year</li>
-					 <li>Complimentary membership to Club Vistara and Trident Privilege program</li>
-					 </ul>
-					 <a name="SBI-Elite-Card" class="btn btn-primary pull-left apply">APPLY NOW</a>
-					 </div>
-                    </center>
-				</div>
-				
-				<div class="col-md-6 col-sm-12">
-                    <center class="brd">
-					<h3 class="text-left crd-titl">SBI Prime Card</h3>
-					<img src="<?php echo e(url('images/sbi-cards/sbi-prime-card.png')); ?>" class="sbi-crd pull-left" width="260"/>
-					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
-					 <li>Welcome e-Gift Voucher worth Rs. 3,000 on joining</li>
-					 <li>Spend linked Gift Vouchers worth Rs. 11,000</li>
-					 <li>10 Reward Points per Rs. 100 spent on Dining, Groceries, Departmental stores and Movies</li>
-					 <li>Complimentary International and Domestic Airport Lounge access</li>
-					 </ul>
-					 <a name="SBI-Prime-Card" class="btn btn-primary pull-left apply">APPLY NOW</a>
-					 </div>
-                    </center>
-				</div>
-				
-				 <div class="col-md-6 col-sm-12">
-                    <center class="brd">
-					<h3 class="text-left crd-titl">SimplyCLICK SBI Card</h3>
-					<img src="<?php echo e(url('images/sbi-cards/simplyclick-sbi-card.png')); ?>" class="sbi-crd pull-left" width="260"/>
-					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
-					 <li>Amazon.in Gift Card worth Rs. 500 on joining</li>
-					 <li>5X Reward Points on online spends</li>
-					 <li>10X Reward Points on online spends with exclusive partners</li>
-					 <li>E-vouchers worth Rs.2000 on annual online spends of Rs.1 Lakh and Rs.2 Lakhs each</li>
-					 </ul>
-					 <a name="SimplyCLICK-SBI-Card" class="btn btn-primary pull-left apply">APPLY NOW</a>
-					 </div>
-                    </center>
-				</div> 
-				 <div class="col-md-6 col-sm-12">
-                    <center class="brd">
-					<h3 class="text-left crd-titl">SimplySAVE SBI Card</h3>
-					<img src="<?php echo e(url('images/sbi-cards/simplysave-card.png')); ?>" class="sbi-crd pull-left" width="260"/>
-					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
-					 <li>2,000 bonus reward points on spends of Rs. 2,000 in first 60 days</li>
-					 <li>Enjoy 10 Reward Points per Rs.100 spent on Dining, Movies, Departmental Stores and Grocery Spends </li>
-					 <li>Annual fees reversal on spends of Rs. 90,000 and above</li>
-					 <li>1% fuel surcharge waiver across all petrol pumps</li>
-					 </ul>
-					 <a name="SimplySAVE-SBI-Card" class="btn btn-primary pull-left apply">APPLY NOW</a>
-					 </div>
-                    </center>
-				</div> 
-				
-				<div class="col-md-6 col-sm-12">
-                    <center class="brd">
-					<h3 class="text-left crd-titl">Yatra Card One Pager</h3>
-					<img src="<?php echo e(url('images/sbi-cards/yatra-card-face.png')); ?>" class="sbi-crd pull-left" width="260"/>
-					 <div class="col-md-12"><ul class="rbl-cr-lst text-left">
-					 <li>Welcome Gift Vouchers worth Rs. 8250</li>
-					 <li>Rs. 1,000 Off *on Domestic Airfare.</li>
-					 <li>Rs. 4,000 Off* on International Flight Booking</li>
-					 <li>20% Off* on Domestic Hotel Bookings</li>
-					 </ul>
-					 <a name="Yatra-Card-One-Pager" class="btn btn-primary pull-left apply">APPLY NOW</a>
-					 </div>
-                    </center>
-				</div>
-				
-               
+                </div>
                 
                 
-            
+            </div>
         </div>
   </div>
   
@@ -441,12 +469,4 @@ var HDFC = document.getElementsByClassName("HDFC-Card");
         $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
     });
 });
-  </script>
-
-  <script type="text/javascript">
-  	$('.apply').click(function(){
-    var name=$(this).closest("a").attr('name');
-    var url="<?php echo e(URL::to('sbi-cc')); ?>?prod="+name;
-    window.location.href=url;
-  });
   </script>
