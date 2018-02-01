@@ -9,13 +9,14 @@
 
 
 					<div class="form-group">
-					<div class="col-md-12"><h4 class="hdr pad1 text-center">Personal Details</h4>
+					<div class="col-md-12">
                      <input type="text" name="prod" class="prod" style="background: #0095d9;color: #fff;margin:0 auto; margin-bottom:10px;font-size:18px;border:1px solid #eee;display:block;margin-top:10px; padding:10px; text-align:center;" 
                       value="<?php if(isset($_GET['prod'])){
                         echo str_replace("_"," ",$_GET["prod"]);
                         }else{
                           echo "0";
                           }?>"> 
+						  <h4 class="hdr pad1 text-center">Personal Details</h4>
 						  </div>
 					<div class="col-md-3">
 					<label>Name <i style="color:red"> *</i></label>
