@@ -23,7 +23,7 @@
                      <li>Upto 15 Reward Points for every Rs. 100 spent on Air India tickets</li>
                      <li>Up to 15,000 Bonus Reward Points on annual spends</li>
 					 </ul>
-					 <a href="" class="btn btn-primary pull-left">APPLY NOW</a>
+					 <a name="AI-Platinum-Card" class="btn btn-primary pull-left apply">APPLY NOW</a>
 					 </div>
                     </center>
 				</div>
@@ -38,7 +38,7 @@
 					 <li>Upto 30 Reward Points for every Rs. 100 spent on Air India tickets.</li>
 					 <li>Up to 1,00,000 Bonus Reward Points on annual spends </li>
 					 </ul>
-					 <a href="" class="btn btn-primary pull-left">APPLY NOW</a>
+					 <a name="AI-Signature-Card" class="btn btn-primary pull-left apply">APPLY NOW</a>
 					 </div>
                     </center>
 				</div>
@@ -53,7 +53,7 @@
 					 <li>5 Select Points per Rs. 100 spent on Dining & Movies</li>
 					 <li>1 Select Point per Rs. 100 on other retail spends (Non fuel)</li>
 					 </ul>
-					 <a href="" class="btn btn-primary pull-left">APPLY NOW</a>
+					 <a name="Central-SBI-Cards" class="btn btn-primary pull-left apply">APPLY NOW</a>
 					 </div>
                     </center>
 				</div>
@@ -68,7 +68,7 @@
 					 <li>Welcome gift of Rs.500 worth fbb gift voucher</li>
 					 <li>2000 Reward points on Card Anniversary</li>
 					 </ul>
-					 <a href="" class="btn btn-primary pull-left">APPLY NOW</a>
+					 <a name="FBB-SBI-Card" class="btn btn-primary pull-left apply">APPLY NOW</a>
 					 </div>
                     </center>
 				</div>
@@ -83,7 +83,7 @@
 					 <li>1.8% transaction charges waiver, on railway ticket bookings on irctc.co.in</li>
 					 <li>1% fuel surcharge waiver at all petrol pumps</li>
 					 </ul>
-					 <a href="" class="btn btn-primary pull-left">APPLY NOW</a>
+					 <a name="IRCTC-SBI-Card-Updated" class="btn btn-primary pull-left apply">APPLY NOW</a>
 					 </div>
                     </center>
 				</div>
@@ -98,7 +98,7 @@
 					 <li>Earn upto 50,000 Bonus Reward Points worth Rs. 12,500/year</li>
 					 <li>Complimentary membership to Club Vistara and Trident Privilege program</li>
 					 </ul>
-					 <a href="" class="btn btn-primary pull-left">APPLY NOW</a>
+					 <a name="SBI-Elite-Card" class="btn btn-primary pull-left apply">APPLY NOW</a>
 					 </div>
                     </center>
 				</div>
@@ -113,7 +113,7 @@
 					 <li>10 Reward Points per Rs. 100 spent on Dining, Groceries, Departmental stores and Movies</li>
 					 <li>Complimentary International and Domestic Airport Lounge access</li>
 					 </ul>
-					 <a href="" class="btn btn-primary pull-left">APPLY NOW</a>
+					 <a name="SBI-Prime-Card" class="btn btn-primary pull-left apply">APPLY NOW</a>
 					 </div>
                     </center>
 				</div>
@@ -128,7 +128,7 @@
 					 <li>10X Reward Points on online spends with exclusive partners</li>
 					 <li>E-vouchers worth Rs.2000 on annual online spends of Rs.1 Lakh and Rs.2 Lakhs each</li>
 					 </ul>
-					 <a href="" class="btn btn-primary pull-left">APPLY NOW</a>
+					 <a name="SimplyCLICK-SBI-Card" class="btn btn-primary pull-left apply">APPLY NOW</a>
 					 </div>
                     </center>
 				</div> 
@@ -142,7 +142,7 @@
 					 <li>Annual fees reversal on spends of Rs. 90,000 and above</li>
 					 <li>1% fuel surcharge waiver across all petrol pumps</li>
 					 </ul>
-					 <a href="" class="btn btn-primary pull-left">APPLY NOW</a>
+					 <a name="SimplySAVE-SBI-Card" class="btn btn-primary pull-left apply">APPLY NOW</a>
 					 </div>
                     </center>
 				</div> 
@@ -157,7 +157,7 @@
 					 <li>Rs. 4,000 Off* on International Flight Booking</li>
 					 <li>20% Off* on Domestic Hotel Bookings</li>
 					 </ul>
-					 <a href="" class="btn btn-primary pull-left">APPLY NOW</a>
+					 <a name="Yatra-Card-One-Pager" class="btn btn-primary pull-left apply">APPLY NOW</a>
 					 </div>
                     </center>
 				</div>
@@ -441,4 +441,12 @@ var HDFC = document.getElementsByClassName("HDFC-Card");
         $("div.bhoechie-tab>div.bhoechie-tab-content").eq(index).addClass("active");
     });
 });
+  </script>
+
+  <script type="text/javascript">
+  	$('.apply').click(function(){
+    var name=$(this).closest("a").attr('name');
+    var url="<?php echo e(URL::to('sbi-cc')); ?>?prod="+name;
+    window.location.href=url;
+  });
   </script>

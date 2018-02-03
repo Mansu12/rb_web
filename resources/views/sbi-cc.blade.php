@@ -8,6 +8,7 @@
                     {{ csrf_field() }}
 
 					<div class="form-group">
+
 					<div class="col-md-12"><h4 class="hdr pad1 text-center">Personal Details</h4></div>
 
           <input type="hidden" name="CardType" class="card_type" 
@@ -18,6 +19,7 @@
                           }?>"> 
 
                           
+
 					<div class="col-md-3">
 					<label>Name <i style="color:red"> *</i></label>
 					<input type="text" id="FirstName" name="FirstName" class="form-control" onkeypress="return AllowAlphabet(event)"  required="">
