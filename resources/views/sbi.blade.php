@@ -22,8 +22,9 @@
                      <li>Card Anniversary gift of 2,000 Reward Points, every year</li>
                      <li>Upto 15 Reward Points for every Rs. 100 spent on Air India tickets</li>
                      <li>Up to 15,000 Bonus Reward Points on annual spends</li>
+                     <li>Joining Fee Rs.1499</li>
 					 </ul>
-					 <a name="AI-Platinum-Card" class="btn btn-primary pull-left apply">APPLY NOW</a>
+					 <a name="AI-Platinum-Card&&Joining_Fee=1499" class="btn btn-primary pull-left apply">APPLY NOW</a>
 					 </div>
                     </center>
 				</div>
@@ -52,8 +53,9 @@
 					 <li>10 Select Points per Rs. 100 spent at any Central store</li>
 					 <li>5 Select Points per Rs. 100 spent on Dining & Movies</li>
 					 <li>1 Select Point per Rs. 100 on other retail spends (Non fuel)</li>
+					 <li>Joining Fee Rs.750+GST</li>
 					 </ul>
-					 <a name="Central-SBI-Cards" class="btn btn-primary pull-left apply">APPLY NOW</a>
+					 <a name="Central-SBI-Cards&&Joining_Fee=750+GST" class="btn btn-primary pull-left apply">APPLY NOW</a>
 					 </div>
                     </center>
 				</div>
@@ -67,6 +69,7 @@
 					 <li>10X Reward Points on Big Bazaar, fbb & Dining spend</li>
 					 <li>Welcome gift of Rs.500 worth fbb gift voucher</li>
 					 <li>2000 Reward points on Card Anniversary</li>
+					 <li>Joining Fee Rs.499+GST</li>
 					 </ul>
 					 <a name="FBB-SBI-Card" class="btn btn-primary pull-left apply">APPLY NOW</a>
 					 </div>
@@ -82,8 +85,9 @@
 					 <li>350 bonus Reward Points on activation</li>
 					 <li>1.8% transaction charges waiver, on railway ticket bookings on irctc.co.in</li>
 					 <li>1% fuel surcharge waiver at all petrol pumps</li>
+					 <li>Joining Fee Rs.500</li>
 					 </ul>
-					 <a name="IRCTC-SBI-Card-Updated" class="btn btn-primary pull-left apply">APPLY NOW</a>
+					 <a name="IRCTC-SBI-Card-Updated&&Joining_Fee=500" class="btn btn-primary pull-left apply">APPLY NOW</a>
 					 </div>
                     </center>
 				</div>
@@ -97,8 +101,9 @@
 					 <li>Get free movie tickets worth Rs. 6,000 every year</li>
 					 <li>Earn upto 50,000 Bonus Reward Points worth Rs. 12,500/year</li>
 					 <li>Complimentary membership to Club Vistara and Trident Privilege program</li>
+					 <li>Joining Fee Rs.4999</li>
 					 </ul>
-					 <a name="SBI-Elite-Card" class="btn btn-primary pull-left apply">APPLY NOW</a>
+					 <a name="SBI-Elite-Card&&Joining_Fee=4999" class="btn btn-primary pull-left apply">APPLY NOW</a>
 					 </div>
                     </center>
 				</div>
@@ -112,8 +117,9 @@
 					 <li>Spend linked Gift Vouchers worth Rs. 11,000</li>
 					 <li>10 Reward Points per Rs. 100 spent on Dining, Groceries, Departmental stores and Movies</li>
 					 <li>Complimentary International and Domestic Airport Lounge access</li>
+					  <li>Joining Fee Rs.2999</li>
 					 </ul>
-					 <a name="SBI-Prime-Card" class="btn btn-primary pull-left apply">APPLY NOW</a>
+					 <a name="SBI-Prime-Card&&Joining_Fee=2999" class="btn btn-primary pull-left apply">APPLY NOW</a>
 					 </div>
                     </center>
 				</div>
@@ -127,8 +133,9 @@
 					 <li>5X Reward Points on online spends</li>
 					 <li>10X Reward Points on online spends with exclusive partners</li>
 					 <li>E-vouchers worth Rs.2000 on annual online spends of Rs.1 Lakh and Rs.2 Lakhs each</li>
+					  <li>Joining Fee Rs.499+GST</li>
 					 </ul>
-					 <a name="SimplyCLICK-SBI-Card" class="btn btn-primary pull-left apply">APPLY NOW</a>
+					 <a name="SimplyCLICK-SBI-Card&&Joining_Fee=499+GST" class="btn btn-primary pull-left apply">APPLY NOW</a>
 					 </div>
                     </center>
 				</div> 
@@ -141,8 +148,9 @@
 					 <li>Enjoy 10 Reward Points per Rs.100 spent on Dining, Movies, Departmental Stores and Grocery Spends </li>
 					 <li>Annual fees reversal on spends of Rs. 90,000 and above</li>
 					 <li>1% fuel surcharge waiver across all petrol pumps</li>
+					 <li>Joining Fee Rs.499+GST</li>
 					 </ul>
-					 <a name="SimplySAVE-SBI-Card" class="btn btn-primary pull-left apply">APPLY NOW</a>
+					 <a name="SimplySAVE-SBI-Card&&Joining_Fee=499+GST" class="btn btn-primary pull-left apply">APPLY NOW</a>
 					 </div>
                     </center>
 				</div> 
@@ -156,8 +164,9 @@
 					 <li>Rs. 1,000 Off *on Domestic Airfare.</li>
 					 <li>Rs. 4,000 Off* on International Flight Booking</li>
 					 <li>20% Off* on Domestic Hotel Bookings</li>
+					 <li>Joining Fee Rs.499+GST</li>
 					 </ul>
-					 <a name="Yatra-Card-One-Pager" class="btn btn-primary pull-left apply">APPLY NOW</a>
+					 <a name="Yatra-Card-One-Pager&&Joining_Fee=499+GST" class="btn btn-primary pull-left apply">APPLY NOW</a>
 					 </div>
                     </center>
 				</div>
@@ -446,7 +455,7 @@ var HDFC = document.getElementsByClassName("HDFC-Card");
   <script type="text/javascript">
   	$('.apply').click(function(){
     var name=$(this).closest("a").attr('name');
-    var url="{{URL::to('sbi-cc')}}?prod="+name;
+    var url="{{URL::to('sbi-cc')}}?card_type="+name;
     window.location.href=url;
   });
   </script>
