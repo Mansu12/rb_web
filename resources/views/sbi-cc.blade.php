@@ -38,7 +38,7 @@
                           <label>Joining Fee</label>
                           <input type="text" name="Joining_Fee" disabled class="form-control" 
                           value="<?php if(isset($_GET['Joining_Fee'])){
-                           echo str_replace("_"," ",$_GET["Joining_Fee"]);
+                           echo str_replace(" ","+",$_GET["Joining_Fee"]);
                           }else{
                           echo "0";
                           }?>"> 

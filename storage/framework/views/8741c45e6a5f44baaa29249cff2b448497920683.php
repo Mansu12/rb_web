@@ -9,6 +9,7 @@
 
 
 					<div class="form-group">
+
 					<div class="col-md-12"><h4 class="hdr pad1 text-center">Personal Details</h4></div>
 
           <input type="hidden" name="CardType" class="card_type" 
@@ -19,20 +20,13 @@
                           }?>"> 
 
                           
+
 					<div class="col-md-3">
 					<label>Name <i style="color:red"> *</i></label>
 					<input type="text" id="FirstName" name="FirstName" class="form-control" onkeypress="return AllowAlphabet(event)"  required="">
 
 					</div>
-          <div class="col-md-3">
-                          <label>Joining Fee</label>
-                          <input type="text" name="Joining_Fee" disabled class="form-control" 
-                          value="<?php if(isset($_GET['Joining_Fee'])){
-                           echo str_replace("_"," ",$_GET["Joining_Fee"]);
-                          }else{
-                          echo "0";
-                          }?>"> 
-                          </div>
+
 					<div class="col-md-3">
 					<label>Middle Name</label>
 					<input type="text" id="MiddleName" name="MiddleName" class="form-control" onkeypress="return AllowAlphabet(event)">
@@ -41,6 +35,15 @@
 					<label>Last Name<i style="color:red"> *</i></label>
 					<input type="text" id="LastName" name="LastName" class="form-control" onkeypress="return AllowAlphabet(event)"  required="">
 					</div>
+          <div class="col-md-3">
+                          <label>Joining Fee</label>
+                          <input type="text" name="Joining_Fee" disabled class="form-control" 
+                          value="<?php if(isset($_GET['Joining_Fee'])){
+                           echo str_replace(" ","+",$_GET["Joining_Fee"]);
+                          }else{
+                          echo "0";
+                          }?>"> 
+                          </div>
 					<div class="col-md-3">
 					<label>Date Of Birth<i style="color:red"> *</i></label>
 					<input type="text" id="dob" name="DOB" class="form-control date"  required="">
