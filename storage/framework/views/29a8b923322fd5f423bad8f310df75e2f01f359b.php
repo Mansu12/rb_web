@@ -1,10 +1,10 @@
-@include('layout.header')
+<?php echo $__env->make('layout.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 
 
 <div id="fh5co-hero">
 	
-  <img src="{{URL::to('images/mrdsave_banner.jpg')}}" width="100%"/>
+  <img src="<?php echo e(URL::to('images/mrdsave_banner.jpg')); ?>" width="100%"/>
   <div class="container">
   <br>
 	<div class="col-md-12 white-bg box-shadow mrg-btm">
@@ -100,6 +100,6 @@ We bring you Digital Medical loans..!!</h2> -->
 
 
 
-@include('layout.footer')
-@include('layout.script')
+<?php echo $__env->make('layout.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('layout.script', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
