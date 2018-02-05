@@ -227,20 +227,33 @@ class CreditcardController extends CallApiController
     }
 
     public function sbi_cc_submit(Request $req){
-        $data=$req->all();
+            $data=$req->all();
             $data['brokerid']=Session::get('brokerid')?Session::get('brokerid'):'MAA=';
             $data['empid']=Session::get('empid')?Session::get('empid'):'MAA=';
             $data['source']=Session::get('source')?Session::get('source'):'MAA=';
+            $data['CampaignName']=Session::get('CampaignName');
             
             $post_data=json_encode($data);
-            print_r($post_data);
+      // print_r($post_data);exit();
+              $url = $this::$url_static."/BankAPIService.svc/createSBICCLeadReq";
+              $result=$this->call_json_data_api($url,$post_data);
+              $http_result=$result['http_result'];
 
+              $error=$result['error'];
+              $st=str_replace('"{', "{", $http_result);
+              $s=str_replace('}"', "}", $st);
+              $m=$s=str_replace('\\', "", $s);
+              $obj=json_decode($m);
+              // print_r($obj);exit();
+             
+
+      return response()->json( $obj);
 
        
     }
 
     public function sbi(){
-            return view('sbi');
+    return view('sbi');
      }
 }
 
