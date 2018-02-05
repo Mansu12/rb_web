@@ -1010,7 +1010,7 @@ $url = $this::$url_static."/BankAPIService.svc/updateIIFLRevisedQuote";
    
     $post_data =json_encode(array("PersonalLoan"=> $data));
     // $post_data=json_encode($data);
-        // print_r($post_data);exit();
+        print_r($post_data);exit();
         $url = $this::$url_static."/BankAPIService.svc/createKotakPersonalLoanReq";
         $result=$this->call_json_data_api($url,$post_data);
         $http_result=$result['http_result'];
@@ -1180,6 +1180,10 @@ $url = $this::$url_static."/BankAPIService.svc/updateIIFLRevisedQuote";
     // print_r($CampaignName);exit();
 
     return view('apply-iifl-loan-dc',['CampaignName'=>$CampaignName]);
+   }
+
+   public function medsave(){
+    return view('medsave');
    }
 
    

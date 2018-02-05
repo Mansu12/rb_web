@@ -358,6 +358,7 @@ Route::post('rbl-personal-loan-submit-dc','LoanController@rbl_personal_loan_subm
 Route::get('kotak-personal-loan-dc','LoanController@kotak_personal_loan_dc');
 Route::post('kotak-pl-submit-dc','LoanController@kotak_pl_submit');
 Route::get('apply-iifl-loan-dc','LoanController@apply_iifl_loan_dc');
+Route::get('medsave','LoanController@medsave');
 
 
 Route::get('pay-online','BankController@pay_online');
