@@ -135,10 +135,10 @@
 	background-color: rgba(255,255,255,0.2);
 	
 }
-.desc {margin:0 auto; display:block; -webkit-transition: all 0.5s;-moz-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s; width:150px;height:150px;border-radius:60%;}
-.desc h2 {text-align:center;line-height:35px;}
-.desc:hover .button5 {display:block;-webkit-transition: all 0.5s;-moz-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;}
-.desc:hover h2 {display:none; color:#ed2121;}
+.desc1 {margin:0 auto; display:block; -webkit-transition: all 0.5s;-moz-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s; width:150px;height:150px;border-radius:60%;}
+.desc1 h2 {text-align:center;line-height:35px;}
+.desc1:hover .button5 {display:block;-webkit-transition: all 0.5s;-moz-transition: all 0.5s;-o-transition: all 0.5s;transition: all 0.5s;}
+.desc1:hover h2 {display:none; color:#ed2121;}
 .yell-bg:hover {background:#02b4e4; border:8px solid #03acda;transform:scale(1.1,1.1);-moz-transform:scale(1.1,1.1);-webkit-transform:scale(1.1,1.1);}
 .blu-bg:hover {background:#02b4e4;border:8px solid #03acda;transform:scale(1.1,1.1);-moz-transform:scale(1.1,1.1);-webkit-transform:scale(1.1,1.1);}
 .red-bg1:hover {background:#02b4e4 !important;border:8px solid #03acda;transform:scale(1.1,1.1);-moz-transform:scale(1.1,1.1);-webkit-transform:scale(1.1,1.1);}
@@ -153,7 +153,7 @@ th {text-align:center;font-size:13px;}
     -o-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
     -ms-box-shadow: 0 0px 40px 0px rgba(0, 0, 0, 0.15);
 }
-td {padding:15px !important; font-size:13px;}
+.table-condensed td {padding:15px !important; font-size:13px;}
 .th1 {padding:15px !important; background:#26bde5;color:#fff;}
 .no-brd th {border:1px solid #fff !important;}
 .no-brd td {border:1px solid #fff !important;}

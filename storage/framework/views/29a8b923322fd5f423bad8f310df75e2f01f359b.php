@@ -62,19 +62,19 @@ We bring you Digital Medical loans..!!</h2> -->
 	<tr class="no-brd">
       <th scope="row"></th>
       <td>
-						<div class="desc box-shadow blu-bg">
+						<div class="desc1 box-shadow blu-bg">
 						<div class="sim-button button5"><a href="http://www.rupeeboss.com/rbl-personal-loan-dc" target="_blank"><span>APPLY NOW</span></a></div>
 						<h2>RBL</h2>
 						</div>
 	  </td>
       <td>
-	      <div class="desc box-shadow red-bg1">
+	      <div class="desc1 box-shadow red-bg1">
 						<div class="sim-button button5"><a href="http://www.rupeeboss.com/kotak-personal-loan-dc" target="_blank"><span>APPLY NOW</span></a></div>
 						<h2>KOTAK</h2>
 					    </div>
 	  </td>
       <td>
-	     <div class="desc box-shadow yell-bg">
+	     <div class="desc1 box-shadow yell-bg">
 						<div class="sim-button button5"><a href="http://www.rupeeboss.com/apply-iifl-loan-dc" target="_blank"><span>APPLY NOW</span></a></div>
 						<h2>IIFL</h2>
 						</div>
