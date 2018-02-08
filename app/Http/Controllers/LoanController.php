@@ -316,7 +316,7 @@ public function dropdown(Request $req){
 }';
     //call API here to save in DB
         //$post=json_encode($post_data);
-     // print_r($post_data);exit();
+     print_r($post_data);exit();
 
     $url = $this::$url_static."/BankAPIService.svc/getIIFLDropdownMasters";
     $result=$this->call_json_data_api($url,$post_data);
@@ -695,6 +695,8 @@ $url = $this::$url_static."/BankAPIService.svc/updateIIFLRevisedQuote";
      return response()->json( $obj);
   }
 
+  
+
   public function lendingkart(){
     return view('lendingkart');
    }
@@ -1010,7 +1012,7 @@ $url = $this::$url_static."/BankAPIService.svc/updateIIFLRevisedQuote";
    
     $post_data =json_encode(array("PersonalLoan"=> $data));
     // $post_data=json_encode($data);
-        print_r($post_data);exit();
+        // print_r($post_data);exit();
         $url = $this::$url_static."/BankAPIService.svc/createKotakPersonalLoanReq";
         $result=$this->call_json_data_api($url,$post_data);
         $http_result=$result['http_result'];

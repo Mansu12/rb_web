@@ -338,8 +338,8 @@
                 <span class="input input--nao">
                     <select class="input__field input__field--nao" name="Gender" id="Gender" required>
                         <option disabled selected value=""></option>
-                        <option>Male</option>
-                        <option>Female</option>
+                        <option value="M">Male</option>
+                        <option value="F">Female</option>
                     </select>
                     <label class="input__label input__label--nao" for="Gender">
                     <span class="input__label-content input__label-content--nao">Gender</span>
@@ -516,12 +516,12 @@
             <section class="content">
             <div class="col-md-12"><h3 class="mrg-tpp">Residence Information</h3></div>
                 <span class="input input--nao">
-                    <select class="input__field input__field--nao fnt-clr" id="Residencetype" name="Residencetype" required>
+                    <select class="input__field input__field--nao fnt-clr" id="PermanentResidencetype" name="PermanentResidencetype" required>
                         <option selected disabled value=""></option>
                         <option value="Rented">Rented</option>
                         <option value="Owned ">Owned</option>
                     </select>
-                    <label class="input__label input__label--nao" for="Residencetype">
+                    <label class="input__label input__label--nao" for="PermanentResidencetype">
                     <span class="input__label-content input__label-content--nao">ResidenceType</span>
                     </label>
                     <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
