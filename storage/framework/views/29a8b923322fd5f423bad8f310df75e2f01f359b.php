@@ -56,6 +56,7 @@
 .blu-bg1:hover {background:#02b4e4;border:8px solid #03acda;transform:scale(1.1,1.1);-moz-transform:scale(1.1,1.1);-webkit-transform:scale(1.1,1.1);}
 .red-bg1:hover {background:#02b4e4 !important;border:8px solid #03acda;transform:scale(1.1,1.1);-moz-transform:scale(1.1,1.1);-webkit-transform:scale(1.1,1.1);}
 th {text-align:center;font-size:13px;}
+.nihon-txt {padding:10px; margin:0px; color:#2e3779;}
 
 .table100.ver1 {
     border-radius: 10px;
@@ -80,7 +81,7 @@ th {text-align:center;font-size:13px;}
 </head>
 <body>
 <div>
-	
+	<h1 class="text-center nihon-txt">NIHON</h1>
   <img src="<?php echo e(URL::to('images/mrdsave_banner.jpg')); ?>" width="100%"/>
   <div class="container">
   <br>
