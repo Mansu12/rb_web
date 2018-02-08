@@ -9,71 +9,122 @@
 
 
 					<div class="form-group">
-					<div class="col-md-12">
-                     <input type="text" name="prod" class="prod" style="background: #0095d9;color: #fff;margin:0 auto; margin-bottom:10px;font-size:18px;border:1px solid #eee;display:block;margin-top:10px; padding:10px; text-align:center;" 
-                      value="<?php if(isset($_GET['prod'])){
-                        echo str_replace("_"," ",$_GET["prod"]);
+
+					<div class="col-md-12"><h4 class="hdr pad1 text-center">Personal Details</h4></div>
+
+          <input type="hidden" name="CardType" class="card_type" 
+                      value="<?php if(isset($_GET['card_type'])){
+                        echo str_replace("_"," ",$_GET["card_type"]);
                         }else{
                           echo "0";
                           }?>"> 
-						  <h4 class="hdr pad1 text-center">Personal Details</h4>
-						  </div>
+
+                          
+
 					<div class="col-md-3">
 					<label>Name <i style="color:red"> *</i></label>
-					<input type="text" id="first_name" name="first_name" class="form-control" onkeypress="return AllowAlphabet(event)"  required="">
+					<input type="text" id="FirstName" name="FirstName" class="form-control" onkeypress="return AllowAlphabet(event)"  required="">
 
 					</div>
+
 					<div class="col-md-3">
 					<label>Middle Name</label>
-					<input type="text" id="middle_name" name="middle_name" class="form-control" onkeypress="return AllowAlphabet(event)">
+					<input type="text" id="MiddleName" name="MiddleName" class="form-control" onkeypress="return AllowAlphabet(event)">
 					</div>
 					<div class="col-md-3">
 					<label>Last Name<i style="color:red"> *</i></label>
-					<input type="text" id="last_name" name="last_name" class="form-control" onkeypress="return AllowAlphabet(event)"  required="">
+					<input type="text" id="LastName" name="LastName" class="form-control" onkeypress="return AllowAlphabet(event)"  required="">
 					</div>
+          <div class="col-md-3">
+                          <label>Joining Fee</label>
+                          <input type="text" name="Joining_Fee" disabled class="form-control" 
+                          value="<?php if(isset($_GET['Joining_Fee'])){
+                           echo str_replace(" ","+",$_GET["Joining_Fee"]);
+                          }else{
+                          echo "0";
+                          }?>"> 
+                          </div>
 					<div class="col-md-3">
 					<label>Date Of Birth<i style="color:red"> *</i></label>
-					<input type="text" id="dob" name="dob" class="form-control date"  required="">
+					<input type="text" id="dob" name="DOB" class="form-control date"  required="">
 					</div>
 					<div class="col-md-3">
 					<label>Pan card No<i style="color:red"> *</i></label>
-					<input type="text" id="pan_number" name="pan_number" class="form-control" oninput="pan_card('pan_number')" maxlength="10"  required="">
+					<input type="text" id="pan_number" name="Pan_No" class="form-control" oninput="pan_card('pan_number')" maxlength="10"  required="">
                     <span id="pan_num" style="display:none;color: red; font-size: 10px">Oops.Please Enter Valid Pan Number.!!</span>
 					</div>
 					<div class="col-md-3">
 					<label>Current Residence Address<i style="color:red"> *</i></label>
-					<input type="text" id="residence_address" name="residence_address" class="form-control"  required="">
+					<input type="text" id="Residence_Addr" name="Residence_Addr" class="form-control"  required="">
 					</div>
 					<hr>
 					<div class="col-md-3">
 					<label>Landmark</label>
-					<input type="text" id="landmark" name="landmark" class="form-control">
+					<input type="text" id="Landmark" name="Landmark" class="form-control">
 					</div>
                     <div class="col-md-3">
                     <label>City</label>
-                    <input type="text" id="city" name="city" required class="form-control">
+                    <input type="text" id="City" name="City" required class="form-control">
                     </div>
                     <div class="col-md-3">
                     <label>State</label>
-                    <input type="text" id="state" name="state" required class="form-control">
+                    <select class="form-control" name="State" id="State" required="">
+                      <option disabled selected  value="">State</option>
+                       <option value="ANDAMAN-NICOBAR">ANDAMAN-NICOBAR</option>
+                        <option value="ANDHRA PRADESH">ANDHRA PRADESH</option>
+                        <option value="ARUNACHAL PRADESH">ARUNACHAL PRADESH</option>
+                        <option value="ASSAM">ASSAM</option>
+                        <option value="BIHAR">BIHAR</option>
+                      <option value="CHANDIGARH">CHANDIGARH</option>
+                      <option value="CHHATTISGARH">CHHATTISGARH</option>
+                      <option value="DADRA & NAGAR HAVELI">DADRA & NAGAR HAVELI</option>
+                      <option value="DAMAN & DIU">DAMAN & DIU</option>
+                      <option value="DELHI">DELHI</option>
+                      <option value="GOA">GOA</option>
+                      <option value="GUJARAT">GUJARAT</option>
+                      <option value="HARYANA">HARYANA</option>
+                      <option value="HIMACHAL PRADESH">HIMACHAL PRADESH</option>
+                      <option value="JAMMU KASHMIR">JAMMU KASHMIR</option>
+                      <option value="JHARKHAND">JHARKHAND</option>
+                      <option value="KARNATAKA">KARNATAKA</option>
+                      <option value="KERALA">KERALA</option>
+                      <option value="LAKSHADWEEP">LAKSHADWEEP</option>
+                      <option value="MADHYA PRADESH">MADHYA PRADESH</option>
+                      <option value="MAHARASHTRA">MAHARASHTRA</option>
+                      <option value="MANIPUR">MANIPUR</option>
+                      <option value="MEGHALAYA">MEGHALAYA</option>
+                      <option value="MIZORAM">MIZORAM</option>
+                      <option value="NAGALAND">NAGALAND</option>
+                      <option value="ORISSA">ORISSA</option>
+                      <option value="PONDICHERRY">PONDICHERRY</option>
+                      <option value="PUNJAB">PUNJAB</option>
+                      <option value="RAJASTHAN">RAJASTHAN</option>
+                      <option value="SIKKIM">SIKKIM</option>
+                      <option value="TAMILNADU">TAMILNADU</option>
+                      <option value="TRIPURA">TRIPURA</option>
+                      <option value="UTTAR PRADESH">UTTAR PRADESH</option>
+                      <option value="UTTARAKHAND">UTTARAKHAND</option>
+                      <option value="WEST BENGAL">WEST BENGAL</option>
+                     
+          </select>
                     </div>
 					<div class="col-md-3">
 					<label>Pincode<i style="color:red"> *</i></label>
-					<input type="text" class="form-control" maxlength="6" onkeypress="return fnAllowNumeric(event)"  required="">
+					<input type="text" id="Pin" name="Pin" class="form-control" maxlength="6" onkeypress="return fnAllowNumeric(event)"  required="">
 					</div>
 					<div class="col-md-3">
 					<label>Mobile No<i style="color:red"> *</i></label>
-					<input type="text" id="mobile_no" name="mobile_no" pattern="[789][0-9]{9}" class="form-control" maxlength="10" onkeypress="return fnAllowNumeric(event)"  required="">
+					<input type="text" id="Mobile" name="Mobile" pattern="[789][0-9]{9}" class="form-control" maxlength="10" onkeypress="return fnAllowNumeric(event)"  required="">
 					</div>
 					<div class="col-md-3">
 					<label>Email Id<i style="color:red"> *</i></label>
-					<input type="text" id="email" name="email" class="form-control" oninput="mail('email')"  required="">
+					<input type="text" id="email" name="Email" class="form-control" oninput="mail('email')"  required="">
                     <span id="email_id" style="display:none;color: red; font-size: 10px">Please Enter Valid Email Id.</span>
 					</div>
 					<div class="col-md-12"><h4 class="hdr pad1 text-center">Office Details</h4></div>
 					<div class="col-md-3">
 					<label>Occupation type<i style="color:red"> *</i></label>
-					<select class="form-control" name="occupation" id="occupation" required="">
+					<select class="form-control" name="Occupation" id="Occupation" required="">
                       <option disabled selected  value="">Occupation type</option>
 					  <option value="Homemaker">Homemaker</option>
 					  <option value="Retired/Pensioner">Retired/Pensioner</option>
@@ -84,35 +135,73 @@
 					</div>
 					<div class="col-md-3">
 					<label>Designation<i style="color:red"> *</i></label>
-					<input type="text" id="designation" name="designation" class="form-control"  required="">
+					<input type="text" id="Designation" name="Designation" class="form-control"  required="">
 					</div>
 					<div class="col-md-3">
 					<label>Company Name<i style="color:red"> *</i></label>
-					<input type="text" id="company_name" name="company_name" class="form-control"  required="">
+					<input type="text" id="CompanyName" name="CompanyName" class="form-control"  required="">
 					</div>
 					<div class="col-md-3">
 					<label>Office Address<i style="color:red"> *</i></label>
-					<input type="text" id="office_address" name="office_address" class="form-control"  required="">
+					<input type="text" id="Office_Addr" name="Office_Addr" class="form-control"  required="">
 					</div>
                     <div class="col-md-3">
                     <label>City</label>
-                    <input type="text" id="off_city" name="off_city" required class="form-control">
+                    <input type="text" id="Office_City" name="Office_City" required class="form-control">
                     </div>
                     <div class="col-md-3">
                     <label>State</label>
-                    <input type="text" id="off_state" name="off_state" required class="form-control">
+                    <select class="form-control" name="Office_State" id="Office_State" required="">
+                      <option disabled selected  value="">State</option>
+                       <option value="ANDAMAN-NICOBAR">ANDAMAN-NICOBAR</option>
+                        <option value="ANDHRA PRADESH">ANDHRA PRADESH</option>
+                        <option value="ARUNACHAL PRADESH">ARUNACHAL PRADESH</option>
+                        <option value="ASSAM">ASSAM</option>
+                        <option value="BIHAR">BIHAR</option>
+                      <option value="CHANDIGARH">CHANDIGARH</option>
+                      <option value="CHHATTISGARH">CHHATTISGARH</option>
+                      <option value="DADRA & NAGAR HAVELI">DADRA & NAGAR HAVELI</option>
+                      <option value="DAMAN & DIU">DAMAN & DIU</option>
+                      <option value="DELHI">DELHI</option>
+                      <option value="GOA">GOA</option>
+                      <option value="GUJARAT">GUJARAT</option>
+                      <option value="HARYANA">HARYANA</option>
+                      <option value="HIMACHAL PRADESH">HIMACHAL PRADESH</option>
+                      <option value="JAMMU KASHMIR">JAMMU KASHMIR</option>
+                      <option value="JHARKHAND">JHARKHAND</option>
+                      <option value="KARNATAKA">KARNATAKA</option>
+                      <option value="KERALA">KERALA</option>
+                      <option value="LAKSHADWEEP">LAKSHADWEEP</option>
+                      <option value="MADHYA PRADESH">MADHYA PRADESH</option>
+                      <option value="MAHARASHTRA">MAHARASHTRA</option>
+                      <option value="MANIPUR">MANIPUR</option>
+                      <option value="MEGHALAYA">MEGHALAYA</option>
+                      <option value="MIZORAM">MIZORAM</option>
+                      <option value="NAGALAND">NAGALAND</option>
+                      <option value="ORISSA">ORISSA</option>
+                      <option value="PONDICHERRY">PONDICHERRY</option>
+                      <option value="PUNJAB">PUNJAB</option>
+                      <option value="RAJASTHAN">RAJASTHAN</option>
+                      <option value="SIKKIM">SIKKIM</option>
+                      <option value="TAMILNADU">TAMILNADU</option>
+                      <option value="TRIPURA">TRIPURA</option>
+                      <option value="UTTAR PRADESH">UTTAR PRADESH</option>
+                      <option value="UTTARAKHAND">UTTARAKHAND</option>
+                      <option value="WEST BENGAL">WEST BENGAL</option>
+                     
+          </select>
                     </div>
 					<div class="col-md-3">
 					<label>Pincode<i style="color:red"> *</i></label>
-					<input type="text" id="pin_code" name="pin_code" class="form-control" maxlength="6" onkeypress="return fnAllowNumeric(event)"  required="">
+					<input type="text" id="Pincode" name="Pincode" class="form-control" maxlength="6" onkeypress="return fnAllowNumeric(event)"  required="">
 					</div>
 					<div class="col-md-3">
 					<label>Gross Income</label>
-					<input type="text" id="income" name="income" onkeypress="return fnAllowNumeric(event)"  class="form-control" minlength="5" maxlength="9">
+					<input type="text" id="Income" name="Income" onkeypress="return fnAllowNumeric(event)"  class="form-control" minlength="5" maxlength="9">
 					</div>
 					<div class="col-md-3">
 					<label>Annual Income<i style="color:red"> *</i></label>
-					<input type="text" class="form-control" id="annual_income" name="annual_income" minlength="5" maxlength="9" required="">
+					<input type="text" class="form-control" id="Annual_Income" name="Annual_Income" minlength="5" maxlength="9" required="">
 					</div>
 					
 					
@@ -147,6 +236,45 @@
 
 <?php echo $__env->make('layout.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 <?php echo $__env->make('layout.script', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="sbi-cc-popup">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Confirmation Status</h4>
+      </div>
+      <div class="modal-body">
+        <h4><p id="modalerr"><h5 style="color: black">Your SBI CC Lead Id is <span id="sbi"></span>.<h5></p></h4>
+        
+      </div>
+
+      <div class="modal-footer">
+        <a type="button" id="okae" name="okae" class="btn btn-primary sbi_cc_proceed">OK</a>
+        
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="sbi-cc-popup-error">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title">Error Status</h4>
+      </div>
+      <div class="modal-body">
+        <h4><p id="modalerr"><h5 style="color: black">Oops!! Unable To Process.Thank You For Banking With SBI.<h5></p></h4>
+        
+      </div>
+      
+      
+    </div>
+  </div>
+</div>
 
 <!-- script -->
 <script type="text/javascript">
@@ -237,14 +365,28 @@
          url: "<?php echo e(URL::to('sbi-cc-submit')); ?>",
          data : $('#sbi_cc').serialize(),
          success: function(msg){
-            
+            console.log(msg.Status);
                     
-                      
+             if (msg.Status==1) {
+              $('#sbi-cc-popup').modal('show');
+              $('#sbi').empty().append(msg.Lead_Id);
+            } 
+            else {
+                $('#sbi-cc-popup').modal('hide');
+                 $('#sbi-cc-popup-error').modal('show');
+                
+            }         
       }   
      });
         }
 
     });
+</script>
+
+<script type="text/javascript">
+  $('.sbi_cc_proceed').click(function(){
+    window.location.href ="<?php echo e(URL::to('thank-you')); ?>";
+  });
 </script>
 
 <script type="text/javascript">
