@@ -63,3 +63,4 @@ Route::post('vehicle-registration','ApiController@vehicle_registration');
 Route::post('vehicle-documents','ApiController@vehicle_documents');
 Route::post('vehicle-video-documents','ApiController@vehicle_video_documents');
 Route::post('vehicle-inspection-details','ApiController@vehicle_inspection_details');
+Route::post('balance-transfer-with-qid','MobileApiController@balance_transfer_with_quoteid');

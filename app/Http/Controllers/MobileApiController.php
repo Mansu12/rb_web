@@ -202,5 +202,43 @@ class MobileApiController extends ApiController
                 $data = array('status'=>$status,'data' =>$resultArray,"saving"=>$savings );
                 return json_encode($data);
 	}
+	public function balance_transfer_with_quoteid(Request $req){
+		try {
+			//save and get quote id
+		$save_req =new Request( ['status'=>'NA','LoanRequired' =>$req['loanamount'] , 'LoanTenure'=>$req['loaninterest'],'ProductId'=>$req['product_id'],'LoanTenure'=>$req['loanterm'],"ApplicantNme"=>$req['applicantname'],"Email"=>$req['email'],"Contact"=>$req['contact'],"BrokerId"=>$req['brokerid'],"api_source"=>$req['source']]);
+		$save=new bank_quote_api_request();	
+		$id=$save->store_bt_req($save_req);
+		//get real quotes
+		$quote=json_decode($this::balance_transfer($req));
+		//print_r($quote->data);exit();
+		if($quote->data!=[]){
+			$status_Id=0;
+			$msg="data delievered";
+			$new_data=$quote->data;
+			$quote=$id;
+			$url=$this::$erp_url_static."BalanceTransfer/PL_BT_Form.aspx";
+		}
+		else{
+			$new_data=NULL;
+			$status_Id=1;
+			$msg="No record Found";
+			$quote=NULL;
+			$url=NULL;
+		}
+		
+		//print_r($a);
+		$new_data=array('data' =>$new_data ,'msg' =>$msg,'status_Id'=>$status_Id,'quote_id'=>$quote,'url'=>$url );
+		} catch (\Exception $e) {
+			$new_data=NULL;
+			$status_Id=1;
+			$msg=$e->getMessage();
+			$quote=NULL;
+			$url=NULL;
+			$new_data=array('data' =>$new_data ,'msg' =>$msg,'status_Id'=>$status_Id,'quote_id'=>$quote,'url'=>$url );
+		}
+		
+		return $new_data;
+			
+	}
 
 }
