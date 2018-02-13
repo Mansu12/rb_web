@@ -19,7 +19,7 @@
         </div>
         <div class="col-md-4">
             <div class="desc">
-              <a href="<?php echo e(url('sbi')); ?>">  <img src="images/sbi_credit_crd.jpg" alt="SBI Credit Cards" title="SBI Credit Cards" class="img-responsive box-shadow"/></a>
+              <a href="<?php echo e(url('coming-soon')); ?>">  <img src="images/coming_soon_credit_card.jpg" alt="SBI Credit Cards" title="SBI Credit Cards" class="img-responsive box-shadow"/></a>
             </div>
         </div>
    </div>

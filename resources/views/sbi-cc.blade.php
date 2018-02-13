@@ -36,7 +36,7 @@
 					</div>
           <div class="col-md-3">
                           <label>Joining Fee</label>
-                          <input type="text" name="Joining_Fee" disabled class="form-control" 
+                          <input type="text" name="Joining_Fee" readonly class="form-control" 
                           value="<?php if(isset($_GET['Joining_Fee'])){
                            echo str_replace(" ","+",$_GET["Joining_Fee"]);
                           }else{

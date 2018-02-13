@@ -13,38 +13,8 @@ class bank_quote_api_request extends Model
     public function store(Request $request)
     {
         $table = new bank_quote_api_request();
-        //print_r($request->BrokerId);exit();   
-        // $table->PropertyID = $request->PropertyID;
-        // $table->PropertyCost = $request->PropertyCost;
-        //  $table->LoanTenure = $request->LoanTenure;
-        //  $table->LoanRequired = $request->LoanRequired ;
-        //  $table->City  = $request->City ;
-        //  $table->ApplicantNme  = $request->ApplicantNme ;
-        //  $table->ApplicantGender  = $request->ApplicantGender ;
-        //  $table->ApplicantSource  = $request->ApplicantSource ;
-        //  $table->ApplicantIncome  = $request->ApplicantIncome ;
-        //  $table->ApplicantObligations  = $request->ApplicantObligations ;
-        //  $table->ApplicantDOB   = $request->ApplicantDOB  ;
-        //  $table->CoApplicantYes   = $request->CoApplicantYes  ;
-        //  $table->CoApplicantGender   = $request->CoApplicantGender  ;
-        //  $table->CoApplicantSource   = $request->CoApplicantSource  ;
-        //  $table->CoApplicantIncome   = $request->CoApplicantIncome  ;
-        //  $table->CoApplicantObligations   = $request->CoApplicantObligations  ;
-        //  $table->CoApplicantDOB   = $request->CoApplicantDOB  ;
-        //  $table->Turnover    = $request->Turnover   ;
-        //  $table->ProfitAfterTax    = $request->ProfitAfterTax   ;
-        //  $table->Depreciation    = $request->Depreciation   ;
-        //  $table->DirectorRemuneration    = $request->DirectorRemuneration   ;
-        //  $table->CoApplicantTurnover    = $request->CoApplicantTurnover   ;
-        //  $table->CoApplicantProfitAfterTax    = $request->CoApplicantProfitAfterTax   ;
-        //  $table->CoApplicantDepreciation    = $request->CoApplicantDepreciation   ;
-        //  $table->CoApplicantDirectorRemuneration    = $request->CoApplicantDirectorRemuneration   ;
-        //  $table->brokerID    = $request->brokerID   ;
-
          $input = $request->all();
-         //print_r($input);exit();
    		 $id = $table::create($input)->id;
-
    		 return $id;
     }
     
@@ -100,5 +70,16 @@ public function update_liza_quote($quote_id){
             ->where('id', $quote_id)
             ->update(['Contact' => Session::get('contact'), 'ApplicantNme' => Session::get('name'),'Email' => Session::get('email')]);
             return $update_quote;
+}
+ 
+    public function store_bt_req(Request $request)
+    {
+        //print_r($this->getAttribute('fillable'));exit();
+       $fillable = ['status',  'LoanRequired', 'ProductId','LoanTenure','ApplicantNme','Email','Contact','BrokerId','api_source','created_at', 'updated_at',];
+        $input = $request->all();
+        $table = new bank_quote_api_request();
+        $id = $table::forceCreate($input)->id;
+        return $id;
+
 }
 }

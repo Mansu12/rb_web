@@ -265,7 +265,7 @@ public function  change_password(Request $req){
      }
      $ref=Session::get('refapp')?Session::get('refapp'):0;
      $source=Session::get('source')?Session::get('source'):'';
-     print_r($source);exit();
+     // print_r($source);exit();
      $CampaignName=Session::get('CampaignName');
     $update = DB::table('bank_quote_api_request')->where('ID', $quote)->where('Email', $email)->update(array('bank_id' => $bank,'roi_type'=>$roi_type,'loan_eligible'=>$loan_eligible,'processing_fee'=>$processing_fee));
     $quote_id=Session::get('quote_id');
