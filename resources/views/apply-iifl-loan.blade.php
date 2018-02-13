@@ -238,6 +238,82 @@
             <a class="btn btn-primary btn-outline with-arrow mrg-top next_form" id="next_form" href="javascript:void(0)">NEXT<i class="icon-arrow-right"></i></a>
             </form>
             </div>
+
+            <div id="iifl-lead" style="display: none;">
+            <form id="iifl_lead" name="iifl_lead" method="POST">
+                {{ csrf_field() }}
+
+
+            
+            <section class="content">
+                <h3 class="text-uppercase exp-hed">IIFL Express Loan</h3>
+                
+                <span class="input input--nao">
+                    <input class="input__field input__field--nao" type="hidden" name="Token"  id="Token" readonly value="" />
+                    <label class="input__label input__label--nao" for="Token">
+                    <span class="input__label-content input__label-content--nao">Token</span>
+                    </label>
+                    <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+                    <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+                    </svg>
+                </span>
+                <span class="input input--nao">
+                   
+                    <input type="hidden" class="input__field input__field--nao"  name="object_name" id="object_name" value="Lead" required>
+                    <label class="input__label input__label--nao" for="object_name">
+                    <span class="input__label-content input__label-content--nao">Object Name</span>
+                    </label>
+                    <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+                    <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+                    </svg>
+                </span>
+                <span class="input input--nao">
+                    <input class="input__field input__field--nao" type="text" name="Parameters[FirstName]" id="FirstName" onkeypress="return AllowAlphabet(event)" required  />
+                    <label class="input__label input__label--nao" for="FirstName">
+                    <span class="input__label-content input__label-content--nao">First Name</span>
+                    </label>
+                    <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+                    <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+                    </svg>
+                </span>
+
+                 <span class="input input--nao">
+                    <input class="input__field input__field--nao" type="text" name="Parameters[LastName]" id="LastName" onkeypress="return AllowAlphabet(event)" required />
+                    <label class="input__label input__label--nao" for="LastName">
+                    <span class="input__label-content input__label-content--nao">Last Name</span>
+                    </label>
+                    <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+                    <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+                    </svg>
+                </span>
+
+                <span class="input input--nao">
+                    <input class="input__field input__field--nao" type="text" name="Parameters[MobilePhone]" id="MobilePhone" onkeypress="return AllowAlphabet(event)"  />
+                    <label class="input__label input__label--nao" for="MobilePhone">
+                    <span class="input__label-content input__label-content--nao">Mobile Phone</span>
+                    </label>
+                    <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+                    <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+                    </svg>
+                </span>
+
+                <span class="input input--nao">
+                    <input class="input__field input__field--nao" type="text" name="Parameters[Email]" id="Email" onkeypress="return AllowAlphabet(event)"  />
+                    <label class="input__label input__label--nao" for="Email">
+                    <span class="input__label-content input__label-content--nao">Email</span>
+                    </label>
+                    <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+                    <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+                    </svg>
+                </span>
+            </section>
+               
+            
+            <div class="col-md-12 mrg-top">
+            <a class="btn btn-primary btn-outline with-arrow mrg-top lead_save" href="javascript:void(0)">NEXT<i class="icon-arrow-right"></i></a>
+            </div>
+            </form>
+            </div>
             
         <div id="Applicant_Details" style="display: none;">
             <form name="applicant_deatils" id="applicant_deatils" method="POST">
@@ -270,7 +346,7 @@
             <section class="content">
                 <h3 class="col-md-12 mrg-tpp">Tell Us a Bit About YourSelf</h3>
                   <input type="hidden" name="CampaignName" value="{{$CampaignName}}">
-
+                   <input type="hidden" name="CRMLeadId" id="CRMLeadId" value="">
                 <input class="input__field input__field--nao" type="hidden" name="CompanyName" required id="CompanyName" onkeypress="return AllowAlphabet(event)" />
                 <input class="input__field input__field--nao" type="hidden" name="MonthlySalary" required id="MonthlySalary" onkeypress="return AllowAlphabet(event)" />
                 <input class="input__field input__field--nao" type="hidden" name="MonthlyObligation" required id="MonthlyObligation" onkeypress="return AllowAlphabet(event)" />
@@ -513,13 +589,26 @@
             <section class="content">
             <div class="col-md-12"><h3 class="mrg-tpp">Residence Information</h3></div>
                 <span class="input input--nao">
-                    <select class="input__field input__field--nao fnt-clr" id="PermanentResidencetype" name="PermanentResidencetype" required>
+                    <select class="input__field input__field--nao fnt-clr" id="Residencetype" name="Residencetype" required>
+                        <option selected disabled value=""></option>
+                        <option value="1">Rented</option>
+                        <option value="2 ">Owned</option>
+                    </select>
+                    <label class="input__label input__label--nao" for="Residencetype">
+                    <span class="input__label-content input__label-content--nao">ResidenceType</span>
+                    </label>
+                    <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
+                    <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
+                    </svg>
+                </span>
+                <span class="input input--nao">
+                    <select class="input__field input__field--nao fnt-clr" id="PermanentResidenceType" name="PermanentResidenceType" required>
                         <option selected disabled value=""></option>
                         <option value="Rented">Rented</option>
-                        <option value="Owned ">Owned</option>
+                        <option value="Owned">Owned</option>
                     </select>
-                    <label class="input__label input__label--nao" for="PermanentResidencetype">
-                    <span class="input__label-content input__label-content--nao">ResidenceType</span>
+                    <label class="input__label input__label--nao" for="PermanentResidenceType">
+                    <span class="input__label-content input__label-content--nao">PermanentResidenceType</span>
                     </label>
                     <svg class="graphic graphic--nao" width="300%" height="100%" viewBox="0 0 1200 60" preserveAspectRatio="none">
                     <path d="M0,56.5c0,0,298.666,0,399.333,0C448.336,56.5,513.994,46,597,46c77.327,0,135,10.5,200.999,10.5c95.996,0,402.001,0,402.001,0"/>
@@ -1765,11 +1854,15 @@ var global_tenure=0;
             $('#Eligibility_details').show();
             
             var email_address = $('#EmailID').val();
-            // //console.log(email_address);
+            // console.log(email_address);
             $('#PersonalEmailID').val(email_address);
+            $('#Email').val(email_address);
+            $('#Email').closest( "span" ).addClass( "input--filled" );
 
             var mob_number = $('#Mob_Num').val();
             $('#MobileNo').val(mob_number);
+            $('#MobilePhone').val(mob_number);
+            $('#MobilePhone').closest( "span" ).addClass( "input--filled" );
 
             var stay_at = $('#city').val();
             // //console.log(stay_at);
@@ -1820,8 +1913,9 @@ var global_tenure=0;
         // //console.log(foir);
         // //console.log(tenure+"  " +pf+ "  "+roi);
         var processing_fee =pf;
+        console.log(processing_fee);
         $('#fee').empty().append(processing_fee);
-        $('#Processingfee').val(processing_fee);
+        // $('#Processingfee').val(processing_fee);
         var period =tenure*12;
         $('#period').empty().append(tenure);
         var rate =roi/12/100;
@@ -1843,8 +1937,9 @@ var global_tenure=0;
          global_tenure=tenure;
         $('#tenure').val(tenure);
         var a =(rate*(Math.pow(1 + rate,period) / (Math.pow(1 + rate,period) - 1)));
-         // //console.log(a);
+         // 
         var amount =max_emi/a;
+        //console.log(a);
         var eligible_amount=Math.round(amount);
         // //console.log(eligible_amount);
         $('#eligible').empty().append(eligible_amount);
@@ -1855,7 +1950,6 @@ var global_tenure=0;
 </script>
 
 <script type="text/javascript">
-     
     $('#next_form').click(function(){
         var amount=$('#AppliedLoan').val();
        if(amount> global_eligible_amount){
@@ -1875,10 +1969,15 @@ var global_tenure=0;
             var no_of_days= days*12;
             var applied_loan=$('#AppliedLoan').val();
             var fee=$('#fee').text();
+            console.log(fee);
+            var processing=fee/100*applied_loan;
+            console.log(processing);
+            $('#Processingfee').val(processing);
+
             var EMI=$('#EMI').val();
             // //console.log(EMI);
             $('#Eligibility_details').hide();
-            $('#Applicant_Details').show();
+            $('#iifl-lead').show();
             $('#Amount').empty().append(applied_loan);
             $('#loanamt').empty().append(applied_loan);
             $('#LoanTenure').empty().append(days);
@@ -1899,11 +1998,25 @@ var global_tenure=0;
             $('#loantenure').val(days);
             $('#intrest').val(a);
             $('#ProcessFee').val(fee);
-            $('#e_m_i').val(EMI);         
-         }
+            $('#e_m_i').val(EMI);
+             $.ajax({  
+             type: "POST",  
+             url: "{{URL::to('iifl-token')}}",
+             data :$('#eligibility_form').serialize(),
+             success: function(msg){
+                console.log(msg);
 
+                $('#Token').val(msg);
+                $('#Token').closest( "span" ).addClass( "input--filled" );
+              
+            
+         }  
+      });          
+         }
+     
     });
-    $('#AppliedLoan, #tenure').on('input', function () {
+
+     $('#AppliedLoan, #tenure').on('input', function () {
         var applied_loan = parseInt($('#AppliedLoan').val());
         var no_of_days = parseFloat($('#tenure').val())*12;
         var a = $('#int span').html();
@@ -1924,6 +2037,37 @@ var global_tenure=0;
     
 });
 </script>
+
+<script type="text/javascript">
+    $('.lead_save').click(function(){
+        alert('okae');
+     if(! $('#iifl_lead').valid() ){
+            
+         }else{
+            var name=$('#FirstName').val();
+            $('#FName').val(name);
+            var lname=$('#LastName').val();
+            $('#LName').val(lname);
+             $('#iifl-lead').hide();
+            $('#Applicant_Details').show();
+            $.ajax({  
+             type: "POST",  
+             url: "{{URL::to('iifl-lead-save')}}",
+             data : $('#iifl_lead').serialize(),
+             success: function(msg){
+                console.log(msg[0].ID);
+                $('#CRMLeadId').val(msg[0].ID);
+
+
+              
+            
+         }  
+      });
+         }
+    });
+</script>
+
+
 
 <script type="text/javascript">
     $('#applicant_form').click(function(){

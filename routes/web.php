@@ -129,6 +129,10 @@ Route::post('iifl-pincode-status','LoanController@iifl_pincode_status');
 Route::post('iifl-permanent-pincode-status','LoanController@iifl_permanent_pincode_status');
 Route::post('iifl-co-pincode-status','LoanController@iifl_co_pincode_status');
 Route::post('iifl-company-pincode-status','LoanController@iifl_company_pincode_status');
+Route::post('iifl-token','LoanController@iifl_token');
+Route::post('iifl-lead-save','LoanController@iifl_lead_save');
+
+
 Route::get('business-loan-calculator','CalculatorController@business_loan_calculator');
 Route::post('business-loan-calculation','CalculatorController@business_loan_calculation');
 Route::get('personal-loan-calculator','CalculatorController@personal_loan_calculator');

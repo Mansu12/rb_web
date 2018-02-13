@@ -695,6 +695,49 @@ $url = $this::$url_static."/BankAPIService.svc/updateIIFLRevisedQuote";
      return response()->json( $obj);
   }
 
+  public function iifl_token(Request $req){
+    
+    $data=$req->all();
+    $post_data=json_encode($data);
+    // print_r($post_data);exit();
+
+   $url = $this::$url_static."/BankAPIService.svc/getIIFLToken";
+     $result=$this->call_json_data_api($url,$post_data);
+     $http_result=$result['http_result'];
+     // print_r($http_result);exit();
+     // $error=$result['error'];
+     $st=str_replace('"\"', " ", $http_result);
+     // print_r($st);exit();
+    
+     $s=str_replace('\""', "", $st);
+      // print_r($s);exit();
+     // $m=$s=str_replace('\\', "", $s);
+    // return $obj = json_decode($s);
+    
+     return response()->json( $s);
+     
+  }
+
+  public function iifl_lead_save(Request $req){
+    $data=$req->all();
+   
+    unset($data['_token']);
+
+    $post_data=json_encode($data);
+
+
+    $url = $this::$url_static."/BankAPIService.svc/createIIFLLeadSave";
+     $result=$this->call_json_data_api($url,$post_data);
+     $http_result=$result['http_result'];
+     $error=$result['error'];
+     $st=str_replace('"{', "{", $http_result);
+     $s=str_replace('}"', "}", $st);
+     $m=$s=str_replace('\\', "", $s);
+     $obj = json_decode($m);
+     //print_r( $obj);
+     return $obj->Body->SaveDetails;
+  }
+
   
 
   public function lendingkart(){
