@@ -63,8 +63,8 @@ Route::post('vehicle-registration','ApiController@vehicle_registration');
 Route::post('vehicle-documents','ApiController@vehicle_documents');
 Route::post('vehicle-video-documents','ApiController@vehicle_video_documents');
 Route::post('vehicle-inspection-details','ApiController@vehicle_inspection_details');
-<<<<<<< HEAD
+
 Route::post('balance-transfer-fm','MobileApiController@balance_transfer_fm');
-=======
+
 Route::post('balance-transfer-with-qid','MobileApiController@balance_transfer_with_quoteid');
->>>>>>> 4260a9960d74029f67899cc3bebbbe0173dae800
+

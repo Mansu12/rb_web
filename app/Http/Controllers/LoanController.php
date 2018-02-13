@@ -1231,6 +1231,10 @@ $url = $this::$url_static."/BankAPIService.svc/updateIIFLRevisedQuote";
     return view('medsave');
    }
 
+   public function lenden(){
+    return view('lenden');
+   }
+
    
 }
 
