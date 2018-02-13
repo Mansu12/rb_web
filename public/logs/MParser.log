@@ -1816,3 +1816,51 @@ Caused by: java.lang.NullPointerException
 	at com.creditReport.ParseXmlMfi.readFile(ParseXmlMfi.java:788)
 	at com.creditReport.ParseXmlMfi.parseXml(ParseXmlMfi.java:379)
 	... 3 more
+2018-02-07 15:03:33,929 [main] INFO  com.creditReport.Controller - 
+INFO: Reading the customer type
+2018-02-07 15:03:33,945 [main] INFO  com.creditReport.Controller - INFO: Activating the MFI parser
+2018-02-07 15:03:44,226 [main] INFO  com.creditReport.Controller - 
+INFO: Reading the customer type
+2018-02-07 15:03:44,226 [main] INFO  com.creditReport.Controller - INFO: Activating the MFI parser
+2018-02-07 15:05:56,178 [main] INFO  com.creditReport.Controller - 
+INFO: Reading the customer type
+2018-02-07 15:05:56,178 [main] INFO  com.creditReport.Controller - INFO: Activating the MFI parser
+2018-02-07 15:05:56,178 [main] INFO  com.creditReport.Controller - INFO: Input file:- xxx.xml
+2018-02-07 15:05:57,083 [main] ERROR com.creditReport.Controller - ERROR: Error in main()
+java.lang.RuntimeException: MParser Exception
+	at com.creditReport.ParseXmlMfi.parseXml(ParseXmlMfi.java:454)
+	at com.creditReport.ParseXmlMfi.startParser(ParseXmlMfi.java:154)
+	at com.creditReport.Controller.initSAWithFileName(Controller.java:115)
+	at com.creditReport.Controller.main(Controller.java:46)
+Caused by: java.lang.NullPointerException
+	at com.creditReport.ParseXmlMfi.readFile(ParseXmlMfi.java:788)
+	at com.creditReport.ParseXmlMfi.parseXml(ParseXmlMfi.java:379)
+	... 3 more
+2018-02-07 15:07:22,391 [main] INFO  com.creditReport.Controller - 
+INFO: Reading the customer type
+2018-02-07 15:07:22,391 [main] INFO  com.creditReport.Controller - INFO: Activating the MFI parser
+2018-02-07 15:07:22,391 [main] INFO  com.creditReport.Controller - INFO: Input file:- xxx.xml
+2018-02-07 15:07:22,844 [main] ERROR com.creditReport.Controller - ERROR: Error in main()
+java.lang.RuntimeException: MParser Exception
+	at com.creditReport.ParseXmlMfi.parseXml(ParseXmlMfi.java:454)
+	at com.creditReport.ParseXmlMfi.startParser(ParseXmlMfi.java:154)
+	at com.creditReport.Controller.initSAWithFileName(Controller.java:115)
+	at com.creditReport.Controller.main(Controller.java:46)
+Caused by: java.lang.NullPointerException
+	at com.creditReport.ParseXmlMfi.readFile(ParseXmlMfi.java:788)
+	at com.creditReport.ParseXmlMfi.parseXml(ParseXmlMfi.java:379)
+	... 3 more
+2018-02-07 15:07:50,290 [main] INFO  com.creditReport.Controller - 
+INFO: Reading the customer type
+2018-02-07 15:07:50,290 [main] INFO  com.creditReport.Controller - INFO: Activating the MFI parser
+2018-02-07 15:07:50,290 [main] INFO  com.creditReport.Controller - INFO: Input file:- xxx.xml
+2018-02-07 15:07:50,759 [main] ERROR com.creditReport.Controller - ERROR: Error in main()
+java.lang.RuntimeException: MParser Exception
+	at com.creditReport.ParseXmlMfi.parseXml(ParseXmlMfi.java:454)
+	at com.creditReport.ParseXmlMfi.startParser(ParseXmlMfi.java:154)
+	at com.creditReport.Controller.initSAWithFileName(Controller.java:115)
+	at com.creditReport.Controller.main(Controller.java:46)
+Caused by: java.lang.NullPointerException
+	at com.creditReport.ParseXmlMfi.readFile(ParseXmlMfi.java:788)
+	at com.creditReport.ParseXmlMfi.parseXml(ParseXmlMfi.java:379)
+	... 3 more
