@@ -1,4 +1,4 @@
-@include('layout.header')
+<?php echo $__env->make('layout.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 <style>
  .img-center {margin:0 auto; display:block;padding:10px;}
  label {font-size:11px;}
@@ -11,7 +11,7 @@
  .step1, .step2, .step3, .step4, .step5, .step6, .step7, .step8, .step9 {float:left;margin-bottom:20px;}
  .center-div {margin:0 auto; display:block;}
   th {text-align:center;}
- @media only screen and (max-width: 768px) {
+ @media  only screen and (max-width: 768px) {
  
  .step1, .step2, .step3, .step4, .step5, .step6, .step7, .step8, .step9, .step10, .step11 {float:none;}
 
@@ -783,6 +783,6 @@
 
 
 
-@include('layout.footer')
-@include('layout.script')
+<?php echo $__env->make('layout.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('layout.script', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
