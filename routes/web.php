@@ -430,3 +430,6 @@ Route::get('sbi','CreditcardController@sbi');
 
 /*Lenden*/
 Route::get('lenden','LoanController@lenden');
+
+/*Recitfy Credit Score*/
+Route::get('rectifycredit','EquifaxController@rectifycredit');

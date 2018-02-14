@@ -256,6 +256,11 @@ $post_data='{
                         ));
         }
  }
+
+
+ public function rectifycredit(){
+  return view('rectifycredit');
+ }
         
 
   
