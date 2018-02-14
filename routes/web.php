@@ -424,8 +424,8 @@ Route::post('excel-upload-submit','LoanController@excel_upload_submit');
 Route::get('capitalfloat','LoanController@capitalfloat');
 
 /*SBI CC*/
-Route::get('sbi-cc','CreditcardController@sbi_cc');
-Route::post('sbi-cc-submit','CreditcardController@sbi_cc_submit');
+Route::get('new-cc','CreditcardController@sbi_cc');
+Route::post('new-cc-submit','CreditcardController@sbi_cc_submit');
 Route::get('sbi','CreditcardController@sbi');
 
 /*Lenden*/

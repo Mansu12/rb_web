@@ -2,7 +2,8 @@
 
 <div class="container" id="fh5co-hero">
 			<div class="row">
-			<div class="sbi-banner"><img src="images/header-img.png" /></div>
+      <br>
+			<div class="sbi-banner"></div>
 				<div class="col-md-12 white-bg mrg-tp-minus box-shadow">
 					<form id="sbi_cc" name="sbi_cc" method="POST">
                     <?php echo e(csrf_field()); ?>
@@ -11,15 +12,8 @@
 					<div class="form-group">
 
 					<div class="col-md-12"><h4 class="hdr pad1 text-center">Personal Details</h4></div>
-
-          <input type="hidden" name="CardType" class="card_type" 
-                      value="<?php if(isset($_GET['card_type'])){
-                        echo str_replace("_"," ",$_GET["card_type"]);
-                        }else{
-                          echo "0";
-                          }?>"> 
-
-                          
+          <input type="hidden" name="CardType" id="CardType" value="0"> 
+          <input type="hidden" name="Joining_Fee" id="Joining_Fee" value="0">              
 
 					<div class="col-md-3">
 					<label>Name <i style="color:red"> *</i></label>
@@ -35,15 +29,7 @@
 					<label>Last Name<i style="color:red"> *</i></label>
 					<input type="text" id="LastName" name="LastName" class="form-control" onkeypress="return AllowAlphabet(event)"  required="">
 					</div>
-          <div class="col-md-3">
-                          <label>Joining Fee</label>
-                          <input type="text" name="Joining_Fee" readonly class="form-control" 
-                          value="<?php if(isset($_GET['Joining_Fee'])){
-                           echo str_replace(" ","+",$_GET["Joining_Fee"]);
-                          }else{
-                          echo "0";
-                          }?>"> 
-                          </div>
+         
 					<div class="col-md-3">
 					<label>Date Of Birth<i style="color:red"> *</i></label>
 					<input type="text" id="dob" name="DOB" class="form-control date"  required="">

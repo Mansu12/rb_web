@@ -11,6 +11,7 @@
  .step1, .step2, .step3, .step4, .step5, .step6, .step7, .step8, .step9 {float:left;margin-bottom:20px;}
  .center-div {margin:0 auto; display:block;}
   th {text-align:center;}
+  .form-control {height: 38px !important;border-radius: 0px !important;}
  @media  only screen and (max-width: 768px) {
  
  .step1, .step2, .step3, .step4, .step5, .step6, .step7, .step8, .step9, .step10, .step11 {float:none;}
@@ -19,7 +20,7 @@
 </style>
 <br>
 <div id="fh5co-hero">
-
+<div class="container">
 <form method="post" action="">
 <div class="col-md-4 col-md-offset-4" style="display:block;">
 	<div class="step1 white-bg box-shadow pad-btm">
@@ -50,7 +51,7 @@
 	</div>
 	
 	
-	<div class="col-md-4 col-md-offset-4" style="display:none;">
+	<div class="col-md-4 col-md-offset-4" style="display:block;">
 	<div class="step2 white-bg box-shadow pad-btm">
 	<h4 class="blu-head-bg">Enter Your Loan Requirements</h4>
 
@@ -83,7 +84,7 @@
 	</div>
 	
 	
-	<div class="col-md-4 col-md-offset-4" style="display:none;">
+	<div class="col-md-4 col-md-offset-4" style="display:block;">
 	<div class="step3 white-bg box-shadow pad-btm">
 	<h4 class="blu-head-bg">Enter Pan Details</h4>
 	<div class="col-md-8 col-xs-8">
@@ -124,7 +125,7 @@
 	
 	
 	
-	<div class="col-md-4 col-md-offset-4" style="display:none;">
+	<div class="col-md-4 col-md-offset-4" style="display:block;">
 	<div class="step4 white-bg box-shadow pad-btm">
 	<h4 class="blu-head-bg">Enter Aadhar Details</h4>
 	<div class="col-md-8 col-xs-8">
@@ -177,7 +178,7 @@
 
 	
 	
-	<div style="display:none;">
+	<div style="display:block;">
 	<div class="col-md-4 col-md-offset-2">
 	<div class="step5 white-bg box-shadow pad-btm">
 	<h4 class="blu-head-bg">Enter Address Details</h4>
@@ -290,7 +291,7 @@
 	
 
 	
-	<div class="col-md-4 col-md-offset-4" style="display:none;">
+	<div class="col-md-4 col-md-offset-4" style="display:block;">
 	<div class="step4 white-bg box-shadow pad-btm">
 	<h4 class="blu-head-bg">Enter Personal Details</h4>
 	
@@ -352,7 +353,7 @@
 	
 	
 	
-	<div style="display:none;">
+	<div style="display:block;">
 	<div class="col-md-4 col-md-offset-2">
 	<div class="step6 white-bg box-shadow pad-btm">
 	<h4 class="blu-head-bg">Enter Professional Details</h4>
@@ -494,7 +495,7 @@
 	</div>
 	
 	
-	<div class="col-md-4 col-md-offset-4" style="display:none;">
+	<div class="col-md-4 col-md-offset-4" style="display:block;">
 	<div class="step7 white-bg box-shadow pad-btm">
 	<h4 class="blu-head-bg">Enter Financial Details</h4>
 	<div class="col-md-8 col-xs-8">
@@ -540,7 +541,7 @@
 	
 	
 	
-	<div class="col-md-4 col-md-offset-4" style="display:none;">
+	<div class="col-md-4 col-md-offset-4" style="display:block;">
 	<div class="step8 white-bg box-shadow pad-btm">
 	<h4 class="blu-head-bg">Enter Financial Details</h4>
 	<p class="col-md-12">Please Upload Your Cheque</p>
@@ -602,7 +603,7 @@
 	
 	
 	
-	<div class="col-md-4 col-md-offset-4" style="display:none;">
+	<div class="col-md-4 col-md-offset-4" style="display:block;">
 	<div class="step8 white-bg box-shadow pad-btm">
 	<h4 class="blu-head-bg">Enter Assets Details</h4>
 	<p class="col-md-12">Please Provide the details of active loans have</p>
@@ -662,7 +663,7 @@
 	
 	
 	
-	<div class="col-md-4 col-md-offset-4" style="display:none;">
+	<div class="col-md-4 col-md-offset-4" style="display:block;">
 	<div class="step8 white-bg box-shadow pad-btm">
 	<h4 class="blu-head-bg">Enter Active Loan Details</h4>
 	<p class="col-md-12">Please Provide the details of active loans have</p>
@@ -728,7 +729,7 @@
 	
 	
 	
-	<div class="col-md-4 col-md-offset-4" style="display:none;">
+	<div class="col-md-4 col-md-offset-4" style="display:block;">
 	<div class="step8 white-bg box-shadow pad-btm">
 	<h4 class="blu-head-bg">Upload Documents</h4>
 	<p class="col-md-12">Please Upload any additional documents if any</p>
@@ -779,7 +780,7 @@
 	</form>
 
 </div>
-
+</div>
 
 
 

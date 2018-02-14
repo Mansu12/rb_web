@@ -1,12 +1,54 @@
-@include('layout.header')
+<!DOCTYPE html>
+<html class="no-js"> 
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <!-- <link href="https://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css" rel="stylesheet" type="text/css"> -->
+  <title><?php if(isset($title))echo $title; else echo "RupeeBoss-Apply for a Loan";  ?></title>
+  <!-- <meta name="google-signin-client_id" content="752185558821-9vlmac53np7bgdo3kn9d2e5ft39t7gud.apps.googleusercontent.com"> -->
+  <meta name="msvalidate.01" content="3744048BDD61F7FE6837BD664522C8F9" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="<?php if(isset($description))echo $description; else echo "RupeeBoss provides all kind of loans."; ?>" />
+  <meta name="keywords" content="<?php if(isset($keywords))echo $keywords; else echo "rupeeboss loans getloan expressloan"; ?>" />
+  <meta name="p:domain_verify" content="05d8ec5b6a704fa5b78abd5f636fdc24"/>
+  <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+  <link rel="shortcut icon" href="<?php echo e(URL::to('images/rb_fav.png')); ?>">
+  <!-- <link rel="stylesheet" href="<?php echo e(URL::to('fonts/Raleway.css')); ?>" type="text/css"> -->
+  <!-- Animate.css -->
 
-<div class="container" id="fh5co-hero">
+  <link  rel="stylesheet" type="text/css" href="<?php echo e(URL::to('css/mysite.css')); ?>"/>
+<link  rel="stylesheet" type="text/css" href="<?php echo e(URL::to('css/style.css')); ?>"/>
+<script src="js/icici_js/jquery.min.js"></script>
+  <script type="text/javascript" src="js/icici_js/material.min.js"></script>
+  <script type="text/javascript" src="js/icici_js/moment-with-locales.min.js"></script>
+  <script type="text/javascript" src="js/icici_js/bootstrap-material-datetimepicker.js"></script>
+   
+</script>
+
+
+<script type="text/javascript" src="js/icici_js/jquery.datepicker.js"></script>
+
+
+    
+<script src="js/jquery.mask.js"></script>
+<script src="js/icici_js/jquery.validate.min.js"></script>
+<script src="js/icici_js/classie.js"></script>
+<script src="js/bootstrap.min.js" type="text/javascript"></script>  
+<link href="css/jquery-ui.min.css" rel="Stylesheet"></link>
+<script src="js/jquery-ui.js" ></script>
+<script type="text/javascript" src="js/datepicker.js"></script>
+
+
+ 
+<div class="container">
+<h1 class="loan-head" >Credit Card</h1>
 			<div class="row">
       <br>
 			<div class="sbi-banner"></div>
 				<div class="col-md-12 white-bg mrg-tp-minus box-shadow">
 					<form id="sbi_cc" name="sbi_cc" method="POST">
-                    {{ csrf_field() }}
+                    <?php echo e(csrf_field()); ?>
+
 
 					<div class="form-group">
 
@@ -219,8 +261,6 @@
 		<br>
 
 
-@include('layout.footer')
-@include('layout.script')
 
 <div class="modal fade" tabindex="-1" role="dialog" id="sbi-cc-popup">
   <div class="modal-dialog" role="document">
@@ -347,7 +387,7 @@
         {     
          $.ajax({  
          type: "POST",  
-         url: "{{URL::to('sbi-cc-submit')}}",
+         url: "<?php echo e(URL::to('sbi-cc-submit')); ?>",
          data : $('#sbi_cc').serialize(),
          success: function(msg){
             console.log(msg.Status);
@@ -370,7 +410,7 @@
 
 <script type="text/javascript">
   $('.sbi_cc_proceed').click(function(){
-    window.location.href ="{{URL::to('thank-you')}}";
+    window.location.href ="<?php echo e(URL::to('thank-you')); ?>";
   });
 </script>
 
@@ -383,7 +423,7 @@
       source: function(request, response) {
         
         $.ajax({
-          url: "{{ route('searchstateajax') }}",
+          url: "<?php echo e(route('searchstateajax')); ?>",
           dataType: "json",
           data: {
             term : request.term
