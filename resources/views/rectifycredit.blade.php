@@ -32,11 +32,11 @@
 					</div>
 					<div class="col-md-4">
 					<label>Date Of Birth</label>
-					<input type="date" class="form-control"  required="">
+					<input name="DateOfBirth" id="DateOfBirth" type="text" class="form-control"  required="">
 					</div>
 					<div class="col-md-4">
 					<label>Pan No</label>
-					<input type="number" class="form-control"  required="">
+					<input name="PanNum" id="PanNum" type="number" class="form-control"  required="">
 					</div>
 					<div class="col-md-4">
 					<label>Aadhar No.</label>
