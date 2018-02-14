@@ -223,7 +223,7 @@ class CreditcardController extends CallApiController
     /*SBI CC*/
 
     public function sbi_cc(){
-        return view('sbi-cc');
+        return view('new-cc');
     }
 
     public function sbi_cc_submit(Request $req){
