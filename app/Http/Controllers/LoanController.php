@@ -1235,6 +1235,26 @@ $url = $this::$url_static."/BankAPIService.svc/updateIIFLRevisedQuote";
     return view('lenden');
    }
 
+   public function otp(Request $req){
+    $data=$req->all();
+    $post_data=json_encode($data);
+   
+    $url = $this::$url_static."/LendenAPIService.svc/SendOTP";
+    $result=$this->call_json_data_api($url,$post_data);
+    $http_result=$result['http_result'];
+    $error=$result['error'];
+    $st=str_replace('"{', "{", $http_result);
+    $s=str_replace('}"', "}", $st);
+    $m=$s=str_replace('\\', "", $s);
+    // print_r($http_result);exit();
+    $obj=json_decode($m);
+    return response()->json( $obj);
+   }
+
+   public function hdfc_personal_loan(){
+    return view('hdfc-personal-loan');
+   }
+
    
 }
 
