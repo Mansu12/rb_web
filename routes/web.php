@@ -430,6 +430,11 @@ Route::get('sbi','CreditcardController@sbi');
 
 /*Lenden*/
 Route::get('lenden','LoanController@lenden');
+Route::post('lenden-otp','LoanController@otp');
+
+
 
 /*Recitfy Credit Score*/
 Route::get('rectifycredit','EquifaxController@rectifycredit');
+
+Route::get('hdfc-personal-loan','LoanController@hdfc_personal_loan');
