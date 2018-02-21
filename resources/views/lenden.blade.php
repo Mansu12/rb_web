@@ -5,17 +5,16 @@
  .yellow-bg {background:#ffc000; font-size:13px; color:#333; padding:10px 10px; margin:0 auto;display:block; border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;}
  .gray-bg {background:#666; font-size:13px; color:#fff; padding:10px 10px; margin:0 auto;display:block;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px; }
  .yellow-bg:hover {background:#eab102;}
- .pad-btm {padding-bottom:20px;}
+ .pad-btm {padding-bottom:18px;}
  .blu-head-bg {background:#28a0ff; padding:15px; display:block;float:left; width:100%; text-align:center; color:#fff;font-size:16px;}
  .mrg-tp-btm {margin:15px auto;}
  .step1, .step2, .step3, .step4, .step5, .step6, .step7, .step8, .step9 {float:left;margin-bottom:20px;}
  .center-div {margin:0 auto; display:block;}
   th {text-align:center;}
   .form-control {height: 38px !important;border-radius: 0px !important;}
- @media only screen and (max-width: 768px) {
- 
+ @media only screen and (max-width: 768px) 
+ {
  .step1, .step2, .step3, .step4, .step5, .step6, .step7, .step8, .step9, .step10, .step11 {float:none;}
-
  }
 </style>
 <br>
