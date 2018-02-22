@@ -1,9 +1,6 @@
-@include('layout.header')
-<style>
- .form-group span {font-size:12px;}
-</style>
+<?php echo $__env->make('layout.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 <div id="fh5co-hero">
- <img src="{{URL::to('images/Personal-Loan-Banner.png')}}" alt="Kotak Personal Loan Banner" title="Kotak Personal Loan" class="img-responsive">
+ <img src="<?php echo e(URL::to('images/Personal-Loan-Banner.png')); ?>" alt="Kotak Personal Loan Banner" title="Kotak Personal Loan" class="img-responsive">
   <div class="fh5co-contact animate-box">
 
     <div class="container">
@@ -15,11 +12,12 @@
 
         <div class="col-md-12">
           <div class="row text-left comp-pg rate white-bg">
-          <button class="btn btn-success btn-outline dis-tbl" id="kotak-pl-status" style="margin:0 auto; display:block; width:250px;">Track Status If Already Applied</button>
+          <button class="btn btn-success btn-outline with-arrow animate-box fadeInUp animated dis-tbl" id="kotak-pl-status" >Tack Status If Already Applied<i class="icon-arrow-right"></i></button>
 
             
               <form class="" id="Kotak_PL_form" role="form" method="POST" >
-               {{ csrf_field() }}
+               <?php echo e(csrf_field()); ?>
+
                
 
                 <div class="row">
@@ -437,7 +435,7 @@
                     <button style="display: none;" class="btn btn-primary btn-outline with-arrow animate-box fadeInUp animated kotak-pl-submit dis-tbl" >Confirm & Continue<i class="icon-arrow-right"></i></button>
 
                   <div class="iframeloading" style= "display: none; position: absolute; top: 0px; left: 0px; width: 100%; height: 100%;">
-                <img src="{{URL::to('images/ajaxloader.gif')}}" alt="Loader" title="Loader" style="top: 50%; position: relative; left: 50%;"  />
+                <img src="<?php echo e(URL::to('images/ajaxloader.gif')); ?>" alt="Loader" title="Loader" style="top: 50%; position: relative; left: 50%;"  />
                </div>
 
                   
@@ -453,8 +451,8 @@
     </div>  
   </div>
 </div>
-@include('layout.footer')
-@include('layout.script')
+<?php echo $__env->make('layout.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+<?php echo $__env->make('layout.script', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
 
 
 <div class="modal fade" tabindex="-1" role="dialog" id="kotak_pl_popup">
@@ -551,7 +549,8 @@
       </div>
       <div class="modal-body">
         <form name="kotak_personal_loan_status" id="kotak_personal_loan_status" method="post">
-          {{ csrf_field() }}
+          <?php echo e(csrf_field()); ?>
+
           <input type="hidden" name="form" value="kotak_personal_loan_status">
                   <div>
                     <fieldset>
@@ -708,7 +707,7 @@
      
         $.ajax({  
          type: "POST",  
-         url: "{{URL::to('kotak-pl-submit')}}",
+         url: "<?php echo e(URL::to('kotak-pl-submit')); ?>",
          data : $('#Kotak_PL_form').serialize(),
          dataType: 'json',
          success: function(msg){
@@ -974,7 +973,7 @@ $('#ExstCustType').on('change', function() {
 <script type="text/javascript">   
 
  $.ajax({ 
-   url: "{{URL::to('kotak-pl-city-master')}}",
+   url: "<?php echo e(URL::to('kotak-pl-city-master')); ?>",
    method:"GET",
    success: function(datas)  
    {
@@ -997,7 +996,7 @@ $('#ExstCustType').on('change', function() {
 <script type="text/javascript">   
 
  $.ajax({ 
-   url: "{{URL::to('kotak-pl-city-master')}}",
+   url: "<?php echo e(URL::to('kotak-pl-city-master')); ?>",
    method:"GET",
    success: function(datas)  
    {
@@ -1020,7 +1019,7 @@ $('#ExstCustType').on('change', function() {
 <script type="text/javascript">   
 
  $.ajax({ 
-   url: "{{URL::to('kotak-pl-city-master')}}",
+   url: "<?php echo e(URL::to('kotak-pl-city-master')); ?>",
    method:"GET",
    success: function(datas)  
    {
@@ -1076,7 +1075,7 @@ $(document).ready(function(){
       source: function(request, response) {
         
         $.ajax({
-          url: "{{ route('searchkotak_plcompanyajax') }}",
+          url: "<?php echo e(route('searchkotak_plcompanyajax')); ?>",
           dataType: "json",
           data: {
             term : request.term
@@ -1120,14 +1119,14 @@ $(document).ready(function(){
         var Organization=$("#Organization").val();
         var NMI=$("#NMI").val();
         var LnAmt=$("#LnAmt").val();
-        var v_token = "{{csrf_token()}}";
+        var v_token = "<?php echo e(csrf_token()); ?>";
         
         
         // $(".iframeloading").show();
      
         $.ajax({  
          type: "POST",  
-         url: "{{URL::to('kotak-pl-proceed')}}",
+         url: "<?php echo e(URL::to('kotak-pl-proceed')); ?>",
          data : { 'Organization': Organization ,'LnAmt': LnAmt , 'NMI': NMI ,'_token': v_token},
          dataType: 'json',
          success: function(msg){
@@ -1168,7 +1167,7 @@ $(document).ready(function(){
          
         $.ajax({  
          type: "POST",  
-         url: "{{URL::to('kotak-personal-loan-status')}}",
+         url: "<?php echo e(URL::to('kotak-personal-loan-status')); ?>",
          data : $('#kotak_personal_loan_status').serialize(),
          success: function(msg){
 

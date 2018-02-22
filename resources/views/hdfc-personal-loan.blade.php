@@ -12,7 +12,7 @@
 					<div class="form-group">
 					<form id="" name="" role="form" method="POST">
 					<br>
-					<h2 class="pad text-center">Apply HDFC Personal Loan</h2>
+					<h2 class="pad text-center text-uppercase">Apply HDFC Personal Loan</h2>
 					<br>
 					<div class="col-md-4">
 					<label>Branch Name</label>
@@ -101,7 +101,7 @@
 					</div>
 					
 					<div class="col-md-4">
-					<label>Perment Address</label>
+					<label>Permenent Address</label>
 					<input type="text" class="form-control"  required="">
 					</div>
 					
