@@ -14,9 +14,12 @@
 					<br>
 					<h2 class="pad text-center text-uppercase">Apply HDFC Personal Loan</h2>
 					<br>
+					
 					<div class="col-md-4">
 					<label>Branch Name</label>
-					<input name="" id="" type="text" class="form-control" required="">
+					<select class="form-control block drop-arr select-sty">
+					  <option></option>
+					</select>
 					</div>
 					<div class="col-md-4">
 					<label>Branch Code</label>
@@ -101,7 +104,7 @@
 					</div>
 					
 					<div class="col-md-4">
-					<label>Perment Address</label>
+					<label>Permenent Address</label>
 					<input type="text" class="form-control"  required="">
 					</div>
 					
