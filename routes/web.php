@@ -438,3 +438,4 @@ Route::post('lenden-otp','LoanController@otp');
 Route::get('rectifycredit','EquifaxController@rectifycredit');
 
 Route::get('hdfc-personal-loan','LoanController@hdfc_personal_loan');
+Route::get('hdfc-business-loan','LoanController@hdfc_business_loan');

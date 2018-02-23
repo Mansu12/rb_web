@@ -1255,6 +1255,10 @@ $url = $this::$url_static."/BankAPIService.svc/updateIIFLRevisedQuote";
     return view('hdfc-personal-loan');
    }
 
+   public function hdfc_business_loan(){
+    return view('hdfc-business-loan');
+   }
+
    
 }
 
