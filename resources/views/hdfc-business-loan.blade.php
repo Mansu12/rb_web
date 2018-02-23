@@ -1,4 +1,4 @@
-<?php echo $__env->make('layout.header', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+@include('layout.header')
 <div id="fh5co-hero">
 <div class="express-lon-ban"><img src="images/hdfc-personal-loan.png" class="img-responsive" width="100%"/></div>
 
@@ -149,6 +149,6 @@
 <br>
 
 
-<?php echo $__env->make('layout.footer', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
-<?php echo $__env->make('layout.script', array_except(get_defined_vars(), array('__data', '__path')))->render(); ?>
+@include('layout.footer')
+@include('layout.script')
 
