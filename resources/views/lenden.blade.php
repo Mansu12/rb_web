@@ -2,9 +2,9 @@
 <style>
  .img-center {margin:0 auto; display:block;padding:10px;}
  label {font-size:11px;}
- .yellow-bg {background:#ffc000; font-size:13px; color:#333; padding:10px 10px; margin:0 auto;display:block; border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;}
+ .yellow-bg {background:#ffc000; font-size:13px; color:#333; margin:0 auto; padding:10px 10px; margin:0 auto; cursor:pointer; border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;}
  .gray-bg {background:#666; font-size:13px; color:#fff; padding:10px 10px; margin:0 auto;display:block;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px; }
- .yellow-bg:hover {background:#eab102;}
+ .yellow-bg:hover {background:#eab102;color:#333;}
  .pad-btm {padding-bottom:18px;}
  .blu-head-bg {background:#28a0ff; padding:15px; display:block;float:left; width:100%; text-align:center; color:#fff;font-size:16px;}
  .mrg-tp-btm {margin:15px auto;}
@@ -53,7 +53,7 @@
 	
 	<div class="col-md-12">
 	
-	<a class="yellow-bg" id="continue">CONTINUE</a>
+	<a class="yellow-bg " id="continue">CONTINUE</a>
 	</div>
 	</div>
 	</form>
@@ -288,7 +288,7 @@
 	
 	<div class="col-md-12">
 	<br>
-	<button class="gray-bg pull-left">BACK</button>
+	<button class="gray-bg pull-left">BACK</button> &nbsp;
 	<button class="yellow-bg">NEXT</button>
 	</div>
 	
