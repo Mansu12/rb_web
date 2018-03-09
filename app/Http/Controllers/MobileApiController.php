@@ -203,7 +203,7 @@ class MobileApiController extends ApiController
                 return json_encode($data);
 	}
 	public function balance_transfer_with_quoteid(Request $req){
-		try {
+		//try {
 			//save and get quote id
 		$save_req =new Request( ['status'=>'NA','LoanRequired' =>$req['loanamount'] , 'LoanTenure'=>$req['loaninterest'],'ProductId'=>$req['product_id'],'LoanTenure'=>$req['loanterm'],"ApplicantNme"=>$req['applicantname'],"Email"=>$req['email'],"Contact"=>$req['contact'],"BrokerId"=>$req['brokerid'],"api_source"=>$req['source']]);
 		$save=new bank_quote_api_request();	
@@ -211,10 +211,32 @@ class MobileApiController extends ApiController
 		//get real quotes
 		$quote=json_decode($this::balance_transfer($req));
 		//print_r($quote->data);exit();
-		if($quote->data!=[]){
+		$data=$quote->data;
+		if($data!=[]){
+			foreach ($data as $key => $value){
+
+			    $new_rate=$value->roi/12/100;
+			    $loanamount=$req['loanamount'];
+			    $loaninterest=$req['loaninterest'];
+			    $loanterm=$req['loanterm'];
+			    $amount = $loanamount * $loaninterest * (pow(1 + $loaninterest, $loanterm) / (pow(1 + $loaninterest, $loanterm) - 1));
+			    $total =(($amount*$loanterm)-$loanamount);
+
+			    $ttl_payment = $loanamount+$total;
+
+			    $new_amount = $loanamount * $new_rate * (pow(1 + $new_rate, $loanterm) / (pow(1 + $new_rate, $loanterm) - 1));
+
+			  $new_total =(($new_amount*$loanterm)-$loanamount);
+			  $new_ttl_payment = $loanamount+$new_total;
+			  $drop_emi= round($amount-$new_amount,2);
+			  $drop_in_int=round((($loaninterest*12*100)-($new_rate*12*100)),2);
+			  $savings=$total-$new_total;
+			  $value->drop_emi=$drop_emi;
+			  $value->drop_in_int=$drop_in_int;
+			}
 			$status_Id=0;
 			$msg="data delievered";
-			$new_data=$quote->data;
+			$new_data=$data;
 			$quote=$id;
 			$url=$this::$erp_url_static."BalanceTransfer/PL_BT_Form.aspx";
 		}
@@ -228,14 +250,14 @@ class MobileApiController extends ApiController
 		
 		//print_r($a);
 		$new_data=array('data' =>$new_data ,'msg' =>$msg,'status_Id'=>$status_Id,'quote_id'=>$quote,'url'=>$url );
-		} catch (\Exception $e) {
-			$new_data=NULL;
-			$status_Id=1;
-			$msg=$e->getMessage();
-			$quote=NULL;
-			$url=NULL;
-			$new_data=array('data' =>$new_data ,'msg' =>$msg,'status_Id'=>$status_Id,'quote_id'=>$quote,'url'=>$url );
-		}
+		// } catch (\Exception $e) {
+		// 	$new_data=NULL;
+		// 	$status_Id=1;
+		// 	$msg=$e->getMessage();
+		// 	$quote=NULL;
+		// 	$url=NULL;
+		// 	$new_data=array('data' =>$new_data ,'msg' =>$msg,'status_Id'=>$status_Id,'quote_id'=>$quote,'url'=>$url );
+		// }
 		
 		return $new_data;
 			
@@ -299,7 +321,7 @@ class MobileApiController extends ApiController
 			$savings=null;	
 		 }
                 $data = array('msg'=>"Data delivered",'status_Id'=>$status_Id,'data' =>$resultArray,"saving"=>$savings );
-                print_r($data );exit();
+               // print_r($data );exit();
                 return json_encode($data);
 	}
 
