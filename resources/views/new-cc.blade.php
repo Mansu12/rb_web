@@ -386,7 +386,7 @@
         {     
          $.ajax({  
          type: "POST",  
-         url: "{{URL::to('sbi-cc-submit')}}",
+         url: "{{URL::to('new-cc-submit')}}",
          data : $('#sbi_cc').serialize(),
          success: function(msg){
             console.log(msg.Status);
@@ -453,6 +453,18 @@
       });
    });
 
+</script>
+
+<script type="text/javascript">
+  function fnAllowNumeric(evt) {
+            evt = (evt) ? evt : window.event;
+            var charCode = (evt.which) ? evt.which : evt.keyCode;
+            if (charCode > 31 && (charCode < 48 || charCode > 57)) {
+
+              return false;
+            }
+            return true;
+          }
 </script>
 
 

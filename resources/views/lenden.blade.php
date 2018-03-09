@@ -2,52 +2,61 @@
 <style>
  .img-center {margin:0 auto; display:block;padding:10px;}
  label {font-size:11px;}
- .yellow-bg {background:#ffc000; font-size:13px; color:#333; padding:10px 10px; margin:0 auto;display:block; border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;}
+ .yellow-bg {background:#ffc000; font-size:13px; color:#333; margin:0 auto; padding:10px 10px; margin:0 auto; cursor:pointer; border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px;}
  .gray-bg {background:#666; font-size:13px; color:#fff; padding:10px 10px; margin:0 auto;display:block;border-radius:5px;-moz-border-radius:5px;-webkit-border-radius:5px; }
- .yellow-bg:hover {background:#eab102;}
- .pad-btm {padding-bottom:20px;}
+ .yellow-bg:hover {background:#eab102;color:#333;}
+ .pad-btm {padding-bottom:18px;}
  .blu-head-bg {background:#28a0ff; padding:15px; display:block;float:left; width:100%; text-align:center; color:#fff;font-size:16px;}
  .mrg-tp-btm {margin:15px auto;}
  .step1, .step2, .step3, .step4, .step5, .step6, .step7, .step8, .step9 {float:left;margin-bottom:20px;}
  .center-div {margin:0 auto; display:block;}
   th {text-align:center;}
   .form-control {height: 38px !important;border-radius: 0px !important;}
- @media only screen and (max-width: 768px) {
- 
+ @media only screen and (max-width: 768px) 
+ {
  .step1, .step2, .step3, .step4, .step5, .step6, .step7, .step8, .step9, .step10, .step11 {float:none;}
-
  }
 </style>
 <br>
 <div id="fh5co-hero">
 <div class="container">
-<form method="post" action="">
+
 <div class="col-md-4 col-md-offset-4" style="display:block;">
+<form id="lenden_otp" name="lenden_otp" method="POST">
+ {{ csrf_field() }}
 	<div class="step1 white-bg box-shadow pad-btm">
 	<img src="images/lenden_logo.jpg" class="img-center"/>
 
-	
+	<input type="hidden" name="request_type" id="request_type" value="send_otp">
 	<div class="col-md-12">
 	<label>Full Name</label>
-	<input type="text" class="form-control"  required="">
+	<input name="fname" id="fname" type="text" class="form-control"  required="">
+	</div>
+
+	<div class="col-md-12">
+	<label>Mobile</label>
+	<input name="mobile_number" id="mobile_number" maxlength="10" type="text" class="form-control"  required="">
 	</div>
 	
 	<div class="col-md-12">
 	<label>Email Id</label>
-	<input type="email" class="form-control"  required="">
+	<input name="email" id="email" oninput="mail('email')" type="text" class="form-control"  required="">
+	<span id="email_id" style="display:none;color: red; font-size: 10px">Please Enter Valid Email Id.</span>
 	</div>
 	
 	<div class="col-md-12">
 	<label>Password</label>
-	<input type="password" class="form-control"  required="">
+	<input name="password" id="password" type="password" class="form-control"  required="">
 	</div>
 	
-	<div class="col-md-12"><a href="#"><p>Term & Condition</p></a></div>
+	<div class="col-md-12"></div>
 	
 	<div class="col-md-12">
-	<button class="yellow-bg">CONTINUE</button>
+	
+	<a class="yellow-bg " id="continue">CONTINUE</a>
 	</div>
 	</div>
+	</form>
 	</div>
 	
 	
@@ -279,7 +288,7 @@
 	
 	<div class="col-md-12">
 	<br>
-	<button class="gray-bg pull-left">BACK</button>
+	<button class="gray-bg pull-left">BACK</button> &nbsp;
 	<button class="yellow-bg">NEXT</button>
 	</div>
 	
@@ -777,7 +786,7 @@
 	</div>
 	</div>
       
-	</form>
+	
 
 </div>
 </div>
@@ -786,4 +795,52 @@
 
 @include('layout.footer')
 @include('layout.script')
+
+<script type="text/javascript">
+  function mail(obj,val){
+    // //console.log(obj);
+    if(obj=='email' ){
+                   var str =$('#email').val();
+                   var emailPattern = /^[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$/; 
+                   var res = str.match(emailPattern);
+                   if(res){
+                     // //console.log('Pancard is valid one.!!');
+                      $('#email_id').hide();
+
+                  }else{
+                    // //console.log('Oops.Please Enter Valid Pan Number.!!');
+                    $('#email_id').show();
+
+                    return false;
+                  }
+                  
+  }
+}
+</script>
+
+<script type="text/javascript">
+	$('#continue').click(function(){
+      alert('okae');
+      if (!$('#lenden_otp').valid()) 
+      {
+      	return false;
+      }else{
+      	 $.ajax({  
+         type: "POST",  
+         url: "{{URL::to('lenden-otp')}}",
+         data : $('#lenden_otp').serialize(),
+         success: function(msg){
+         	if (msg.code==200) 
+         	{
+         		alert(msg.response);
+         	}
+         
+
+					
+					  
+      }   
+     });
+      }
+	});
+</script>
 
