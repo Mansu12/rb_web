@@ -432,6 +432,8 @@ Route::get('sbi','CreditcardController@sbi');
 Route::get('lenden','LoanController@lenden');
 Route::post('lenden-otp','LoanController@otp');
 
+/*Flexi*/
+Route::get('flexi-loans','LoanController@flexi');
 
 
 /*Recitfy Credit Score*/
