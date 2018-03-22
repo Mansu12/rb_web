@@ -15,10 +15,10 @@
 		</div>	
 	  	</div>
 
-		<div class="col-md-4 red-bg1 ">
-	   <div class="form-in">
+		<div class="col-md-4" style="padding-right:0px;">
+	   <div class="form-in" style="background:#39f;padding-bottom: 10px;">
 
-              <span class="head-1 heading-bmar">Request A Call Back</span>
+              <span class="heading-bmar"><h3 class="text-center pad" style="color:#fff;text-transform:uppercase;">Request A Call Back</h3></span>
               <form class="" id="compareform" role="form" method="POST">
             
               <?php echo e(csrf_field()); ?>
@@ -48,7 +48,7 @@
 			  
 			  <div class="centr-obj"> 
 			    
-			    <button class="btn btn-primary btn-outline with-arrow sidebar-submit" >Submit</button>
+			    <button class="btn btn-primary sidebar-submit block" >Submit</button>
 			   
 			  </div>
 			</form>
