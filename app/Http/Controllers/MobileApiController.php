@@ -212,23 +212,28 @@ class MobileApiController extends ApiController
 		$quote=json_decode($this::balance_transfer($req));
 		//print_r($quote->data);exit();
 		$data=$quote->data;
+
 		if($data!=[]){
 			foreach ($data as $key => $value){
 
-			    $new_rate=$value->roi/12/100;
+  				$new_rate=$value->roi/12/100;
+			    //print_r($new_rate);exit();
 			    $loanamount=$req['loanamount'];
-			    $loaninterest=$req['loaninterest'];
-			    $loanterm=$req['loanterm'];
-			    $amount = $loanamount * $loaninterest * (pow(1 + $loaninterest, $loanterm) / (pow(1 + $loaninterest, $loanterm) - 1));
-			    $total =(($amount*$loanterm)-$loanamount);
+			    $loaninterest=$req['loaninterest']/12/100;
+			    $loanterm=$req['loanterm']*12;
 
-			    $ttl_payment = $loanamount+$total;
+    		$amount = $loanamount * $loaninterest * (pow(1 + $loaninterest, $loanterm) / (pow(1 + $loaninterest, $loanterm) - 1));
+    		$total =(($amount*$loanterm)-$loanamount);
+    		//print_r($total);exit();
+    		$ttl_payment = $loanamount+$total;
 
-			    $new_amount = $loanamount * $new_rate * (pow(1 + $new_rate, $loanterm) / (pow(1 + $new_rate, $loanterm) - 1));
+    		$new_amount = $loanamount * $new_rate * (pow(1 + $new_rate, $loanterm) / (pow(1 + $new_rate, $loanterm) - 1));
 
-			  $new_total =(($new_amount*$loanterm)-$loanamount);
-			  $new_ttl_payment = $loanamount+$new_total;
-			  $drop_emi= round($amount-$new_amount,2);
+	  		$new_total =(($new_amount*$loanterm)-$loanamount);
+	  		$new_ttl_payment = $loanamount+$new_total;
+			$drop_emi= round($amount-$new_amount,2);
+
+			   // print_r($drop_emi);exit();
 			  $drop_in_int=round((($loaninterest*12*100)-($new_rate*12*100)),2);
 			  $savings=$total-$new_total;
 			  $value->drop_emi=$drop_emi;
